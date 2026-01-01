@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1.4 - Personas e Público-Alvo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1F2937;
+            background-color: #F9FAFB;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitulo {
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #F59E0B;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #1E40AF;
+            font-size: 2em;
+            margin: 40px 0 20px 0;
+            font-weight: 700;
+            border-left: 5px solid #F59E0B;
+            padding-left: 20px;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #1E3A8A;
+            font-size: 1.5em;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-family: 'Poppins', sans-serif;
+            color: #047857;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+
+        .destaque {
+            background: #FEF3C7;
+            border-left: 5px solid #F59E0B;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .destaque strong {
+            color: #92400E;
+            font-size: 1.1em;
+        }
+
+        .importante {
+            background: #DBEAFE;
+            border-left: 5px solid #1E40AF;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .importante strong {
+            color: #1E40AF;
+            font-size: 1.1em;
+        }
+
+        .sucesso {
+            background: #D1FAE5;
+            border-left: 5px solid #10B981;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .sucesso strong {
+            color: #047857;
+            font-size: 1.1em;
+        }
+
+        .alerta {
+            background: #FEE2E2;
+            border-left: 5px solid #EF4444;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .alerta strong {
+            color: #991B1B;
+            font-size: 1.1em;
+        }
+
+        ul, ol {
+            margin: 20px 0 20px 40px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        li strong {
+            color: #1E40AF;
+        }
+
+        .exemplo {
+            background: #F3F4F6;
+            border: 2px solid #E5E7EB;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+
+        .exemplo h4 {
+            color: #059669;
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2em;
+        }
+
+        .tabela {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .tabela th {
+            background: #1E40AF;
+            color: white;
+            padding: 18px;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .tabela td {
+            padding: 18px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .tabela tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tabela tr:nth-child(even) {
+            background: #F9FAFB;
+        }
+
+        .exercicio {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 12px;
+            border: 3px solid #F59E0B;
+        }
+
+        .exercicio h3 {
+            color: #92400E;
+            margin-top: 0;
+        }
+
+        .persona-card {
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+            border: 3px solid #3B82F6;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .persona-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #93C5FD;
+        }
+
+        .persona-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1E40AF, #3B82F6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            margin-right: 20px;
+        }
+
+        .persona-info h4 {
+            margin: 0 0 5px 0;
+            color: #1E40AF;
+        }
+
+        .persona-subtitle {
+            color: #6B7280;
+            font-style: italic;
+        }
+
+        .persona-section {
+            margin: 15px 0;
+        }
+
+        .persona-section strong {
+            color: #1E40AF;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 3px solid #E5E7EB;
+            text-align: center;
+            color: #6B7280;
+        }
+
+        .footer strong {
+            color: #1E40AF;
+        }
+
+        .vs-box {
+            background: #FEF3C7;
+            border: 3px dashed #F59E0B;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .vs-box h3 {
+            color: #92400E;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 20px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .comparison-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .vs-divider {
+            font-size: 3em;
+            font-weight: bold;
+            color: #F59E0B;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AULA 1.4</h1>
+            <p class="subtitulo">Personas e Público-Alvo</p>
+            <span class="badge">MÓDULO 1 - FUNDAMENTOS</span>
+        </div>
+
+        <h2>🎯 O Que é Público-Alvo?</h2>
+
+        <p><strong>Público-alvo</strong> é um grupo amplo de pessoas que podem se interessar pelo seu produto ou serviço. É uma definição mais genérica baseada em características demográficas e comportamentais.</p>
+
+        <div class="exemplo">
+            <h4>📌 Exemplo de Público-Alvo:</h4>
+            <p><strong>Negócio:</strong> Academia de Musculação</p>
+            <p><strong>Público-Alvo:</strong></p>
+            <ul style="margin-top: 15px;">
+                <li><strong>Idade:</strong> 18 a 45 anos</li>
+                <li><strong>Sexo:</strong> Masculino e Feminino</li>
+                <li><strong>Localização:</strong> Bairro Centro, Zona Sul</li>
+                <li><strong>Classe social:</strong> B e C</li>
+                <li><strong>Interesse:</strong> Saúde, bem-estar, emagrecimento, ganho de massa</li>
+            </ul>
+        </div>
+
+        <p>Como você pode ver, o público-alvo é uma definição <strong>ampla e genérica</strong>. Ajuda a ter uma ideia inicial, mas não é suficiente para criar estratégias de marketing realmente eficazes.</p>
+
+        <h2>👤 O Que é Persona?</h2>
+
+        <p><strong>Persona</strong> (ou buyer persona) é uma representação semi-fictícia do seu cliente ideal. É como se você criasse um personagem detalhado, com nome, história, dores, desejos e comportamentos específicos.</p>
+
+        <div class="destaque">
+            <strong>💡 Diferença Fundamental:</strong> O público-alvo é quem PODE comprar de você. A persona é quem você QUER que compre de você. A persona é muito mais específica, detalhada e humanizada.
+        </div>
+
+        <h2>⚔️ Público-Alvo vs Persona</h2>
+
+        <div class="vs-box">
+            <h3>PÚBLICO-ALVO vs PERSONA</h3>
+
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <h4 style="color: #1E40AF; margin-top: 0;">📊 PÚBLICO-ALVO</h4>
+                    <ul style="text-align: left; margin: 15px 0 0 20px;">
+                        <li>Genérico e amplo</li>
+                        <li>Dados demográficos</li>
+                        <li>Grupos de pessoas</li>
+                        <li>Superficial</li>
+                    </ul>
+                </div>
+
+                <div class="vs-divider">VS</div>
+
+                <div class="comparison-item">
+                    <h4 style="color: #047857; margin-top: 0;">👤 PERSONA</h4>
+                    <ul style="text-align: left; margin: 15px 0 0 20px;">
+                        <li>Específico e detalhado</li>
+                        <li>Comportamentos e dores</li>
+                        <li>Pessoa individual</li>
+                        <li>Profundo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Aspecto</th>
+                    <th>Público-Alvo</th>
+                    <th>Persona</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Definição</strong></td>
+                    <td>"Mulheres de 25-35 anos, classe B"</td>
+                    <td>"Mariana, 28 anos, arquiteta, casada, sem filhos"</td>
+                </tr>
+                <tr>
+                    <td><strong>Dores</strong></td>
+                    <td>Não especifica</td>
+                    <td>"Não tem tempo para academia, come fora todo dia"</td>
+                </tr>
+                <tr>
+                    <td><strong>Objetivos</strong></td>
+                    <td>Genérico</td>
+                    <td>"Quer emagrecer 8kg até o casamento em 6 meses"</td>
+                </tr>
+                <tr>
+                    <td><strong>Comportamento</strong></td>
+                    <td>Não detalha</td>
+                    <td>"Usa Instagram, assiste YouTube antes de dormir"</td>
+                </tr>
+                <tr>
+                    <td><strong>Uso</strong></td>
+                    <td>Planejamento inicial</td>
+                    <td>Criação de conteúdo e campanhas</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>🔍 Como Criar uma Persona Completa?</h2>
+
+        <p>Para criar uma persona eficaz, você precisa responder às seguintes perguntas:</p>
+
+        <h3>1. Dados Demográficos</h3>
+        <ul>
+            <li><strong>Nome:</strong> Dê um nome fictício (humaniza a persona)</li>
+            <li><strong>Idade:</strong> Seja específico (não "25-35", mas "32 anos")</li>
+            <li><strong>Profissão:</strong> O que faz para viver?</li>
+            <li><strong>Renda:</strong> Quanto ganha por mês?</li>
+            <li><strong>Estado civil:</strong> Casado, solteiro, divorciado?</li>
+            <li><strong>Filhos:</strong> Tem? Quantos? Idade?</li>
+            <li><strong>Localização:</strong> Onde mora? (cidade, bairro)</li>
+        </ul>
+
+        <h3>2. Comportamento e Estilo de Vida</h3>
+        <ul>
+            <li><strong>Rotina:</strong> Como é um dia típico?</li>
+            <li><strong>Hobbies:</strong> O que gosta de fazer no tempo livre?</li>
+            <li><strong>Redes sociais:</strong> Quais usa? Com que frequência?</li>
+            <li><strong>Consumo de conteúdo:</strong> Lê blogs? Assiste YouTube? Ouve podcasts?</li>
+            <li><strong>Marcas favoritas:</strong> Quais marcas admira?</li>
+        </ul>
+
+        <h3>3. Dores e Desafios</h3>
+        <ul>
+            <li><strong>Principais problemas:</strong> O que tira o sono dela?</li>
+            <li><strong>Frustrações:</strong> O que a deixa irritada?</li>
+            <li><strong>Medos:</strong> Do que tem medo?</li>
+            <li><strong>Objeções:</strong> O que a impede de comprar?</li>
+        </ul>
+
+        <h3>4. Objetivos e Sonhos</h3>
+        <ul>
+            <li><strong>Objetivos profissionais:</strong> Onde quer chegar na carreira?</li>
+            <li><strong>Objetivos pessoais:</strong> O que deseja para a vida?</li>
+            <li><strong>Aspirações:</strong> Como quer ser vista pelos outros?</li>
+        </ul>
+
+        <h3>5. Jornada de Compra</h3>
+        <ul>
+            <li><strong>Como descobre produtos:</strong> Google? Indicação? Redes sociais?</li>
+            <li><strong>O que valoriza:</strong> Preço? Qualidade? Atendimento?</li>
+            <li><strong>Objeções de compra:</strong> "É caro", "Não tenho tempo", etc.</li>
+        </ul>
+
+        <h2>✨ Exemplo Completo de Persona</h2>
+
+        <div class="persona-card">
+            <div class="persona-header">
+                <div class="persona-avatar">👩</div>
+                <div class="persona-info">
+                    <h4>Mariana Souza - "A Empreendedora Sobrecarregada"</h4>
+                    <p class="persona-subtitle">"Quero crescer meu negócio, mas não tenho tempo para aprender marketing"</p>
+                </div>
+            </div>
+
+            <div class="persona-section">
+                <strong>📋 Dados Demográficos:</strong>
+                <p>• 32 anos<br>
+                • Dona de uma loja de roupas online<br>
+                • Renda: R$ 5.000/mês<br>
+                • Casada, 1 filho de 3 anos<br>
+                • Mora em São Paulo - SP (Zona Oeste)</p>
+            </div>
+
+            <div class="persona-section">
+                <strong>📱 Comportamento Digital:</strong>
+                <p>• Passa 3h/dia no Instagram (profissional + pessoal)<br>
+                • Consome conteúdo no YouTube antes de dormir<br>
+                • Está em grupos de empreendedoras no Facebook<br>
+                • Usa Pinterest para buscar inspiração de looks<br>
+                • Compra cursos online, mas raramente finaliza</p>
+            </div>
+
+            <div class="persona-section">
+                <strong>💼 Rotina:</strong>
+                <p>• Acorda às 6h, cuida do filho até 8h<br>
+                • Das 8h às 18h: atende clientes, embala pedidos, faz posts<br>
+                • Trabalha sozinha (não tem funcionários)<br>
+                • À noite: família e "tempo para ela" (raro)</p>
+            </div>
+
+            <div class="persona-section">
+                <strong>😰 Dores e Desafios:</strong>
+                <p>• "Não sei fazer anúncios no Instagram e Facebook"<br>
+                • "Gasto muito tempo criando conteúdo e não vejo resultados"<br>
+                • "Minha loja não aparece no Google"<br>
+                • "Sinto que perco vendas por não saber fazer marketing"<br>
+                • "Não tenho dinheiro para contratar uma agência"</p>
+            </div>
+
+            <div class="persona-section">
+                <strong>🎯 Objetivos:</strong>
+                <p>• Aumentar vendas em 50% nos próximos 6 meses<br>
+                • Conseguir viver só da loja (largar trabalho CLT do marido)<br>
+                • Ter tempo de qualidade com o filho<br>
+                • Ser reconhecida como referência em moda plus size</p>
+            </div>
+
+            <div class="persona-section">
+                <strong>🛒 Jornada de Compra:</strong>
+                <p>• Descobre produtos através do Instagram (influencers e anúncios)<br>
+                • Pesquisa no Google: "como vender mais no Instagram"<br>
+                • Valoriza: resultados práticos, praticidade, suporte<br>
+                • Objeções: "Será que funciona?", "Vou ter tempo?", "E se não der certo?"</p>
+            </div>
+
+            <div class="persona-section">
+                <strong>💬 Frase que define:</strong>
+                <p style="font-style: italic; font-size: 1.1em; color: #1E40AF;">"Eu sei que preciso investir em marketing digital, mas me sinto perdida e não sei por onde começar. Preciso de algo simples e que me dê resultados rápidos!"</p>
+            </div>
+        </div>
+
+        <div class="importante">
+            <strong>🎯 Por Que Isso Importa?</strong> Agora você sabe EXATAMENTE para quem está falando. Você pode criar conteúdo, anúncios e ofertas que falam diretamente com as dores e desejos da Mariana. Isso aumenta DRASTICAMENTE suas taxas de conversão!
+        </div>
+
+        <h2>🔨 Como Coletar Dados Para Criar Personas?</h2>
+
+        <p>Você não deve "inventar" sua persona. Ela precisa ser baseada em dados reais:</p>
+
+        <h3>Método 1: Pesquisa com Clientes Atuais</h3>
+        <ul>
+            <li>Envie questionários por email ou WhatsApp</li>
+            <li>Faça entrevistas por telefone/Zoom (15-30 min)</li>
+            <li>Perguntas-chave:
+                <ul>
+                    <li>"Qual foi o principal problema que te levou a comprar?"</li>
+                    <li>"Onde você costuma buscar informações?"</li>
+                    <li>"O que quase te impediu de comprar?"</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Método 2: Análise de Redes Sociais</h3>
+        <ul>
+            <li>Veja quem segue sua página no Instagram/Facebook</li>
+            <li>Use o Instagram Insights para dados demográficos</li>
+            <li>Analise comentários e mensagens diretas</li>
+            <li>Observe quais posts geram mais engajamento</li>
+        </ul>
+
+        <h3>Método 3: Google Analytics</h3>
+        <ul>
+            <li>Veja dados de idade, sexo, localização dos visitantes</li>
+            <li>Analise quais páginas são mais visitadas</li>
+            <li>Descubra de onde vem seu tráfego (Google, redes sociais, etc.)</li>
+        </ul>
+
+        <h3>Método 4: Pesquisa de Concorrentes</h3>
+        <ul>
+            <li>Veja quem segue e comenta nos perfis dos concorrentes</li>
+            <li>Analise as avaliações negativas (mostram dores não atendidas)</li>
+            <li>Observe quais conteúdos geram mais engajamento</li>
+        </ul>
+
+        <h3>Método 5: Grupos e Comunidades</h3>
+        <ul>
+            <li>Entre em grupos do Facebook relacionados ao seu nicho</li>
+            <li>Participe de fóruns (Reddit, Quora)</li>
+            <li>Observe quais perguntas são mais frequentes</li>
+            <li>Identifique padrões de dores e desejos</li>
+        </ul>
+
+        <h2>❌ Erros Comuns ao Criar Personas</h2>
+
+        <div class="alerta">
+            <strong>⚠️ Erro #1: Criar Personas Demais</strong><br>
+            Não crie 10 personas diferentes! Comece com 1 ou 2 personas principais. Mais que isso vai te deixar perdido e diluir sua mensagem.
+        </div>
+
+        <div class="alerta">
+            <strong>⚠️ Erro #2: Basear-se Apenas em Suposições</strong><br>
+            "Acho que meu cliente é assim..." NÃO! Use dados reais de pesquisas, entrevistas e analytics.
+        </div>
+
+        <div class="alerta">
+            <strong>⚠️ Erro #3: Criar Persona e Esquecer no Gaveta</strong><br>
+            A persona precisa ser USADA! Imprima, cole na parede, consulte sempre que for criar conteúdo ou campanhas.
+        </div>
+
+        <div class="alerta">
+            <strong>⚠️ Erro #4: Não Atualizar a Persona</strong><br>
+            O mercado muda, as pessoas mudam. Revise sua persona a cada 6-12 meses.
+        </div>
+
+        <h2>🚀 Como Usar Personas no Marketing</h2>
+
+        <h3>1. Criação de Conteúdo</h3>
+        <p>Antes de criar qualquer post, pergunte: "A Mariana se importaria com isso?"</p>
+        <div class="exemplo">
+            <p><strong>❌ Ruim:</strong> "Confira nossas promoções!"</p>
+            <p><strong>✅ Bom:</strong> "3 dicas para vender mais no Instagram (mesmo sem gastar com anúncios)"</p>
+            <p><em>Por quê? Porque fala diretamente com a dor da Mariana!</em></p>
+        </div>
+
+        <h3>2. Anúncios Pagos</h3>
+        <p>Use as características da persona para segmentar seus anúncios:</p>
+        <ul>
+            <li>Idade: 28-35 anos</li>
+            <li>Localização: São Paulo</li>
+            <li>Interesses: Empreendedorismo, moda, marketing digital</li>
+            <li>Comportamento: Já comprou online nos últimos 30 dias</li>
+        </ul>
+
+        <h3>3. Copywriting (Textos de Vendas)</h3>
+        <p>Escreva como se estivesse conversando com a persona:</p>
+        <div class="exemplo">
+            <p style="font-style: italic;">"Mariana, eu sei exatamente como você se sente. Trabalhar 10 horas por dia, criar conteúdo sem parar e mesmo assim ver suas vendas caindo... é frustrante, eu sei. Mas e se eu te dissesse que existe um jeito mais simples?"</p>
+        </div>
+
+        <h3>4. Desenvolvimento de Produtos</h3>
+        <p>Use as dores da persona para criar produtos que resolvem problemas reais:</p>
+        <ul>
+            <li>Dor: "Não tenho tempo para aprender" → Solução: Curso em vídeos curtos de 10min</li>
+            <li>Dor: "E se não der certo?" → Solução: Garantia de 7 dias</li>
+            <li>Dor: "Não sei se funciona" → Solução: Depoimentos de clientes reais</li>
+        </ul>
+
+        <h2>📝 Template de Persona (Use Este Modelo)</h2>
+
+        <div class="exercicio">
+            <h3>📝 CRIE SUA PERSONA AGORA</h3>
+
+            <p><strong>Nome da Persona:</strong></p>
+            <p style="border: 1px solid #D1D5DB; padding: 15px; background: white; border-radius: 6px;">_________________________________________________________________</p>
+
+            <p><strong>Citação que a define:</strong></p>
+            <p style="border: 1px solid #D1D5DB; padding: 15px; background: white; border-radius: 6px;">_________________________________________________________________</p>
+
+            <p><strong>DADOS DEMOGRÁFICOS:</strong></p>
+            <ul style="list-style: none; margin-left: 0;">
+                <li>Idade: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 200px;">______________</span></li>
+                <li>Profissão: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 200px;">______________</span></li>
+                <li>Renda: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 200px;">______________</span></li>
+                <li>Estado civil: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 200px;">______________</span></li>
+                <li>Filhos: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 200px;">______________</span></li>
+                <li>Localização: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 200px;">______________</span></li>
+            </ul>
+
+            <p><strong>COMPORTAMENTO DIGITAL:</strong></p>
+            <p style="border: 1px solid #D1D5DB; padding: 15px; background: white; border-radius: 6px; min-height: 100px;">
+            Redes sociais que usa:<br>
+            _________________________________________________________________<br><br>
+            Como consome conteúdo:<br>
+            _________________________________________________________________
+            </p>
+
+            <p><strong>DORES E DESAFIOS (liste 3-5):</strong></p>
+            <ol style="margin-left: 20px;">
+                <li style="border: 1px solid #D1D5DB; padding: 10px; background: white; border-radius: 6px; margin: 10px 0;">_________________________________________________________________</li>
+                <li style="border: 1px solid #D1D5DB; padding: 10px; background: white; border-radius: 6px; margin: 10px 0;">_________________________________________________________________</li>
+                <li style="border: 1px solid #D1D5DB; padding: 10px; background: white; border-radius: 6px; margin: 10px 0;">_________________________________________________________________</li>
+            </ol>
+
+            <p><strong>OBJETIVOS E SONHOS (liste 3-5):</strong></p>
+            <ol style="margin-left: 20px;">
+                <li style="border: 1px solid #D1D5DB; padding: 10px; background: white; border-radius: 6px; margin: 10px 0;">_________________________________________________________________</li>
+                <li style="border: 1px solid #D1D5DB; padding: 10px; background: white; border-radius: 6px; margin: 10px 0;">_________________________________________________________________</li>
+                <li style="border: 1px solid #D1D5DB; padding: 10px; background: white; border-radius: 6px; margin: 10px 0;">_________________________________________________________________</li>
+            </ol>
+
+            <p><strong>OBJEÇÕES DE COMPRA:</strong></p>
+            <p style="border: 1px solid #D1D5DB; padding: 15px; background: white; border-radius: 6px; min-height: 80px;">
+            O que a impede de comprar?<br>
+            _________________________________________________________________
+            </p>
+
+            <p><strong>COMO ELA ENCONTRA SOLUÇÕES:</strong></p>
+            <p style="border: 1px solid #D1D5DB; padding: 15px; background: white; border-radius: 6px; min-height: 80px;">
+            Google? Indicação? Redes sociais?<br>
+            _________________________________________________________________
+            </p>
+        </div>
+
+        <div class="sucesso">
+            <strong>🎊 Parabéns!</strong> Você concluiu a Aula 1.4 e agora sabe como criar personas detalhadas para seu negócio. Com uma persona bem definida, você consegue criar campanhas muito mais eficazes e aumentar suas vendas! Na próxima aula, vamos explorar os <strong>Principais Canais Digitais</strong> onde você pode alcançar sua persona.
+        </div>
+
+        <div class="footer">
+            <p><strong>Marketing Digital do Zero ao Pro</strong></p>
+            <p>Módulo 1 - Aula 1.4: Personas e Público-Alvo</p>
+            <p>© 2026 Cursos Certificados - Todos os direitos reservados</p>
+        </div>
+    </div>
+</body>
+</html>

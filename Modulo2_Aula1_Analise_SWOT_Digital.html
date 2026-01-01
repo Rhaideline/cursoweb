@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 2.1 - Análise SWOT Digital</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1F2937;
+            background-color: #F9FAFB;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitulo {
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #F59E0B;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #7C3AED;
+            font-size: 2em;
+            margin: 40px 0 20px 0;
+            font-weight: 700;
+            border-left: 5px solid #F59E0B;
+            padding-left: 20px;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #6D28D9;
+            font-size: 1.5em;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-family: 'Poppins', sans-serif;
+            color: #047857;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+
+        .destaque {
+            background: #FEF3C7;
+            border-left: 5px solid #F59E0B;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .destaque strong {
+            color: #92400E;
+            font-size: 1.1em;
+        }
+
+        .importante {
+            background: #EDE9FE;
+            border-left: 5px solid #7C3AED;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .importante strong {
+            color: #6D28D9;
+            font-size: 1.1em;
+        }
+
+        .sucesso {
+            background: #D1FAE5;
+            border-left: 5px solid #10B981;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .sucesso strong {
+            color: #047857;
+            font-size: 1.1em;
+        }
+
+        ul, ol {
+            margin: 20px 0 20px 40px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        li strong {
+            color: #7C3AED;
+        }
+
+        .exemplo {
+            background: #F3F4F6;
+            border: 2px solid #E5E7EB;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+
+        .exemplo h4 {
+            color: #059669;
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2em;
+        }
+
+        .swot-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .swot-quadrant {
+            padding: 30px;
+            border-radius: 12px;
+            min-height: 300px;
+        }
+
+        .swot-quadrant h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+
+        .swot-quadrant ul {
+            margin: 10px 0 0 20px;
+        }
+
+        .swot-quadrant li {
+            font-size: 1em;
+            margin-bottom: 12px;
+        }
+
+        .forcas {
+            background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%);
+            border: 3px solid #10B981;
+        }
+
+        .forcas h3 {
+            color: #047857;
+        }
+
+        .fraquezas {
+            background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%);
+            border: 3px solid #EF4444;
+        }
+
+        .fraquezas h3 {
+            color: #991B1B;
+        }
+
+        .oportunidades {
+            background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%);
+            border: 3px solid #3B82F6;
+        }
+
+        .oportunidades h3 {
+            color: #1E40AF;
+        }
+
+        .ameacas {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            border: 3px solid #F59E0B;
+        }
+
+        .ameacas h3 {
+            color: #92400E;
+        }
+
+        .exercicio {
+            background: linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 100%);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 12px;
+            border: 3px solid #7C3AED;
+        }
+
+        .exercicio h3 {
+            color: #5B21B6;
+            margin-top: 0;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 3px solid #E5E7EB;
+            text-align: center;
+            color: #6B7280;
+        }
+
+        .footer strong {
+            color: #7C3AED;
+        }
+
+        .tabela {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .tabela th {
+            background: #7C3AED;
+            color: white;
+            padding: 18px;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .tabela td {
+            padding: 18px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .tabela tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tabela tr:nth-child(even) {
+            background: #F9FAFB;
+        }
+
+        .matriz-swot {
+            background: white;
+            border: 3px solid #7C3AED;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .matriz-swot h3 {
+            text-align: center;
+            color: #7C3AED;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AULA 2.1</h1>
+            <p class="subtitulo">Análise SWOT Digital</p>
+            <span class="badge">MÓDULO 2 - ESTRATÉGIA E PLANEJAMENTO</span>
+        </div>
+
+        <h2>🎯 O Que é Análise SWOT?</h2>
+
+        <p><strong>SWOT</strong> é uma sigla em inglês que significa:</p>
+
+        <ul>
+            <li><strong>S</strong>trengths = <strong>Forças</strong> (fatores internos positivos)</li>
+            <li><strong>W</strong>eaknesses = <strong>Fraquezas</strong> (fatores internos negativos)</li>
+            <li><strong>O</strong>pportunities = <strong>Oportunidades</strong> (fatores externos positivos)</li>
+            <li><strong>T</strong>hreats = <strong>Ameaças</strong> (fatores externos negativos)</li>
+        </ul>
+
+        <div class="destaque">
+            <strong>💡 Em resumo:</strong> A Análise SWOT é uma ferramenta estratégica que ajuda você a entender onde seu negócio está forte, onde está fraco, quais oportunidades pode aproveitar e quais ameaças precisa enfrentar.
+        </div>
+
+        <p>No contexto do <strong>Marketing Digital</strong>, a SWOT ajuda você a:</p>
+        <ul>
+            <li>Identificar vantagens competitivas online</li>
+            <li>Descobrir pontos fracos que precisam ser melhorados</li>
+            <li>Encontrar oportunidades digitais (novos canais, tendências)</li>
+            <li>Antecipar ameaças (concorrentes, mudanças de algoritmo)</li>
+        </ul>
+
+        <h2>📊 A Matriz SWOT</h2>
+
+        <div class="matriz-swot">
+            <h3>MATRIZ SWOT - VISÃO GERAL</h3>
+            <div class="swot-grid">
+                <div class="swot-quadrant forcas">
+                    <h3>💪 FORÇAS</h3>
+                    <p style="text-align: center; margin-bottom: 15px;"><em>Fatores Internos Positivos</em></p>
+                    <ul>
+                        <li>O que você faz bem?</li>
+                        <li>Quais recursos você tem?</li>
+                        <li>O que seus clientes elogiam?</li>
+                        <li>Qual sua vantagem competitiva?</li>
+                    </ul>
+                </div>
+
+                <div class="swot-quadrant fraquezas">
+                    <h3>😓 FRAQUEZAS</h3>
+                    <p style="text-align: center; margin-bottom: 15px;"><em>Fatores Internos Negativos</em></p>
+                    <ul>
+                        <li>O que você faz mal?</li>
+                        <li>O que falta para você?</li>
+                        <li>O que clientes reclamam?</li>
+                        <li>Onde você perde para concorrentes?</li>
+                    </ul>
+                </div>
+
+                <div class="swot-quadrant oportunidades">
+                    <h3>🚀 OPORTUNIDADES</h3>
+                    <p style="text-align: center; margin-bottom: 15px;"><em>Fatores Externos Positivos</em></p>
+                    <ul>
+                        <li>Quais tendências você pode aproveitar?</li>
+                        <li>Que canais estão crescendo?</li>
+                        <li>Há nichos inexplorados?</li>
+                        <li>Mudanças no mercado favoráveis?</li>
+                    </ul>
+                </div>
+
+                <div class="swot-quadrant ameacas">
+                    <h3>⚠️ AMEAÇAS</h3>
+                    <p style="text-align: center; margin-bottom: 15px;"><em>Fatores Externos Negativos</em></p>
+                    <ul>
+                        <li>Quem são seus concorrentes?</li>
+                        <li>Mudanças de algoritmo?</li>
+                        <li>Crises econômicas?</li>
+                        <li>Novas regulamentações?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="importante">
+            <strong>🔑 Diferença Crucial:</strong><br><br>
+            <strong>Interno vs Externo:</strong><br>
+            • <strong>Forças e Fraquezas:</strong> São coisas que VOCÊ controla (seu time, produtos, processos)<br>
+            • <strong>Oportunidades e Ameaças:</strong> São coisas EXTERNAS que você não controla (mercado, concorrência, economia)
+        </div>
+
+        <h2>💪 Forças (Strengths) - Fatores Internos Positivos</h2>
+
+        <p>Perguntas para identificar suas forças:</p>
+
+        <ul>
+            <li><strong>Produto/Serviço:</strong> O que torna seu produto único? Qual diferencial você oferece?</li>
+            <li><strong>Equipe:</strong> Você tem especialistas? Equipe qualificada?</li>
+            <li><strong>Recursos:</strong> Que ferramentas, tecnologias ou ativos você possui?</li>
+            <li><strong>Reputação:</strong> Você tem boa avaliação? Depoimentos positivos?</li>
+            <li><strong>Digital:</strong> Seu site é rápido? Suas redes sociais são ativas?</li>
+        </ul>
+
+        <div class="exemplo">
+            <h4>📌 Exemplo: Forças de uma Loja Online de Roupas</h4>
+            <ul>
+                <li>✅ Atendimento excepcional via WhatsApp (responde em 5 min)</li>
+                <li>✅ 4.9 estrelas no Google com 500+ avaliações</li>
+                <li>✅ Instagram com 50k seguidores engajados</li>
+                <li>✅ Política de troca facilitada (30 dias sem burocracia)</li>
+                <li>✅ Produtos exclusivos (não vendem em outras lojas)</li>
+                <li>✅ Entrega rápida (24h em São Paulo)</li>
+            </ul>
+        </div>
+
+        <h2>😓 Fraquezas (Weaknesses) - Fatores Internos Negativos</h2>
+
+        <p>Perguntas para identificar suas fraquezas:</p>
+
+        <ul>
+            <li><strong>Limitações:</strong> O que você não consegue fazer bem?</li>
+            <li><strong>Recursos:</strong> O que está faltando? (orçamento, equipe, ferramentas)</li>
+            <li><strong>Reclamações:</strong> O que clientes mais reclamam?</li>
+            <li><strong>Processos:</strong> Onde você é lento ou ineficiente?</li>
+            <li><strong>Digital:</strong> Seu site é lento? Suas redes têm poucos seguidores?</li>
+        </ul>
+
+        <div class="exemplo">
+            <h4>📌 Exemplo: Fraquezas da Mesma Loja</h4>
+            <ul>
+                <li>❌ Site lento (leva 8 segundos para carregar)</li>
+                <li>❌ Não tem blog (perde tráfego orgânico do Google)</li>
+                <li>❌ Email marketing inexistente (não captura leads)</li>
+                <li>❌ Poucos vídeos de produtos (clientes querem ver como fica)</li>
+                <li>❌ Não aceita Pix (só cartão e boleto)</li>
+                <li>❌ Estoque limitado (produtos esgotam rápido)</li>
+            </ul>
+        </div>
+
+        <h2>🚀 Oportunidades (Opportunities) - Fatores Externos Positivos</h2>
+
+        <p>Perguntas para identificar oportunidades:</p>
+
+        <ul>
+            <li><strong>Tendências:</strong> Quais novidades estão surgindo no seu mercado?</li>
+            <li><strong>Tecnologia:</strong> Há novas ferramentas que podem te ajudar?</li>
+            <li><strong>Comportamento:</strong> Como as pessoas estão consumindo diferente?</li>
+            <li><strong>Lacunas:</strong> O que a concorrência não está fazendo?</li>
+            <li><strong>Sazonalidade:</strong> Datas comemorativas, eventos?</li>
+        </ul>
+
+        <div class="exemplo">
+            <h4>📌 Exemplo: Oportunidades para a Loja</h4>
+            <ul>
+                <li>🌟 TikTok está bombando (pode viralizar com "try-on haul")</li>
+                <li>🌟 Black Friday chegando (chance de aumentar vendas 300%)</li>
+                <li>🌟 Influencers do nicho procurando parcerias</li>
+                <li>🌟 Crescimento de compras via Instagram Shopping</li>
+                <li>🌟 Público buscando "moda sustentável" (nicho inexplorado)</li>
+                <li>🌟 Concorrentes não usam vídeos (oportunidade de se destacar)</li>
+            </ul>
+        </div>
+
+        <h2>⚠️ Ameaças (Threats) - Fatores Externos Negativos</h2>
+
+        <p>Perguntas para identificar ameaças:</p>
+
+        <ul>
+            <li><strong>Concorrência:</strong> Quem está crescendo no seu nicho?</li>
+            <li><strong>Mudanças:</strong> Algoritmos de redes sociais mudaram?</li>
+            <li><strong>Economia:</strong> Crise, inflação, desemprego?</li>
+            <li><strong>Regulamentação:</strong> Novas leis (LGPD, impostos)?</li>
+            <li><strong>Tecnologia:</strong> Seu modelo está ficando obsoleto?</li>
+        </ul>
+
+        <div class="exemplo">
+            <h4>📌 Exemplo: Ameaças para a Loja</h4>
+            <ul>
+                <li>⚡ Shein e AliExpress vendendo muito mais barato</li>
+                <li>⚡ Instagram diminuiu alcance orgânico (precisa pagar anúncios)</li>
+                <li>⚡ Crise econômica (pessoas comprando menos roupas)</li>
+                <li>⚡ Aumento no custo do frete (Correios mais caro)</li>
+                <li>⚡ Grandes magazines investindo pesado em online</li>
+                <li>⚡ Mudanças na lei de trocas/devoluções</li>
+            </ul>
+        </div>
+
+        <h2>🎯 Como Fazer Sua Análise SWOT Digital (Passo a Passo)</h2>
+
+        <h3>Passo 1: Reúna Dados</h3>
+        <p>Antes de fazer a SWOT, colete informações:</p>
+        <ul>
+            <li><strong>Analytics:</strong> Google Analytics, Instagram Insights, Facebook Analytics</li>
+            <li><strong>Avaliações:</strong> Google, Reclame Aqui, redes sociais</li>
+            <li><strong>Concorrentes:</strong> Analise o que eles fazem bem e mal</li>
+            <li><strong>Equipe:</strong> Pergunte à sua equipe sobre pontos fortes e fracos</li>
+            <li><strong>Clientes:</strong> Faça pesquisas, leia comentários</li>
+        </ul>
+
+        <h3>Passo 2: Faça um Brainstorm</h3>
+        <p>Liste TUDO que vier à mente em cada quadrante. Não filtre ainda!</p>
+        <ul>
+            <li>Use post-its (físicos ou digitais)</li>
+            <li>Envolva a equipe (diferentes perspectivas)</li>
+            <li>Reserve 30-60 minutos</li>
+            <li>Quantidade primeiro, qualidade depois</li>
+        </ul>
+
+        <h3>Passo 3: Priorize</h3>
+        <p>Depois de listar tudo, selecione os itens mais importantes:</p>
+        <ul>
+            <li>Escolha as 5-7 principais de cada quadrante</li>
+            <li>Foque no que tem maior impacto no negócio</li>
+            <li>Seja honesto e realista</li>
+        </ul>
+
+        <h3>Passo 4: Crie Estratégias</h3>
+        <p>Agora transforme a análise em ação:</p>
+
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Estratégia</th>
+                    <th>Como Fazer</th>
+                    <th>Exemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Forças + Oportunidades</strong><br>(Ataque)</td>
+                    <td>Use suas forças para aproveitar oportunidades</td>
+                    <td>Use seus 50k seguidores para viralizar no TikTok</td>
+                </tr>
+                <tr>
+                    <td><strong>Forças + Ameaças</strong><br>(Defesa)</td>
+                    <td>Use suas forças para se defender de ameaças</td>
+                    <td>Destaque atendimento diferenciado vs Shein</td>
+                </tr>
+                <tr>
+                    <td><strong>Fraquezas + Oportunidades</strong><br>(Reforço)</td>
+                    <td>Corrija fraquezas para aproveitar oportunidades</td>
+                    <td>Crie vídeos (fraqueza) para usar Instagram Shopping (oportunidade)</td>
+                </tr>
+                <tr>
+                    <td><strong>Fraquezas + Ameaças</strong><br>(Sobrevivência)</td>
+                    <td>Minimize fraquezas para evitar ameaças</td>
+                    <td>Otimize site (fraqueza) para competir com grandes magazines (ameaça)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>📱 SWOT Digital: Áreas para Analisar</h2>
+
+        <p>No marketing digital, analise especificamente:</p>
+
+        <h3>1. Presença Online</h3>
+        <ul>
+            <li><strong>Forças:</strong> Site rápido, design bonito, mobile-first</li>
+            <li><strong>Fraquezas:</strong> Site lento, não responsivo, difícil de navegar</li>
+            <li><strong>Oportunidades:</strong> Criar app, melhorar UX, adicionar chatbot</li>
+            <li><strong>Ameaças:</strong> Concorrentes com sites melhores</li>
+        </ul>
+
+        <h3>2. Redes Sociais</h3>
+        <ul>
+            <li><strong>Forças:</strong> Alto engajamento, muitos seguidores, conteúdo viral</li>
+            <li><strong>Fraquezas:</strong> Poucos seguidores, baixo engajamento, irregular</li>
+            <li><strong>Oportunidades:</strong> Novos canais (TikTok, Pinterest), trends</li>
+            <li><strong>Ameaças:</strong> Mudanças de algoritmo, concorrentes maiores</li>
+        </ul>
+
+        <h3>3. Conteúdo</h3>
+        <ul>
+            <li><strong>Forças:</strong> Blog ativo, vídeos de qualidade, storytelling</li>
+            <li><strong>Fraquezas:</strong> Sem blog, conteúdo irregular, sem vídeos</li>
+            <li><strong>Oportunidades:</strong> SEO, YouTube, podcasts</li>
+            <li><strong>Ameaças:</strong> Concorrentes produzindo mais/melhor</li>
+        </ul>
+
+        <h3>4. Tráfego Pago</h3>
+        <ul>
+            <li><strong>Forças:</strong> ROI positivo, anúncios otimizados</li>
+            <li><strong>Fraquezas:</strong> Orçamento limitado, falta de conhecimento</li>
+            <li><strong>Oportunidades:</strong> Novos formatos, públicos inexplorados</li>
+            <li><strong>Ameaças:</strong> Aumento de CPC, concorrência agressiva</li>
+        </ul>
+
+        <h3>5. Relacionamento com Cliente</h3>
+        <ul>
+            <li><strong>Forças:</strong> Email marketing ativo, WhatsApp responsivo</li>
+            <li><strong>Fraquezas:</strong> Não captura emails, atendimento lento</li>
+            <li><strong>Oportunidades:</strong> Automação, chatbots, CRM</li>
+            <li><strong>Ameaças:</strong> Clientes preferindo concorrentes</li>
+        </ul>
+
+        <div class="exercicio">
+            <h3>📝 EXERCÍCIO: FAÇA SUA ANÁLISE SWOT DIGITAL</h3>
+
+            <p style="text-align: center; font-weight: bold; margin-bottom: 30px;">Liste 5-7 itens em cada quadrante do seu negócio:</p>
+
+            <div class="swot-grid" style="gap: 30px;">
+                <div style="background: #D1FAE5; padding: 20px; border-radius: 8px; border: 2px solid #10B981;">
+                    <h4 style="color: #047857; text-align: center; margin-top: 0;">💪 FORÇAS</h4>
+                    <ol style="margin-left: 20px;">
+                        <li style="border: 1px solid #10B981; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                        <li style="border: 1px solid #10B981; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                        <li style="border: 1px solid #10B981; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                        <li style="border: 1px solid #10B981; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                        <li style="border: 1px solid #10B981; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                    </ol>
+                </div>
+
+                <div style="background: #FEE2E2; padding: 20px; border-radius: 8px; border: 2px solid #EF4444;">
+                    <h4 style="color: #991B1B; text-align: center; margin-top: 0;">😓 FRAQUEZAS</h4>
+                    <ol style="margin-left: 20px;">
+                        <li style="border: 1px solid #EF4444; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                        <li style="border: 1px solid #EF4444; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                        <li style="border: 1px solid #EF4444; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                        <li style="border: 1px solid #EF4444; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                        <li style="border: 1px solid #EF4444; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                    </ol>
+                </div>
+
+                <div style="background: #DBEAFE; padding: 20px; border-radius: 8px; border: 2px solid #3B82F6;">
+                    <h4 style="color: #1E40AF; text-align: center; margin-top: 0;">🚀 OPORTUNIDADES</h4>
+                    <ol style="margin-left: 20px;">
+                        <li style="border: 1px solid #3B82F6; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                        <li style="border: 1px solid #3B82F6; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                        <li style="border: 1px solid #3B82F6; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                        <li style="border: 1px solid #3B82F6; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                        <li style="border: 1px solid #3B82F6; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                    </ol>
+                </div>
+
+                <div style="background: #FEF3C7; padding: 20px; border-radius: 8px; border: 2px solid #F59E0B;">
+                    <h4 style="color: #92400E; text-align: center; margin-top: 0;">⚠️ AMEAÇAS</h4>
+                    <ol style="margin-left: 20px;">
+                        <li style="border: 1px solid #F59E0B; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                        <li style="border: 1px solid #F59E0B; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                        <li style="border: 1px solid #F59E0B; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                        <li style="border: 1px solid #F59E0B; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                        <li style="border: 1px solid #F59E0B; padding: 8px; background: white; border-radius: 4px; margin: 8px 0; min-height: 40px;"></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="sucesso">
+            <strong>🎊 Parabéns!</strong> Você concluiu a Aula 2.1 e agora sabe como fazer uma Análise SWOT Digital completa. Na próxima aula, vamos aprender sobre <strong>Definição de Objetivos SMART</strong> para transformar essa análise em metas concretas!
+        </div>
+
+        <div class="footer">
+            <p><strong>Marketing Digital do Zero ao Pro</strong></p>
+            <p>Módulo 2 - Aula 2.1: Análise SWOT Digital</p>
+            <p>© 2026 Cursos Certificados - Todos os direitos reservados</p>
+        </div>
+    </div>
+</body>
+</html>

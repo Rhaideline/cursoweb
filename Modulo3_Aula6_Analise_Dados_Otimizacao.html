@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3.6 - Análise de Dados e Otimização | Marketing Digital do Zero ao Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1f2937;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 4px solid #667eea;
+        }
+
+        .module-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1e40af;
+            margin: 50px 0 25px 0;
+            padding-left: 20px;
+            border-left: 6px solid #667eea;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #374151;
+            margin: 35px 0 20px 0;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 6px solid #f59e0b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .highlight-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border-left: 6px solid #3b82f6;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .stat-box h3 {
+            color: #1e40af;
+            margin-top: 0;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .tool-card {
+            background: #f9fafb;
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .tool-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .tool-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            color: #667eea;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .tool-card p {
+            font-size: 16px;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+
+        .formula-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .formula {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .data-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .data-table td {
+            padding: 16px 18px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 16px;
+        }
+
+        .data-table tr:hover {
+            background: #f9fafb;
+        }
+
+        .emoji {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border-left: 6px solid #10b981;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .tip-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border-left: 6px solid #ef4444;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .warning-box h3 {
+            color: #991b1b;
+            margin-top: 0;
+        }
+
+        ul, ol {
+            margin: 20px 0 20px 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .comparison-card {
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .comparison-bad {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 2px solid #ef4444;
+        }
+
+        .comparison-good {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border: 2px solid #10b981;
+        }
+
+        .comparison-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .comparison-bad h4 {
+            color: #991b1b;
+        }
+
+        .comparison-good h4 {
+            color: #065f46;
+        }
+
+        .exercise-box {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 3px solid #667eea;
+        }
+
+        .exercise-box h3 {
+            color: #1e40af;
+            margin-top: 0;
+            font-size: 26px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 3px solid #e5e7eb;
+            text-align: center;
+            color: #6b7280;
+        }
+
+        strong {
+            color: #1e40af;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            .tool-grid,
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .data-table {
+                font-size: 14px;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 12px 10px;
+            }
+        }
+
+        .metric-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #e5e7eb;
+            margin: 20px 0;
+        }
+
+        .metric-value {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #667eea;
+            margin: 15px 0;
+        }
+
+        .metric-label {
+            font-size: 16px;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .metric-change {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .metric-up {
+            color: #10b981;
+        }
+
+        .metric-down {
+            color: #ef4444;
+        }
+
+        .dashboard-example {
+            background: #f9fafb;
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #e5e7eb;
+            margin: 25px 0;
+        }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        @media (max-width: 768px) {
+            .kpi-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .process-step {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            margin: 15px 0;
+        }
+
+        .process-step h4 {
+            font-family: 'Poppins', sans-serif;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="module-tag">Módulo 3 - Aula 6</span>
+            <h1>Análise de Dados e Otimização</h1>
+            <p class="subtitle">Como Transformar Dados em Decisões Lucrativas e Escalar Resultados</p>
+        </div>
+
+        <h2>📊 Por Que Análise de Dados é Sua Maior Vantagem Competitiva</h2>
+
+        <div class="stat-box">
+            <h3>💡 O Poder dos Dados</h3>
+            <p><strong>"Se você não pode medir, não pode melhorar."</strong> - Peter Drucker</p>
+            <ul>
+                <li><strong>87% das empresas</strong> que usam análise de dados avançada têm ROI superior à concorrência</li>
+                <li><strong>Testes A/B</strong> podem aumentar conversões em 49% (média de estudos de 2020-2025)</li>
+                <li><strong>Otimização baseada em dados</strong> reduz custo de aquisição de cliente em até 60%</li>
+                <li><strong>Empresas data-driven</strong> crescem 5-8% mais rápido que a média do mercado</li>
+            </ul>
+        </div>
+
+        <p>A diferença entre amadores e profissionais de marketing está em UMA coisa: <strong>profissionais tomam decisões baseadas em dados, não em achismos.</strong></p>
+
+        <h2>🎯 Os 3 Níveis de Análise de Dados</h2>
+
+        <div class="formula-box">
+            <div class="formula">
+                Descritivo (O que aconteceu?)<br>
+                + Diagnóstico (Por que aconteceu?)<br>
+                + Preditivo (O que vai acontecer?)<br>
+                = Decisões Estratégicas Vencedoras
+            </div>
+        </div>
+
+        <h3>Nível 1: Análise Descritiva</h3>
+        <p><strong>Pergunta:</strong> O que aconteceu?</p>
+        <p><strong>Ferramentas:</strong> Google Analytics, Instagram Insights, Meta Business Suite</p>
+        <p><strong>Exemplo:</strong> "Tivemos 5.000 visitas no site esse mês, 200 leads gerados, 10 vendas."</p>
+
+        <h3>Nível 2: Análise Diagnóstica</h3>
+        <p><strong>Pergunta:</strong> Por que aconteceu?</p>
+        <p><strong>Ferramentas:</strong> Google Analytics (fluxo de comportamento), Hotjar (mapas de calor)</p>
+        <p><strong>Exemplo:</strong> "As vendas aumentaram porque mudamos o CTA de 'Saiba mais' para 'Comece grátis agora'."</p>
+
+        <h3>Nível 3: Análise Preditiva</h3>
+        <p><strong>Pergunta:</strong> O que vai acontecer?</p>
+        <p><strong>Ferramentas:</strong> Google Analytics (previsões), ferramentas de IA (ChatGPT para análise de tendências)</p>
+        <p><strong>Exemplo:</strong> "Com base nos últimos 3 meses, se mantivermos esse ritmo, teremos 150 vendas no próximo trimestre."</p>
+
+        <h2>📈 KPIs Essenciais por Canal</h2>
+
+        <h3>Instagram / Redes Sociais</h3>
+        <div class="kpi-grid">
+            <div class="metric-card">
+                <p class="metric-label">Taxa de Engajamento</p>
+                <div class="metric-value">4.2%</div>
+                <p class="metric-change metric-up">↑ +1.3% vs mês passado</p>
+                <p><strong>Fórmula:</strong> (Curtidas + Comentários + Compartilhamentos + Salvamentos) ÷ Alcance × 100</p>
+            </div>
+
+            <div class="metric-card">
+                <p class="metric-label">Alcance</p>
+                <div class="metric-value">18.5K</div>
+                <p class="metric-change metric-up">↑ +22% vs mês passado</p>
+                <p><strong>Meta:</strong> Crescer 15-20% ao mês</p>
+            </div>
+
+            <div class="metric-card">
+                <p class="metric-label">Cliques no Link da Bio</p>
+                <div class="metric-value">327</div>
+                <p class="metric-change metric-down">↓ -5% vs mês passado</p>
+                <p><strong>Ação:</strong> Testar novo CTA nos Stories</p>
+            </div>
+        </div>
+
+        <h3>Google Analytics / Tráfego do Site</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>KPI</th>
+                    <th>O Que Mede</th>
+                    <th>Benchmarks</th>
+                    <th>Como Melhorar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Sessões</strong></td>
+                    <td>Número de visitas ao site</td>
+                    <td>Crescer 10-20%/mês</td>
+                    <td>Mais tráfego (SEO, anúncios, social)</td>
+                </tr>
+                <tr>
+                    <td><strong>Taxa de Rejeição</strong></td>
+                    <td>% de visitantes que saem sem interagir</td>
+                    <td>40-60% (quanto menor, melhor)</td>
+                    <td>Melhorar velocidade, conteúdo relevante, CTA claro</td>
+                </tr>
+                <tr>
+                    <td><strong>Tempo Médio na Página</strong></td>
+                    <td>Quanto tempo passam no site</td>
+                    <td>2-3 minutos (blog/conteúdo)</td>
+                    <td>Conteúdo mais engajador, vídeos, interatividade</td>
+                </tr>
+                <tr>
+                    <td><strong>Páginas por Sessão</strong></td>
+                    <td>Quantas páginas visitam</td>
+                    <td>2-4 páginas</td>
+                    <td>Links internos, conteúdo relacionado</td>
+                </tr>
+                <tr>
+                    <td><strong>Taxa de Conversão</strong></td>
+                    <td>% que completa objetivo (compra, lead, etc)</td>
+                    <td>2-5% (e-commerce), 10-15% (leads)</td>
+                    <td>Otimizar landing page, CTA, checkout</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>E-mail Marketing</h3>
+        <div class="kpi-grid">
+            <div class="metric-card">
+                <p class="metric-label">Taxa de Abertura</p>
+                <div class="metric-value">28%</div>
+                <p class="metric-change metric-up">↑ +6% vs mês passado</p>
+                <p><strong>Como melhorou:</strong> Teste A/B de assuntos</p>
+            </div>
+
+            <div class="metric-card">
+                <p class="metric-label">Taxa de Cliques (CTR)</p>
+                <div class="metric-value">4.1%</div>
+                <p class="metric-change metric-up">↑ +1.2% vs mês passado</p>
+                <p><strong>Como melhorou:</strong> CTA mais visível, menos links</p>
+            </div>
+
+            <div class="metric-card">
+                <p class="metric-label">Taxa de Conversão</p>
+                <div class="metric-value">3.2%</div>
+                <p class="metric-change metric-up">↑ +0.8% vs mês passado</p>
+                <p><strong>Como melhorou:</strong> Segmentação por interesse</p>
+            </div>
+        </div>
+
+        <h3>Tráfego Pago (Google Ads / Meta Ads)</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>KPI</th>
+                    <th>Fórmula</th>
+                    <th>Benchmarks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>CPC (Custo por Clique)</strong></td>
+                    <td>Gasto Total ÷ Cliques</td>
+                    <td>R$ 0,50 - R$ 5 (depende do nicho)</td>
+                </tr>
+                <tr>
+                    <td><strong>CPM (Custo por Mil Impressões)</strong></td>
+                    <td>Gasto Total ÷ Impressões × 1000</td>
+                    <td>R$ 10 - R$ 50</td>
+                </tr>
+                <tr>
+                    <td><strong>CTR (Taxa de Cliques)</strong></td>
+                    <td>Cliques ÷ Impressões × 100</td>
+                    <td>1-3% (Search), 0.5-1.5% (Display)</td>
+                </tr>
+                <tr>
+                    <td><strong>CPA (Custo por Aquisição)</strong></td>
+                    <td>Gasto Total ÷ Conversões</td>
+                    <td>Deve ser < 30% do LTV do cliente</td>
+                </tr>
+                <tr>
+                    <td><strong>ROAS (Retorno sobre Gasto em Anúncios)</strong></td>
+                    <td>Receita ÷ Gasto em Anúncios</td>
+                    <td>Mínimo 3:1 (R$3 retorno para cada R$1 gasto)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>🔧 Ferramentas de Análise Indispensáveis</h2>
+
+        <div class="tool-grid">
+            <div class="tool-card">
+                <h4><span class="emoji">📊</span> Google Analytics 4 (GA4)</h4>
+                <p><strong>Função:</strong> Análise completa de tráfego do site</p>
+                <p><strong>Preço:</strong> Gratuito</p>
+                <p><strong>Use para:</strong> Ver de onde vem o tráfego, comportamento de usuários, funis de conversão</p>
+                <p><strong>Essencial para:</strong> Qualquer site/e-commerce</p>
+            </div>
+
+            <div class="tool-card">
+                <h4><span class="emoji">🔥</span> Hotjar</h4>
+                <p><strong>Função:</strong> Mapas de calor, gravações de sessões</p>
+                <p><strong>Preço:</strong> Gratuito até 35 sessões/dia</p>
+                <p><strong>Use para:</strong> Ver ONDE os usuários clicam, quanto scrollam, onde abandonam</p>
+                <p><strong>Essencial para:</strong> Otimizar landing pages e checkout</p>
+            </div>
+
+            <div class="tool-card">
+                <h4><span class="emoji">📈</span> Google Search Console</h4>
+                <p><strong>Função:</strong> Análise de SEO orgânico</p>
+                <p><strong>Preço:</strong> Gratuito</p>
+                <p><strong>Use para:</strong> Palavras-chave que trazem tráfego, erros técnicos, posição no Google</p>
+                <p><strong>Essencial para:</strong> Estratégia de SEO</p>
+            </div>
+
+            <div class="tool-card">
+                <h4><span class="emoji">📊</span> Google Data Studio (Looker Studio)</h4>
+                <p><strong>Função:</strong> Dashboards visuais personalizados</p>
+                <p><strong>Preço:</strong> Gratuito</p>
+                <p><strong>Use para:</strong> Unificar dados de GA4, Ads, Search Console em 1 relatório</p>
+                <p><strong>Essencial para:</strong> Apresentar relatórios para clientes/chefes</p>
+            </div>
+
+            <div class="tool-card">
+                <h4><span class="emoji">🎯</span> Meta Business Suite</h4>
+                <p><strong>Função:</strong> Analytics de Instagram e Facebook</p>
+                <p><strong>Preço:</strong> Gratuito</p>
+                <p><strong>Use para:</strong> Insights de posts, Stories, Reels, audiência</p>
+                <p><strong>Essencial para:</strong> Social media marketing</p>
+            </div>
+
+            <div class="tool-card">
+                <h4><span class="emoji">📧</span> Plataforma de E-mail (ex: Mailchimp)</h4>
+                <p><strong>Função:</strong> Analytics de e-mail marketing</p>
+                <p><strong>Preço:</strong> Varia (gratuito até 500 contatos)</p>
+                <p><strong>Use para:</strong> Taxas de abertura, cliques, conversão, A/B tests</p>
+                <p><strong>Essencial para:</strong> Automações e campanhas</p>
+            </div>
+
+            <div class="tool-card">
+                <h4><span class="emoji">🔗</span> UTM.io / Bitly</h4>
+                <p><strong>Função:</strong> Criar e rastrear links com UTM</p>
+                <p><strong>Preço:</strong> Gratuito</p>
+                <p><strong>Use para:</strong> Saber exatamente qual post/campanha gerou tráfego/vendas</p>
+                <p><strong>Essencial para:</strong> Campanhas multicanal</p>
+            </div>
+
+            <div class="tool-card">
+                <h4><span class="emoji">🚀</span> Semrush / Ahrefs (SEO)</h4>
+                <p><strong>Função:</strong> Análise de SEO, concorrentes, palavras-chave</p>
+                <p><strong>Preço:</strong> A partir de $99/mês</p>
+                <p><strong>Use para:</strong> Pesquisa de keywords, backlinks, auditoria de site</p>
+                <p><strong>Essencial para:</strong> Estratégias avançadas de SEO</p>
+            </div>
+        </div>
+
+        <h2>🧪 Testes A/B: A Ciência da Otimização</h2>
+
+        <div class="highlight-box">
+            <h3>💡 O Que é Teste A/B?</h3>
+            <p>Comparar 2 versões (A vs B) de um elemento para ver qual performa melhor. Mude APENAS 1 variável por vez.</p>
+            <p><strong>Exemplo:</strong> Enviar e-mail com assunto A para 50% da lista e assunto B para os outros 50%. O que tiver maior taxa de abertura vence.</p>
+        </div>
+
+        <h3>O Que Testar em Cada Canal</h3>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Canal</th>
+                    <th>Elementos para Testar</th>
+                    <th>Impacto Esperado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Landing Page</strong></td>
+                    <td>Título, CTA (texto/cor/tamanho), imagens, formulário (campos), vídeo vs sem vídeo</td>
+                    <td>+20-300% de conversão</td>
+                </tr>
+                <tr>
+                    <td><strong>E-mail Marketing</strong></td>
+                    <td>Assunto, nome do remetente, pré-header, horário de envio, CTA</td>
+                    <td>+10-50% de taxa de abertura/cliques</td>
+                </tr>
+                <tr>
+                    <td><strong>Anúncios (Google/Meta)</strong></td>
+                    <td>Título, imagem/vídeo, texto do anúncio, CTA, público-alvo</td>
+                    <td>+30-200% de CTR/conversões</td>
+                </tr>
+                <tr>
+                    <td><strong>Instagram Posts</strong></td>
+                    <td>Tipo de conteúdo (Reel vs Carrossel), legenda, CTA, hashtags, horário</td>
+                    <td>+15-100% de engajamento</td>
+                </tr>
+                <tr>
+                    <td><strong>Checkout (E-commerce)</strong></td>
+                    <td>Número de etapas, campos obrigatórios, botões de pagamento, garantias</td>
+                    <td>+10-60% de taxa de finalização</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Processo de Teste A/B em 5 Passos</h3>
+
+        <div class="process-step">
+            <h4>1. Defina o Objetivo</h4>
+            <p><strong>Exemplo:</strong> "Aumentar a taxa de conversão da landing page de 2% para 3%"</p>
+        </div>
+
+        <div class="process-step">
+            <h4>2. Crie uma Hipótese</h4>
+            <p><strong>Fórmula:</strong> "Se eu [mudar X], então [Y acontecerá], porque [razão lógica]"</p>
+            <p><strong>Exemplo:</strong> "Se eu mudar o CTA de 'Saiba mais' para 'Comece grátis agora', a conversão aumentará, porque é mais específico e urgente."</p>
+        </div>
+
+        <div class="process-step">
+            <h4>3. Divida o Tráfego 50/50</h4>
+            <p><strong>Versão A (Controle):</strong> CTA "Saiba mais" (50% dos visitantes)</p>
+            <p><strong>Versão B (Variação):</strong> CTA "Comece grátis agora" (50% dos visitantes)</p>
+        </div>
+
+        <div class="process-step">
+            <h4>4. Colete Dados Suficientes</h4>
+            <p><strong>Mínimo:</strong> 100 conversões por versão OU 1-2 semanas de teste</p>
+            <p><strong>Ferramenta:</strong> Calculadora de significância estatística (Google "A/B test calculator")</p>
+        </div>
+
+        <div class="process-step">
+            <h4>5. Analise Resultados e Implemente o Vencedor</h4>
+            <p><strong>Exemplo de resultado:</strong></p>
+            <ul>
+                <li>Versão A: 2.1% de conversão (210 conversões de 10.000 visitantes)</li>
+                <li>Versão B: 3.4% de conversão (340 conversões de 10.000 visitantes)</li>
+                <li><strong>Vencedor:</strong> Versão B (+62% de melhoria!)</li>
+                <li><strong>Ação:</strong> Implementar "Comece grátis agora" permanentemente</li>
+            </ul>
+        </div>
+
+        <div class="warning-box">
+            <h3>⚠️ Erros Comuns em Testes A/B</h3>
+            <ul>
+                <li><strong>Testar múltiplas variáveis ao mesmo tempo:</strong> Não saberá o que causou a diferença</li>
+                <li><strong>Parar o teste cedo demais:</strong> Resultados não confiáveis (pode ser coincidência)</li>
+                <li><strong>Ignorar significância estatística:</strong> Diferença de 2.1% vs 2.3% pode ser apenas sorte</li>
+                <li><strong>Não documentar testes:</strong> Repetir testes que já foram feitos</li>
+                <li><strong>Testar sem tráfego suficiente:</strong> Precisa de pelo menos 1.000 visitantes por versão</li>
+            </ul>
+        </div>
+
+        <h2>📊 Como Criar um Dashboard de Marketing (Passo a Passo)</h2>
+
+        <p>Um dashboard centraliza TODOS os seus dados em um só lugar. Você abre e em 30 segundos sabe exatamente como está performando.</p>
+
+        <h3>Estrutura de Dashboard Ideal</h3>
+
+        <div class="dashboard-example">
+            <h4><strong>Seção 1: Visão Geral (KPIs Principais)</strong></h4>
+            <div class="kpi-grid">
+                <div class="metric-card">
+                    <p class="metric-label">Receita Total (Mês)</p>
+                    <div class="metric-value">R$ 47.5K</div>
+                    <p class="metric-change metric-up">↑ +18% vs mês passado</p>
+                </div>
+                <div class="metric-card">
+                    <p class="metric-label">Novos Leads</p>
+                    <div class="metric-value">1.243</div>
+                    <p class="metric-change metric-up">↑ +22% vs mês passado</p>
+                </div>
+                <div class="metric-card">
+                    <p class="metric-label">ROI de Marketing</p>
+                    <div class="metric-value">4.8:1</div>
+                    <p class="metric-change metric-up">↑ +0.7 vs mês passado</p>
+                </div>
+            </div>
+
+            <h4><strong>Seção 2: Tráfego por Canal</strong></h4>
+            <p>Gráfico de barras mostrando:</p>
+            <ul>
+                <li>Orgânico: 45% (22.500 visitas)</li>
+                <li>Direto: 25% (12.500 visitas)</li>
+                <li>Redes Sociais: 18% (9.000 visitas)</li>
+                <li>Pago: 10% (5.000 visitas)</li>
+                <li>Referral: 2% (1.000 visitas)</li>
+            </ul>
+
+            <h4><strong>Seção 3: Funil de Conversão</strong></h4>
+            <p>Visualização do funil:</p>
+            <ul>
+                <li>50.000 visitantes → Taxa de rejeição: 55% (restam 22.500)</li>
+                <li>22.500 visitantes engajados → 15% viraram leads (3.375 leads)</li>
+                <li>3.375 leads → 8% viraram clientes (270 vendas)</li>
+                <li><strong>Taxa de conversão geral:</strong> 0.54%</li>
+            </ul>
+
+            <h4><strong>Seção 4: Campanhas de Melhor Performance</strong></h4>
+            <p>Tabela com top 5 campanhas:</p>
+            <ol>
+                <li>Campanha Instagram Reels: R$ 12k receita, R$ 2k gasto, ROAS 6:1</li>
+                <li>E-mail Black Friday: R$ 9k receita, R$ 0 gasto, ROI infinito</li>
+                <li>Google Ads Search: R$ 8k receita, R$ 3k gasto, ROAS 2.7:1</li>
+            </ol>
+
+            <h4><strong>Seção 5: Ações Recomendadas</strong></h4>
+            <ul>
+                <li>🔴 <strong>Urgente:</strong> Taxa de rejeição em 55% (meta: < 50%). Ação: Otimizar velocidade do site.</li>
+                <li>🟡 <strong>Atenção:</strong> Campanha Google Display com ROAS 0.8:1 (prejuízo). Ação: Pausar ou ajustar público.</li>
+                <li>🟢 <strong>Oportunidade:</strong> Instagram Reels com ROAS 6:1. Ação: Dobrar investimento.</li>
+            </ul>
+        </div>
+
+        <h3>Ferramentas para Criar Dashboards</h3>
+        <ul>
+            <li><strong>Google Data Studio (Looker Studio):</strong> Gratuito, integra com GA4, Ads, Search Console</li>
+            <li><strong>Microsoft Power BI:</strong> Gratuito (versão desktop), visualizações avançadas</li>
+            <li><strong>Tableau Public:</strong> Gratuito, muito visual, curva de aprendizado</li>
+            <li><strong>Klipfolio:</strong> Pago ($99/mês), integra com 100+ ferramentas</li>
+        </ul>
+
+        <h2>🔄 O Ciclo de Otimização Contínua</h2>
+
+        <div class="formula-box">
+            <div class="formula">
+                Medir → Analisar → Testar → Implementar → Repetir
+            </div>
+        </div>
+
+        <h3>Rotina Semanal de Análise (30 minutos)</h3>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Dia</th>
+                    <th>Tarefa</th>
+                    <th>Ferramenta</th>
+                    <th>Tempo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Segunda</td>
+                    <td>Revisar dashboard geral da semana passada</td>
+                    <td>Google Data Studio</td>
+                    <td>10min</td>
+                </tr>
+                <tr>
+                    <td>Terça</td>
+                    <td>Analisar performance de redes sociais</td>
+                    <td>Meta Business Suite</td>
+                    <td>10min</td>
+                </tr>
+                <tr>
+                    <td>Quarta</td>
+                    <td>Revisar campanhas de anúncios (pausar o que não funciona)</td>
+                    <td>Google Ads / Meta Ads</td>
+                    <td>15min</td>
+                </tr>
+                <tr>
+                    <td>Quinta</td>
+                    <td>Analisar e-mails da semana (aberturas, cliques)</td>
+                    <td>Mailchimp / ConvertKit</td>
+                    <td>10min</td>
+                </tr>
+                <tr>
+                    <td>Sexta</td>
+                    <td>Identificar 1 teste A/B para próxima semana</td>
+                    <td>Hotjar (ver mapas de calor)</td>
+                    <td>15min</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Rotina Mensal de Análise (2 horas)</h3>
+        <ol>
+            <li><strong>Semana 1:</strong> Relatório completo de todos os KPIs vs mês anterior</li>
+            <li><strong>Semana 2:</strong> Análise profunda do funil de conversão (onde estão os gargalos?)</li>
+            <li><strong>Semana 3:</strong> Benchmarking (comparar com concorrentes e médias do setor)</li>
+            <li><strong>Semana 4:</strong> Planejamento do próximo mês baseado em insights</li>
+        </ol>
+
+        <h2>🎯 Otimizações de Alto Impacto (Quick Wins)</h2>
+
+        <div class="comparison-grid">
+            <div class="comparison-card comparison-good">
+                <h4>✅ 1. Velocidade do Site</h4>
+                <p><strong>Problema:</strong> Site carrega em 8 segundos</p>
+                <p><strong>Impacto:</strong> 53% dos visitantes abandonam se demora +3s</p>
+                <p><strong>Solução rápida:</strong></p>
+                <ul>
+                    <li>Comprimir imagens (TinyPNG)</li>
+                    <li>Usar cache (plugin WP Rocket se for WordPress)</li>
+                    <li>Minificar CSS/JS (Google PageSpeed Insights te diz como)</li>
+                </ul>
+                <p><strong>Ganho esperado:</strong> +15-30% de conversões</p>
+            </div>
+
+            <div class="comparison-card comparison-good">
+                <h4>✅ 2. Mobile First</h4>
+                <p><strong>Problema:</strong> Site não responsivo em mobile</p>
+                <p><strong>Impacto:</strong> 60%+ do tráfego vem de mobile</p>
+                <p><strong>Solução rápida:</strong></p>
+                <ul>
+                    <li>Teste no Google Mobile-Friendly Test</li>
+                    <li>Botões grandes (mínimo 44x44px)</li>
+                    <li>Texto legível (mínimo 16px)</li>
+                </ul>
+                <p><strong>Ganho esperado:</strong> +20-40% de conversões mobile</p>
+            </div>
+        </div>
+
+        <div class="comparison-grid">
+            <div class="comparison-card comparison-good">
+                <h4>✅ 3. Remover Campos do Formulário</h4>
+                <p><strong>Problema:</strong> Formulário de contato com 8 campos</p>
+                <p><strong>Impacto:</strong> Cada campo extra reduz conversão em 5-10%</p>
+                <p><strong>Solução rápida:</strong></p>
+                <ul>
+                    <li>Mantenha APENAS: Nome, E-mail, Mensagem (opcional)</li>
+                    <li>Colete mais informações depois, por e-mail</li>
+                </ul>
+                <p><strong>Ganho esperado:</strong> +30-50% de leads</p>
+            </div>
+
+            <div class="comparison-card comparison-good">
+                <h4>✅ 4. Adicionar Prova Social</h4>
+                <p><strong>Problema:</strong> Landing page sem depoimentos</p>
+                <p><strong>Impacto:</strong> 92% confiam em recomendações (vs 33% em propaganda)</p>
+                <p><strong>Solução rápida:</strong></p>
+                <ul>
+                    <li>Adicionar 3-5 depoimentos com foto e nome real</li>
+                    <li>Números de resultados ("Mais de 10.000 alunos")</li>
+                    <li>Logos de empresas/parceiros</li>
+                </ul>
+                <p><strong>Ganho esperado:</strong> +20-35% de conversões</p>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <h3>💡 Priorização de Otimizações (Framework ICE)</h3>
+            <p>Quando você tem 10 ideias de otimização, como escolher por onde começar?</p>
+            <p><strong>Use o ICE Score:</strong></p>
+            <ul>
+                <li><strong>I (Impact):</strong> Impacto potencial (1-10)</li>
+                <li><strong>C (Confidence):</strong> Confiança que vai funcionar (1-10)</li>
+                <li><strong>E (Ease):</strong> Facilidade de implementar (1-10)</li>
+            </ul>
+            <p><strong>Fórmula:</strong> ICE Score = (Impact + Confidence + Ease) ÷ 3</p>
+            <p><strong>Exemplo:</strong></p>
+            <ul>
+                <li>Ideia A: Redesign completo do site → Impact 9, Confidence 6, Ease 2 = ICE 5.7</li>
+                <li>Ideia B: Mudar cor do CTA de azul para laranja → Impact 6, Confidence 8, Ease 10 = ICE 8</li>
+                <li><strong>Vencedor:</strong> Ideia B (faça primeiro, é rápido e confiável)</li>
+            </ul>
+        </div>
+
+        <div class="exercise-box">
+            <h3>🎯 EXERCÍCIO PRÁTICO FINAL</h3>
+            <ol>
+                <li><strong>Configure o Google Analytics 4:</strong> Se ainda não tem, crie conta e adicione o código de rastreamento no site (tutorial: YouTube "Como instalar GA4")</li>
+                <li><strong>Defina seus 5 KPIs principais:</strong> Escolha as 5 métricas mais importantes para seu negócio (ex: Sessões, Taxa de conversão, ROI, Novos leads, Receita)</li>
+                <li><strong>Crie um dashboard simples:</strong> Use Google Data Studio (gratuito) para visualizar seus 5 KPIs em tempo real</li>
+                <li><strong>Identifique 1 gargalo:</strong> Olhe seu funil de vendas. Onde você perde mais pessoas? (ex: 80% abandonam no checkout)</li>
+                <li><strong>Defina 1 teste A/B:</strong> Com base no gargalo, crie uma hipótese e planeje um teste para os próximos 7 dias</li>
+                <li><strong>Agende análise semanal:</strong> Bloqueie 30min toda segunda-feira para revisar dados e tomar decisões</li>
+            </ol>
+        </div>
+
+        <div class="highlight-box">
+            <h3>🚀 Checklist: Análise de Dados Profissional</h3>
+            <ul>
+                <li>☐ Google Analytics 4 instalado e configurado</li>
+                <li>☐ Google Search Console configurado</li>
+                <li>☐ Hotjar (ou similar) instalado para mapas de calor</li>
+                <li>☐ UTMs configurados em todos os links de campanhas</li>
+                <li>☐ Dashboard criado com 5-10 KPIs principais</li>
+                <li>☐ Rotina semanal de análise agendada (30min)</li>
+                <li>☐ Pelo menos 1 teste A/B rodando sempre</li>
+                <li>☐ Relatório mensal documentado (para comparar evolução)</li>
+                <li>☐ Metas SMART definidas para cada KPI</li>
+                <li>☐ Processo de otimização contínua implementado</li>
+            </ul>
+        </div>
+
+        <div class="stat-box">
+            <h3>🎓 Lição Final: Dados sem Ação = Desperdício</h3>
+            <p><strong>A diferença entre quem cresce e quem estagana:</strong></p>
+            <ul>
+                <li><strong>Amadores:</strong> Coletam dados, mas não agem</li>
+                <li><strong>Profissionais:</strong> Transformam insights em testes, testes em aprendizados, aprendizados em crescimento exponencial</li>
+            </ul>
+            <p>Você não precisa de dados perfeitos. Precisa de dados SUFICIENTES para tomar a PRÓXIMA decisão. Depois, ajusta o caminho.</p>
+            <p><strong>Lembre-se:</strong> Melhorias de 1% ao dia = 3.778% de crescimento ao ano (poder dos juros compostos aplicado ao marketing).</p>
+        </div>
+
+        <div class="footer">
+            <p><strong>Parabéns! Você completou o Módulo 3 - Redes Sociais e Conteúdo</strong></p>
+            <p><strong>Próximo Módulo:</strong> Módulo 4 - Tráfego Pago e Conversão</p>
+            <p>Marketing Digital do Zero ao Pro • 2025</p>
+        </div>
+    </div>
+</body>
+</html>

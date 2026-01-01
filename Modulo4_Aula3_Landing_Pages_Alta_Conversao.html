@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 4.3 - Landing Pages de Alta Conversão | Marketing Digital do Zero ao Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1f2937;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 4px solid #10b981;
+        }
+
+        .module-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #059669;
+            margin: 50px 0 25px 0;
+            padding-left: 20px;
+            border-left: 6px solid #10b981;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #374151;
+            margin: 35px 0 20px 0;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 6px solid #f59e0b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .highlight-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border-left: 6px solid #10b981;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .stat-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+
+        .formula-box {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        .formula {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .lp-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .lp-table th {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 18px;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .lp-table td {
+            padding: 16px 18px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 16px;
+        }
+
+        .lp-table tr:hover {
+            background: #f9fafb;
+        }
+
+        .emoji {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border-left: 6px solid #3b82f6;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .tip-box h3 {
+            color: #1e40af;
+            margin-top: 0;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border-left: 6px solid #ef4444;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .warning-box h3 {
+            color: #991b1b;
+            margin-top: 0;
+        }
+
+        ul, ol {
+            margin: 20px 0 20px 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .comparison-card {
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .comparison-bad {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 2px solid #ef4444;
+        }
+
+        .comparison-good {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border: 2px solid #10b981;
+        }
+
+        .comparison-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .comparison-bad h4 {
+            color: #991b1b;
+        }
+
+        .comparison-good h4 {
+            color: #065f46;
+        }
+
+        .exercise-box {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 3px solid #4f46e5;
+        }
+
+        .exercise-box h3 {
+            color: #3730a3;
+            margin-top: 0;
+            font-size: 26px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 3px solid #e5e7eb;
+            text-align: center;
+            color: #6b7280;
+        }
+
+        strong {
+            color: #059669;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lp-table {
+                font-size: 14px;
+            }
+
+            .lp-table th,
+            .lp-table td {
+                padding: 12px 10px;
+            }
+        }
+
+        .lp-section {
+            background: #f9fafb;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #10b981;
+            margin: 20px 0;
+        }
+
+        .lp-section h4 {
+            font-family: 'Poppins', sans-serif;
+            color: #10b981;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .element-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .element-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #e5e7eb;
+        }
+
+        .element-card h4 {
+            font-family: 'Poppins', sans-serif;
+            color: #10b981;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .element-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="module-tag">Módulo 4 - Aula 3</span>
+            <h1>Landing Pages de Alta Conversão</h1>
+            <p class="subtitle">Transforme Visitantes em Clientes com Páginas que Vendem 10x Mais</p>
+        </div>
+
+        <h2>🎯 O Que é uma Landing Page e Por Que Ela Converte Mais?</h2>
+
+        <p>Uma <strong>Landing Page</strong> (página de aterrissagem/captura) é uma página com UM ÚNICO OBJETIVO: fazer o visitante realizar UMA ação específica (comprar, se cadastrar, baixar, agendar).</p>
+
+        <div class="stat-box">
+            <h3>📊 Landing Page vs Home do Site</h3>
+            <table class="lp-table">
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Home do Site</th>
+                        <th>Landing Page</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Objetivos</strong></td>
+                        <td>Múltiplos (navegar, conhecer, contato, blog...)</td>
+                        <td>UM único (ex: comprar o curso)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Menu/Links</strong></td>
+                        <td>Menu completo, rodapé com links</td>
+                        <td>SEM menu (zero distrações)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Taxa de Conversão</strong></td>
+                        <td>0,5-2%</td>
+                        <td>10-40%+ (quando otimizada)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Público</strong></td>
+                        <td>Geral (explorar marca)</td>
+                        <td>Específico (pronto para ação)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="formula-box">
+            <div class="formula">
+                1 Página + 1 Objetivo + 0 Distrações = Alta Conversão
+            </div>
+        </div>
+
+        <h2>🏗️ Anatomia de uma Landing Page Perfeita (12 Elementos)</h2>
+
+        <div class="lp-section">
+            <h4><span class="emoji">1️⃣</span> Headline (Título Principal)</h4>
+            <p><strong>Função:</strong> Capturar atenção em 3 segundos e comunicar BENEFÍCIO claro</p>
+            <p><strong>Fórmula:</strong> [Resultado Desejado] + [Tempo/Facilidade] + [Para Quem]</p>
+            <p><strong>Exemplo RUIM:</strong> "Bem-vindo ao nosso curso"</p>
+            <p><strong>Exemplo BOM:</strong> "Domine Marketing Digital em 60 Dias (Mesmo Sem Experiência)"</p>
+            <p><strong>Tamanho ideal:</strong> 5-12 palavras</p>
+            <p><strong>Teste:</strong> "Minha avó entenderia o benefício lendo isso?"</p>
+        </div>
+
+        <div class="lp-section">
+            <h4><span class="emoji">2️⃣</span> Subheadline (Subtítulo)</h4>
+            <p><strong>Função:</strong> Complementar headline, adicionar urgência ou prova social</p>
+            <p><strong>Exemplo:</strong> "Mais de 10.000 alunos já transformaram carreiras. Próxima turma inicia em 48 horas."</p>
+        </div>
+
+        <div class="lp-section">
+            <h4><span class="emoji">3️⃣</span> Hero Image/Video (Imagem Principal)</h4>
+            <p><strong>Função:</strong> Reforçar visualmente a oferta</p>
+            <p><strong>Opções:</strong></p>
+            <ul>
+                <li>Imagem do produto (ex: mockup do curso em tablet/celular)</li>
+                <li>Foto sua (se marca pessoal) sorrindo, profissional</li>
+                <li>Vídeo de 30-90s explicando oferta (aumenta conversão em 80%)</li>
+            </ul>
+            <p><strong>Evite:</strong> Fotos genéricas de banco de imagens</p>
+        </div>
+
+        <div class="lp-section">
+            <h4><span class="emoji">4️⃣</span> Benefícios (Não Características)</h4>
+            <p><strong>Função:</strong> Mostrar TRANSFORMAÇÃO que o cliente terá</p>
+            <p><strong>Característica vs Benefício:</strong></p>
+            <table class="lp-table">
+                <thead>
+                    <tr>
+                        <th>❌ Característica (O que é)</th>
+                        <th>✅ Benefício (O que você ganha)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>"40 horas de conteúdo"</td>
+                        <td>"Aprenda tudo que precisa em 8 semanas estudando apenas 1h/dia"</td>
+                    </tr>
+                    <tr>
+                        <td>"Certificado digital"</td>
+                        <td>"Certificado reconhecido para alavancar seu currículo e LinkedIn"</td>
+                    </tr>
+                    <tr>
+                        <td>"Módulo sobre Instagram Ads"</td>
+                        <td>"Venda R$5k+/mês usando Instagram Ads (mesmo com R$10/dia)"</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="lp-section">
+            <h4><span class="emoji">5️⃣</span> Prova Social (Social Proof)</h4>
+            <p><strong>Função:</strong> Reduzir objeção "será que funciona?"</p>
+            <p><strong>Tipos de prova social:</strong></p>
+            <ul>
+                <li><strong>Depoimentos em vídeo:</strong> Mais poderoso (+30% conversão)</li>
+                <li><strong>Depoimentos escritos com foto:</strong> Nome real + cidade + foto verdadeira</li>
+                <li><strong>Números:</strong> "Mais de 10.000 alunos", "Nota 4,9/5 no Reclame Aqui"</li>
+                <li><strong>Logos/Selos:</strong> "Visto em: [logos de mídia]", "Certificado por: [instituição]"</li>
+                <li><strong>Capturas de tela:</strong> Print de resultados de alunos, avaliações Google</li>
+            </ul>
+            <p><strong>Onde colocar:</strong> Após benefícios e ANTES do CTA principal</p>
+        </div>
+
+        <div class="lp-section">
+            <h4><span class="emoji">6️⃣</span> Oferta Clara (O Que Está Incluído)</h4>
+            <p><strong>Função:</strong> Detalhar TUDO que o cliente receberá</p>
+            <p><strong>Estrutura:</strong></p>
+            <ul>
+                <li>✅ Módulo 1: [Nome] - [Benefício resumido]</li>
+                <li>✅ Módulo 2: [Nome] - [Benefício resumido]</li>
+                <li>✅ Bônus 1: [Nome] (Valor: R$ XX)</li>
+                <li>✅ Bônus 2: [Nome] (Valor: R$ XX)</li>
+                <li><strong>Valor Total:</strong> R$ 997 → <span style="color: #ef4444; font-size: 24px;">R$ 197</span> (80% OFF)</li>
+            </ul>
+        </div>
+
+        <div class="lp-section">
+            <h4><span class="emoji">7️⃣</span> Preço e Formas de Pagamento</h4>
+            <p><strong>Estratégias de precificação que convertem:</strong></p>
+            <ul>
+                <li><strong>Preço riscado:</strong> <del>R$ 497</del> → R$ 197</li>
+                <li><strong>Parcelamento destacado:</strong> "12x de R$ 19,70 (menos que um almoço/semana)"</li>
+                <li><strong>Comparação:</strong> "Menos que 2 cafés por dia"</li>
+                <li><strong>Valor por módulo:</strong> "R$ 12,31 por módulo (16 módulos)"</li>
+            </ul>
+        </div>
+
+        <div class="lp-section">
+            <h4><span class="emoji">8️⃣</span> CTA (Call to Action - Botão)</h4>
+            <p><strong>Função:</strong> Dizer EXATAMENTE o que fazer</p>
+            <p><strong>Características do CTA perfeito:</strong></p>
+            <ul>
+                <li><strong>Cor contrastante:</strong> Destaque do resto da página (verde, laranja, vermelho)</li>
+                <li><strong>Tamanho grande:</strong> Impossível não ver</li>
+                <li><strong>Texto acionável:</strong> Verbos no imperativo</li>
+                <li><strong>Repetido:</strong> No topo, meio, rodapé (mínimo 3x na página)</li>
+            </ul>
+            <p><strong>Textos de CTA:</strong></p>
+            <table class="lp-table">
+                <thead>
+                    <tr>
+                        <th>❌ Genérico (Fraco)</th>
+                        <th>✅ Específico (Forte)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>"Clique aqui"</td>
+                        <td>"Quero Garantir Minha Vaga Agora"</td>
+                    </tr>
+                    <tr>
+                        <td>"Comprar"</td>
+                        <td>"Começar Minha Transformação"</td>
+                    </tr>
+                    <tr>
+                        <td>"Saiba mais"</td>
+                        <td>"Acessar o Curso com 50% OFF"</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="lp-section">
+            <h4><span class="emoji">9️⃣</span> Garantia (Reversão de Risco)</h4>
+            <p><strong>Função:</strong> Eliminar objeção "e se eu me arrepender?"</p>
+            <p><strong>Tipos de garantia:</strong></p>
+            <ul>
+                <li><strong>Garantia de 7/15/30 dias:</strong> "Se não gostar, devolvemos 100% do seu dinheiro, sem perguntas"</li>
+                <li><strong>Garantia estendida:</strong> "Garantia de 60 dias ou até terminar o curso (o que vier depois)"</li>
+                <li><strong>Garantia + bônus:</strong> "Se pedir reembolso, pode FICAR com os 3 bônus (no valor de R$ 297)"</li>
+                <li><strong>Selo visual:</strong> Badge "Garantia Incondicional de 30 Dias" com ícone de escudo</li>
+            </ul>
+        </div>
+
+        <div class="lp-section">
+            <h4><span class="emoji">🔟</span> FAQ (Perguntas Frequentes)</h4>
+            <p><strong>Função:</strong> Antecipar e responder objeções antes que surjam</p>
+            <p><strong>Perguntas essenciais:</strong></p>
+            <ul>
+                <li>"Para quem é este curso?" / "Para quem NÃO é?"</li>
+                <li>"Preciso de experiência prévia?"</li>
+                <li>"Quanto tempo para ver resultados?"</li>
+                <li>"O que acontece após a compra?"</li>
+                <li>"Como funciona a garantia?"</li>
+                <li>"Posso parcelar?"</li>
+                <li>"Recebo certificado?"</li>
+                <li>"Tem suporte?"</li>
+            </ul>
+        </div>
+
+        <div class="lp-section">
+            <h4><span class="emoji">1️⃣1️⃣</span> Urgência e Escassez</h4>
+            <p><strong>Função:</strong> Fazer agir AGORA (não "vou pensar e volto depois")</p>
+            <p><strong>Gatilhos de urgência:</strong></p>
+            <ul>
+                <li><strong>Countdown timer:</strong> "Oferta expira em: [02:47:32]"</li>
+                <li><strong>Vagas limitadas:</strong> "Restam apenas 7 vagas nesta turma"</li>
+                <li><strong>Bônus temporário:</strong> "Bônus X desaparece em 24h"</li>
+                <li><strong>Preço progressivo:</strong> "Preço sobe R$ 50 a cada 10 vendas"</li>
+            </ul>
+            <p><strong>⚠️ ATENÇÃO:</strong> Urgência FALSA destrói credibilidade. Use apenas se for real!</p>
+        </div>
+
+        <div class="lp-section">
+            <h4><span class="emoji">1️⃣2️⃣</span> Sobre o Autor/Empresa</h4>
+            <p><strong>Função:</strong> Estabelecer autoridade e conexão</p>
+            <p><strong>O que incluir:</strong></p>
+            <ul>
+                <li>Foto profissional (não casual demais)</li>
+                <li>Mini-biografia (3-5 linhas)</li>
+                <li>Credenciais relevantes (não listar tudo)</li>
+                <li>Conexão emocional ("Eu já estive no seu lugar...")</li>
+            </ul>
+        </div>
+
+        <h2>🎨 Design e UX: Princípios de Conversão</h2>
+
+        <div class="element-grid">
+            <div class="element-card">
+                <h4>🎯 Hierarquia Visual</h4>
+                <p>O olho segue uma ordem natural:</p>
+                <ol>
+                    <li>Headline (maior, negrito)</li>
+                    <li>Hero image/video</li>
+                    <li>CTA (contraste forte)</li>
+                    <li>Benefícios</li>
+                    <li>Prova social</li>
+                </ol>
+            </div>
+
+            <div class="element-card">
+                <h4>🎨 Paleta de Cores</h4>
+                <p><strong>Fundo:</strong> Branco/cinza claro (legibilidade)</p>
+                <p><strong>Títulos:</strong> Azul escuro/preto</p>
+                <p><strong>CTA:</strong> Verde/laranja/vermelho (contraste)</p>
+                <p><strong>Evite:</strong> Mais de 3 cores principais</p>
+            </div>
+
+            <div class="element-card">
+                <h4>📱 Mobile First</h4>
+                <p>60%+ acessam de mobile</p>
+                <p><strong>Regras:</strong></p>
+                <ul>
+                    <li>Botões grandes (mínimo 44x44px)</li>
+                    <li>Texto legível (mínimo 16px)</li>
+                    <li>Sem hover (não funciona no touch)</li>
+                </ul>
+            </div>
+
+            <div class="element-card">
+                <h4>⚡ Velocidade</h4>
+                <p><strong>Meta:</strong> Carregar em < 3 segundos</p>
+                <p><strong>Como:</strong></p>
+                <ul>
+                    <li>Comprimir imagens (TinyPNG)</li>
+                    <li>Hospedar vídeo no YouTube/Vimeo</li>
+                    <li>Evitar muitos scripts/plugins</li>
+                </ul>
+            </div>
+
+            <div class="element-card">
+                <h4>👁️ Eye-tracking</h4>
+                <p>Padrão "F" de leitura:</p>
+                <ul>
+                    <li>Scanneiam topo horizontalmente</li>
+                    <li>Descem lado esquerdo verticalmente</li>
+                    <li><strong>Ação:</strong> Coloque info importante na esquerda e topo</li>
+                </ul>
+            </div>
+
+            <div class="element-card">
+                <h4>🔒 Trust Signals</h4>
+                <p>Sinais de confiança:</p>
+                <ul>
+                    <li>SSL (cadeado verde na URL)</li>
+                    <li>Selos: "Site Seguro", "Pag Seguro"</li>
+                    <li>Formas de pagamento aceitas</li>
+                    <li>Dados de contato reais</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>🛠️ Ferramentas para Criar Landing Pages (2025)</h2>
+
+        <table class="lp-table">
+            <thead>
+                <tr>
+                    <th>Ferramenta</th>
+                    <th>Melhor Para</th>
+                    <th>Preço</th>
+                    <th>Curva de Aprendizado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Kiwify</strong></td>
+                    <td>Vender infoprodutos (já tem checkout integrado)</td>
+                    <td>Gratuito (só paga taxa por venda)</td>
+                    <td>Fácil ⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><strong>Elementor (WordPress)</strong></td>
+                    <td>Liberdade total de design, sites complexos</td>
+                    <td>Gratuito (Pro: $59/ano)</td>
+                    <td>Média ⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><strong>Unbounce</strong></td>
+                    <td>Testes A/B avançados, agências</td>
+                    <td>A partir de $90/mês</td>
+                    <td>Média ⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><strong>Leadpages</strong></td>
+                    <td>Iniciantes, templates prontos</td>
+                    <td>A partir de $37/mês</td>
+                    <td>Fácil ⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><strong>Systeme.io (Brasileiro)</strong></td>
+                    <td>Landing page + funil + e-mail em 1 plataforma</td>
+                    <td>Gratuito até 2.000 contatos</td>
+                    <td>Fácil ⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><strong>Wix / Webflow</strong></td>
+                    <td>Sites completos + landing pages</td>
+                    <td>R$ 39-119/mês</td>
+                    <td>Fácil (Wix) / Difícil (Webflow) ⭐⭐⭐</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>📊 Como Testar e Otimizar (Testes A/B)</h2>
+
+        <div class="highlight-box">
+            <h3>🧪 O Que Testar (Por Ordem de Impacto)</h3>
+            <ol>
+                <li><strong>Headline:</strong> Muda mais a conversão (+50-200%)</li>
+                <li><strong>CTA (texto e cor do botão):</strong> Teste verde vs laranja, "Comprar" vs "Começar Agora"</li>
+                <li><strong>Hero image/video:</strong> Com vídeo vs sem vídeo (vídeo geralmente ganha)</li>
+                <li><strong>Preço (se aplicável):</strong> R$ 197 vs 12x R$ 19,70 em destaque</li>
+                <li><strong>Tamanho do formulário:</strong> 3 campos vs 8 campos (menos = mais conversão)</li>
+                <li><strong>Prova social:</strong> Com depoimentos vs sem, vídeo vs texto</li>
+            </ol>
+        </div>
+
+        <div class="warning-box">
+            <h3>⚠️ Erros Comuns em Testes A/B</h3>
+            <ul>
+                <li><strong>Testar tudo ao mesmo tempo:</strong> Não saberá o que causou a diferença. Teste 1 elemento por vez</li>
+                <li><strong>Amostra pequena:</strong> Mínimo 100 conversões por versão para resultado confiável</li>
+                <li><strong>Parar teste cedo:</strong> Rode por pelo menos 1-2 semanas ou até significância estatística</li>
+                <li><strong>Não documentar:</strong> Registre todos os testes (planilha) para não repetir</li>
+            </ul>
+        </div>
+
+        <div class="tip-box">
+            <h3>🎯 Métricas para Acompanhar</h3>
+            <table class="lp-table">
+                <thead>
+                    <tr>
+                        <th>Métrica</th>
+                        <th>Como Calcular</th>
+                        <th>Benchmark</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Taxa de Conversão</strong></td>
+                        <td>Conversões ÷ Visitantes × 100</td>
+                        <td>10-40% (LP otimizada)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Taxa de Rejeição</strong></td>
+                        <td>% que sai sem interagir</td>
+                        <td>< 40% (ideal)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tempo na Página</strong></td>
+                        <td>Média de minutos</td>
+                        <td>2-4 min (indica leitura)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scroll Depth</strong></td>
+                        <td>% que rolam até o final</td>
+                        <td>> 70% leram tudo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cliques no CTA</strong></td>
+                        <td>Cliques ÷ Visitantes × 100</td>
+                        <td>> 20% (interesse alto)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="exercise-box">
+            <h3>🎯 EXERCÍCIO PRÁTICO</h3>
+            <ol>
+                <li><strong>Escolha uma ferramenta:</strong> Recomendo Kiwify (gratuito) ou Elementor se já tem WordPress</li>
+                <li><strong>Escreva sua headline usando a fórmula:</strong> [Resultado] + [Tempo] + [Para Quem]</li>
+                <li><strong>Liste 5 benefícios principais:</strong> Transforme características em benefícios</li>
+                <li><strong>Colete 3 depoimentos:</strong> Se ainda não tem, ofereça produto/serviço de graça para primeiros clientes em troca de depoimento</li>
+                <li><strong>Crie sua primeira LP:</strong> Use template pronto da ferramenta, preencha com seu conteúdo</li>
+                <li><strong>Instale Google Analytics:</strong> Rastreie visitantes e conversões (vamos ver em detalhes na próxima aula)</li>
+                <li><strong>Teste por 7 dias:</strong> Envie 100-200 visitantes (ads, redes sociais). Anote taxa de conversão</li>
+                <li><strong>Otimize 1 elemento:</strong> Mude headline OU CTA. Compare resultados</li>
+            </ol>
+        </div>
+
+        <div class="footer">
+            <p><strong>Próxima Aula:</strong> WhatsApp Business e Automação</p>
+            <p>Marketing Digital do Zero ao Pro • 2025</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Cursos Certificados - Transforme Sua Carreira com Cursos Online</title>
+    <meta name="description" content="Cursos online profissionalizantes com certificados reconhecidos. Marketing Digital, Excel, Design, Programação e muito mais. Acesso vitalício e suporte especializado.">
+    <meta name="keywords" content="cursos online, certificados, educação online, cursos profissionalizantes">
+    <link rel="canonical" href="https://cursoscertificados.com.br/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Cursos Certificados - Educação Online de Qualidade">
+    <meta property="og:description" content="Transforme sua carreira com nossos cursos online certificados.">
+    <meta property="og:image" content="og-image.jpg">
+    <meta property="og:url" content="https://cursoscertificados.com.br/">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1E40AF',
+                        'accent-orange': '#F59E0B',
+                        'success-green': '#10B981',
+                        'dark-navy': '#1E3A8A',
+                        'light-blue': '#3B82F6',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gradient-primary {
+            background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%);
+        }
+
+        .gradient-hero {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.95) 0%, rgba(59, 130, 246, 0.95) 100%),
+                        url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&h=900&fit=crop') center/cover;
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .course-image {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .stats-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+            .mobile-menu.active {
+                max-height: 500px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- HEADER -->
+    <header class="gradient-primary text-white sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold font-poppins">
+                    📚 Cursos Certificados
+                </div>
+
+                <ul class="hidden md:flex items-center space-x-8 font-inter font-medium">
+                    <li><a href="#inicio" class="hover:text-accent-orange transition">Início</a></li>
+                    <li><a href="#cursos" class="hover:text-accent-orange transition">Cursos</a></li>
+                    <li><a href="#sobre" class="hover:text-accent-orange transition">Sobre</a></li>
+                    <li><a href="#contato" class="hover:text-accent-orange transition">Contato</a></li>
+                </ul>
+
+                <a href="#" class="hidden md:block bg-accent-orange text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-600 transition">
+                    Área do Aluno
+                </a>
+
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu md:hidden mt-4">
+                <ul class="flex flex-col space-y-4 font-inter font-medium">
+                    <li><a href="#inicio" class="block hover:text-accent-orange transition">Início</a></li>
+                    <li><a href="#cursos" class="block hover:text-accent-orange transition">Cursos</a></li>
+                    <li><a href="#sobre" class="block hover:text-accent-orange transition">Sobre</a></li>
+                    <li><a href="#contato" class="block hover:text-accent-orange transition">Contato</a></li>
+                    <li><a href="#" class="block bg-accent-orange text-white px-6 py-2 rounded-full text-center font-semibold">Área do Aluno</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="gradient-hero text-white py-24 lg:py-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in">
+                    Conquiste Sua Certificação Profissional
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-95">
+                    Cursos online de alta qualidade com certificados reconhecidos nacionalmente
+                </p>
+                <p class="text-lg mb-10 opacity-90">
+                    Acesso vitalício • Suporte especializado • Aprenda no seu ritmo
+                </p>
+                <a href="#cursos" class="inline-block bg-accent-orange text-white text-xl font-bold px-12 py-5 rounded-full shadow-2xl hover:scale-105 transition-all duration-300">
+                    Ver Todos os Cursos
+                </a>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+                    <div class="stats-card rounded-xl p-6">
+                        <div class="text-4xl font-bold mb-2">10k+</div>
+                        <div class="text-sm opacity-90">Alunos Certificados</div>
+                    </div>
+                    <div class="stats-card rounded-xl p-6">
+                        <div class="text-4xl font-bold mb-2">4.9</div>
+                        <div class="text-sm opacity-90">Avaliação Média</div>
+                    </div>
+                    <div class="stats-card rounded-xl p-6">
+                        <div class="text-4xl font-bold mb-2">15+</div>
+                        <div class="text-sm opacity-90">Cursos Disponíveis</div>
+                    </div>
+                    <div class="stats-card rounded-xl p-6">
+                        <div class="text-4xl font-bold mb-2">100%</div>
+                        <div class="text-sm opacity-90">Online</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURSOS SECTION -->
+    <section id="cursos" class="py-16 lg:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark-navy mb-4 font-poppins">
+                    Nossos Cursos Profissionalizantes
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Escolha o curso perfeito para impulsionar sua carreira e alcançar seus objetivos profissionais
+                </p>
+            </div>
+
+            <!-- Grid de Cursos -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+                <!-- CURSO 1: Marketing Digital -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Marketing Digital" class="course-image w-full">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-red-100 text-red-600 text-xs font-bold px-3 py-1 rounded-full">🔥 MAIS VENDIDO</span>
+                            <span class="text-yellow-500">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 font-poppins">Marketing Digital do Zero ao Pro</h3>
+                        <p class="text-gray-600 mb-4">Domine as estratégias mais lucrativas do marketing digital. Instagram, Facebook Ads, Google Ads, tráfego pago e muito mais.</p>
+                        <ul class="space-y-2 mb-6 text-sm text-gray-700">
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> 40 horas de conteúdo</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> 26 aulas em PDF</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> 7 bônus exclusivos</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Certificado reconhecido</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-400 line-through text-sm">R$ 497</span>
+                                <div class="text-3xl font-bold text-primary-blue">R$ 197</div>
+                                <span class="text-sm text-gray-600">ou 12x de R$ 19,70</span>
+                            </div>
+                        </div>
+                        <a href="curso-marketing-digital.html" class="block mt-6 bg-primary-blue text-white text-center py-3 rounded-lg font-bold hover:bg-blue-800 transition">
+                            Ver Detalhes
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CURSO 2: Excel Avançado -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Excel Avançado" class="course-image w-full">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-blue-100 text-blue-600 text-xs font-bold px-3 py-1 rounded-full">⭐ RECOMENDADO</span>
+                            <span class="text-yellow-500">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 font-poppins">Excel Avançado & Power BI</h3>
+                        <p class="text-gray-600 mb-4">Do básico ao avançado. Dashboards profissionais, fórmulas complexas, macros e análise de dados para o mercado de trabalho.</p>
+                        <ul class="space-y-2 mb-6 text-sm text-gray-700">
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> 50 horas de conteúdo</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Planilhas práticas</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Power BI incluído</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Certificado reconhecido</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-400 line-through text-sm">R$ 397</span>
+                                <div class="text-3xl font-bold text-primary-blue">R$ 147</div>
+                                <span class="text-sm text-gray-600">ou 12x de R$ 14,29</span>
+                            </div>
+                        </div>
+                        <a href="#" class="block mt-6 bg-primary-blue text-white text-center py-3 rounded-lg font-bold hover:bg-blue-800 transition">
+                            Ver Detalhes
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CURSO 3: Design Gráfico -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&h=400&fit=crop" alt="Design Gráfico" class="course-image w-full">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-purple-100 text-purple-600 text-xs font-bold px-3 py-1 rounded-full">🎨 CRIATIVO</span>
+                            <span class="text-yellow-500">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 font-poppins">Design Gráfico com Canva</h3>
+                        <p class="text-gray-600 mb-4">Crie designs profissionais mesmo sem experiência. Logotipos, posts para redes sociais, banners e identidade visual completa.</p>
+                        <ul class="space-y-2 mb-6 text-sm text-gray-700">
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> 35 horas de conteúdo</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> 100+ templates</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Projetos práticos</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Certificado reconhecido</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-400 line-through text-sm">R$ 347</span>
+                                <div class="text-3xl font-bold text-primary-blue">R$ 127</div>
+                                <span class="text-sm text-gray-600">ou 12x de R$ 12,29</span>
+                            </div>
+                        </div>
+                        <a href="#" class="block mt-6 bg-primary-blue text-white text-center py-3 rounded-lg font-bold hover:bg-blue-800 transition">
+                            Ver Detalhes
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CURSO 4: Programação Web -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop" alt="Programação Web" class="course-image w-full">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-green-100 text-green-600 text-xs font-bold px-3 py-1 rounded-full">💻 TECH</span>
+                            <span class="text-yellow-500">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 font-poppins">Desenvolvimento Web Completo</h3>
+                        <p class="text-gray-600 mb-4">HTML, CSS, JavaScript, React e Node.js. Do zero ao primeiro projeto profissional no mercado de tecnologia.</p>
+                        <ul class="space-y-2 mb-6 text-sm text-gray-700">
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> 60 horas de conteúdo</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Projetos reais</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Mentoria de carreira</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Certificado reconhecido</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-400 line-through text-sm">R$ 697</span>
+                                <div class="text-3xl font-bold text-primary-blue">R$ 297</div>
+                                <span class="text-sm text-gray-600">ou 12x de R$ 28,83</span>
+                            </div>
+                        </div>
+                        <a href="#" class="block mt-6 bg-primary-blue text-white text-center py-3 rounded-lg font-bold hover:bg-blue-800 transition">
+                            Ver Detalhes
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CURSO 5: Copywriting -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=400&fit=crop" alt="Copywriting" class="course-image w-full">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-yellow-100 text-yellow-600 text-xs font-bold px-3 py-1 rounded-full">✍️ VENDAS</span>
+                            <span class="text-yellow-500">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 font-poppins">Copywriting Persuasivo</h3>
+                        <p class="text-gray-600 mb-4">Escreva textos que vendem. Técnicas comprovadas de persuasão, gatilhos mentais e copywriting para vendas online.</p>
+                        <ul class="space-y-2 mb-6 text-sm text-gray-700">
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> 30 horas de conteúdo</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> 200+ exemplos</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Scripts prontos</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Certificado reconhecido</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-400 line-through text-sm">R$ 447</span>
+                                <div class="text-3xl font-bold text-primary-blue">R$ 177</div>
+                                <span class="text-sm text-gray-600">ou 12x de R$ 17,17</span>
+                            </div>
+                        </div>
+                        <a href="#" class="block mt-6 bg-primary-blue text-white text-center py-3 rounded-lg font-bold hover:bg-blue-800 transition">
+                            Ver Detalhes
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CURSO 6: Inteligência Artificial -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop" alt="Inteligência Artificial" class="course-image w-full">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-indigo-100 text-indigo-600 text-xs font-bold px-3 py-1 rounded-full">🤖 NOVO</span>
+                            <span class="text-yellow-500">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 font-poppins">IA para Negócios</h3>
+                        <p class="text-gray-600 mb-4">Use Inteligência Artificial e automação para multiplicar sua produtividade. ChatGPT, MidJourney e ferramentas práticas.</p>
+                        <ul class="space-y-2 mb-6 text-sm text-gray-700">
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> 25 horas de conteúdo</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Ferramentas de IA</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Casos práticos</li>
+                            <li class="flex items-center"><span class="text-success-green mr-2">✓</span> Certificado reconhecido</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-400 line-through text-sm">R$ 397</span>
+                                <div class="text-3xl font-bold text-primary-blue">R$ 147</div>
+                                <span class="text-sm text-gray-600">ou 12x de R$ 14,29</span>
+                            </div>
+                        </div>
+                        <a href="#" class="block mt-6 bg-primary-blue text-white text-center py-3 rounded-lg font-bold hover:bg-blue-800 transition">
+                            Ver Detalhes
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NÓS -->
+    <section id="sobre" class="py-16 lg:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=600&fit=crop" alt="Estudantes aprendendo" class="rounded-2xl shadow-2xl">
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark-navy mb-6 font-poppins">
+                        Por Que Somos a Melhor Escolha Para Sua Educação?
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Somos uma plataforma dedicada a transformar vidas através da educação online de qualidade. Nossos cursos são desenvolvidos por especialistas do mercado e atualizados constantemente para refletir as tendências mais recentes.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-success-green text-2xl mr-3">✓</span>
+                            <div>
+                                <strong class="text-gray-900">Certificados Reconhecidos</strong>
+                                <p class="text-gray-600">Válidos em todo território nacional</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-success-green text-2xl mr-3">✓</span>
+                            <div>
+                                <strong class="text-gray-900">Acesso Vitalício</strong>
+                                <p class="text-gray-600">Estude quando e onde quiser, sem prazo</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-success-green text-2xl mr-3">✓</span>
+                            <div>
+                                <strong class="text-gray-900">Suporte Dedicado</strong>
+                                <p class="text-gray-600">Tire dúvidas com nossos especialistas</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-success-green text-2xl mr-3">✓</span>
+                            <div>
+                                <strong class="text-gray-900">Garantia de 7 Dias</strong>
+                                <p class="text-gray-600">100% do seu dinheiro de volta</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#cursos" class="inline-block bg-accent-orange text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition">
+                        Começar Agora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="py-16 lg:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-dark-navy mb-16 font-poppins">
+                O Que Nossos Alunos Dizem
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-yellow-500 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-700 mb-6 italic">"O curso de Marketing Digital transformou meu negócio. Em 3 meses já estava gerando resultados incríveis!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary-blue to-light-blue rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            MS
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Maria Silva</p>
+                            <p class="text-sm text-gray-600">Empreendedora Digital</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-yellow-500 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-700 mb-6 italic">"Consegui minha promoção depois de concluir o curso de Excel. O conteúdo é extremamente prático!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary-blue to-light-blue rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            JP
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">João Pedro</p>
+                            <p class="text-sm text-gray-600">Analista Financeiro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-yellow-500 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-700 mb-6 italic">"Nunca pensei que conseguiria criar designs tão profissionais. O curso de Design mudou minha carreira!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary-blue to-light-blue rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            AC
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Ana Costa</p>
+                            <p class="text-sm text-gray-600">Designer Freelancer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="gradient-primary text-white py-16 lg:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 font-poppins">
+                Pronto Para Transformar Sua Carreira?
+            </h2>
+            <p class="text-xl mb-10 opacity-95 max-w-2xl mx-auto">
+                Junte-se a mais de 10.000 alunos que já conquistaram seus objetivos profissionais
+            </p>
+            <a href="#cursos" class="inline-block bg-accent-orange text-white text-xl font-bold px-12 py-5 rounded-full shadow-2xl hover:scale-105 transition-all duration-300">
+                Escolher Meu Curso Agora
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark-navy text-gray-100 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-12 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-white font-poppins">📚 Cursos Certificados</h3>
+                    <p class="text-gray-300 mb-4">Plataforma online de cursos profissionalizantes com certificados reconhecidos nacionalmente.</p>
+                    <p class="text-gray-400 text-sm">
+                        <strong>Email:</strong><br>
+                        contato@cursoscertificados.com.br
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-white font-poppins">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#cursos" class="text-gray-300 hover:text-accent-orange transition">Todos os Cursos</a></li>
+                        <li><a href="#sobre" class="text-gray-300 hover:text-accent-orange transition">Sobre Nós</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent-orange transition">Política de Privacidade</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent-orange transition">Termos de Uso</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-white font-poppins">Redes Sociais</h4>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/cursoscertificados/" target="_blank" rel="noopener" class="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-500 rounded-full flex items-center justify-center hover:scale-110 transition" title="Instagram">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/cursoscertificados/" target="_blank" rel="noopener" class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:scale-110 transition" title="Facebook">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@cursoscertificados" target="_blank" rel="noopener" class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center hover:scale-110 transition" title="YouTube">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 Cursos Certificados. Todos os direitos reservados.</p>
+                <p class="mt-2">CNPJ: XX.XXX.XXX/XXXX-XX | Certificados reconhecidos nacionalmente</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Menu Mobile Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

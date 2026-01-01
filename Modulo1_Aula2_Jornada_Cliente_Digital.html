@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1.2 - Jornada do Cliente Digital</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #fff;
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            color: #1E40AF;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 32px;
+            border-bottom: 4px solid #F59E0B;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #1E3A8A;
+            margin-top: 40px;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #3B82F6;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: white;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .destaque {
+            background: #FEF3C7;
+            border-left: 5px solid #F59E0B;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .importante {
+            background: #DBEAFE;
+            border-left: 5px solid #1E40AF;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .dica {
+            background: #D1FAE5;
+            border-left: 5px solid #10B981;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .exemplo {
+            background: #F3F4F6;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #E5E7EB;
+        }
+
+        .exemplo h4 {
+            color: #F59E0B;
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+
+        th {
+            background: #1E40AF;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        td {
+            border: 1px solid #E5E7EB;
+            padding: 12px;
+        }
+
+        tr:nth-child(even) {
+            background: #F9FAFB;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #E5E7EB;
+            text-align: center;
+            color: #6B7280;
+            font-size: 14px;
+        }
+
+        .exercicio {
+            background: #FEF2F2;
+            border: 2px dashed #EF4444;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .exercicio h3 {
+            color: #DC2626;
+            margin-top: 0;
+        }
+
+        .checklist {
+            background: white;
+            border: 2px solid #10B981;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .checklist li {
+            list-style: none;
+        }
+
+        .checklist li:before {
+            content: "✓ ";
+            color: #10B981;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .etapa {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        .etapa h3 {
+            color: #FEF3C7;
+            margin-top: 0;
+        }
+
+        .etapa p {
+            color: white;
+        }
+
+        @media print {
+            body {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>🛤️ AULA 1.2 - JORNADA DO CLIENTE DIGITAL</h1>
+        <p>Módulo 1: Fundamentos do Marketing Digital | Curso: Marketing Digital do Zero ao Pro</p>
+        <p>Carga Horária: 2 horas | Cursos Certificados © 2026</p>
+    </div>
+
+    <h2>🎯 Objetivos da Aula</h2>
+    <div class="checklist">
+        <ul>
+            <li>Entender as 5 etapas da jornada do cliente digital</li>
+            <li>Aprender a mapear a jornada do seu público-alvo</li>
+            <li>Criar estratégias específicas para cada etapa</li>
+            <li>Identificar pontos de contato com o cliente</li>
+            <li>Otimizar a experiência do cliente em cada fase</li>
+        </ul>
+    </div>
+
+    <h2>📚 1. O Que É a Jornada do Cliente?</h2>
+
+    <p>A <strong>Jornada do Cliente</strong> (ou <em>Customer Journey</em>) é o caminho que uma pessoa percorre desde o primeiro contato com sua marca até se tornar um cliente fiel e promotor do seu negócio.</p>
+
+    <p>No ambiente digital, essa jornada acontece principalmente online: nas redes sociais, Google, email, WhatsApp, site, etc. Entender cada etapa é fundamental para criar estratégias de marketing eficazes.</p>
+
+    <div class="importante">
+        <h3>💡 Por Que É Importante?</h3>
+        <p>Conhecer a jornada do cliente permite que você:</p>
+        <ul>
+            <li>Crie conteúdo certo, para a pessoa certa, no momento certo</li>
+            <li>Evite desperdiçar dinheiro tentando vender para quem ainda não está pronto</li>
+            <li>Aumente suas taxas de conversão</li>
+            <li>Melhore a experiência do cliente</li>
+            <li>Construa relacionamentos duradouros</li>
+        </ul>
+    </div>
+
+    <h2>🛤️ 2. As 5 Etapas da Jornada do Cliente Digital</h2>
+
+    <div class="etapa">
+        <h3>ETAPA 1: DESCOBERTA (AWARENESS)</h3>
+        <p><strong>O que acontece:</strong> O cliente descobre que tem um problema ou necessidade. Ele ainda não conhece sua marca ou solução.</p>
+        <p><strong>Estado mental:</strong> "Tenho um problema, mas não sei como resolver."</p>
+        <p><strong>Objetivo do marketing:</strong> Ser encontrado e gerar consciência sobre o problema.</p>
+    </div>
+
+    <p><strong>Características da Etapa de Descoberta:</strong></p>
+    <ul>
+        <li>O cliente ainda não procura por soluções específicas</li>
+        <li>Está pesquisando, aprendendo, se informando</li>
+        <li>Não está pronto para comprar</li>
+        <li>Precisa de conteúdo educativo e informativo</li>
+    </ul>
+
+    <p><strong>Estratégias para Descoberta:</strong></p>
+    <ul>
+        <li><strong>SEO:</strong> Aparecer no Google quando o cliente pesquisa sobre o problema</li>
+        <li><strong>Blog:</strong> Artigos educativos sobre o tema</li>
+        <li><strong>Redes Sociais:</strong> Posts informativos, carrosséis, infográficos</li>
+        <li><strong>YouTube:</strong> Vídeos educativos</li>
+        <li><strong>Anúncios de Reconhecimento:</strong> Tráfego pago para alcançar novas pessoas</li>
+    </ul>
+
+    <div class="exemplo">
+        <h4>📊 Exemplo Prático - Descoberta</h4>
+        <p><strong>Nicho:</strong> Academia de Ginástica</p>
+        <p><strong>Problema do cliente:</strong> "Estou me sentindo cansado e com baixa energia"</p>
+        <p><strong>Conteúdo:</strong> Post no Instagram com o título "7 Sinais de Que Você Precisa Se Exercitar Mais"</p>
+        <p><strong>Resultado:</strong> A pessoa descobre que exercícios podem resolver o problema dela.</p>
+    </div>
+
+    <div class="etapa">
+        <h3>ETAPA 2: CONSIDERAÇÃO (CONSIDERATION)</h3>
+        <p><strong>O que acontece:</strong> O cliente já identificou o problema e está pesquisando soluções. Começa a comparar opções.</p>
+        <p><strong>Estado mental:</strong> "Já sei meu problema. Quais são as soluções disponíveis?"</p>
+        <p><strong>Objetivo do marketing:</strong> Educar e posicionar sua solução como a melhor opção.</p>
+    </div>
+
+    <p><strong>Características da Etapa de Consideração:</strong></p>
+    <ul>
+        <li>O cliente está comparando diferentes soluções</li>
+        <li>Pesquisa reviews, depoimentos, preços</li>
+        <li>Avalia prós e contras</li>
+        <li>Ainda não decidiu comprar, mas está mais próximo</li>
+    </ul>
+
+    <p><strong>Estratégias para Consideração:</strong></p>
+    <ul>
+        <li><strong>Comparativos:</strong> "Opção A vs. Opção B"</li>
+        <li><strong>Cases de Sucesso:</strong> Depoimentos e resultados de clientes</li>
+        <li><strong>Webinars/Lives:</strong> Aulas gratuitas mostrando sua autoridade</li>
+        <li><strong>E-books/Guias:</strong> Materiais ricos que agregam valor</li>
+        <li><strong>Email Marketing:</strong> Nutrição com conteúdo relevante</li>
+    </ul>
+
+    <div class="exemplo">
+        <h4>📊 Exemplo Prático - Consideração</h4>
+        <p><strong>Nicho:</strong> Academia de Ginástica</p>
+        <p><strong>Situação:</strong> Pessoa já sabe que precisa se exercitar, mas não decidiu onde</p>
+        <p><strong>Conteúdo:</strong> Vídeo "Como Escolher a Academia Ideal Para Você" + Tour virtual pela sua academia</p>
+        <p><strong>Resultado:</strong> A pessoa vê sua academia como uma opção viável.</p>
+    </div>
+
+    <div class="etapa">
+        <h3>ETAPA 3: DECISÃO (DECISION)</h3>
+        <p><strong>O que acontece:</strong> O cliente está pronto para comprar. Está decidindo entre você e seus concorrentes.</p>
+        <p><strong>Estado mental:</strong> "Vou comprar. Mas de quem?"</p>
+        <p><strong>Objetivo do marketing:</strong> Converter! Mostrar que você é a melhor escolha.</p>
+    </div>
+
+    <p><strong>Características da Etapa de Decisão:</strong></p>
+    <ul>
+        <li>O cliente está com a "carteira na mão"</li>
+        <li>Procura por preços, condições, garantias</li>
+        <li>Pequenos detalhes fazem diferença</li>
+        <li>Precisa de um empurrãozinho final</li>
+    </ul>
+
+    <p><strong>Estratégias para Decisão:</strong></p>
+    <ul>
+        <li><strong>Ofertas Especiais:</strong> Desconto, bônus, frete grátis</li>
+        <li><strong>Urgência e Escassez:</strong> "Últimas vagas", "Oferta até meia-noite"</li>
+        <li><strong>Garantia:</strong> "7 dias para testar, se não gostar, devolvemos seu dinheiro"</li>
+        <li><strong>Depoimentos Específicos:</strong> "Eu estava na dúvida entre X e Y, escolhi e não me arrependi"</li>
+        <li><strong>Página de Vendas:</strong> Landing page otimizada para conversão</li>
+        <li><strong>Retargeting:</strong> Anúncios para quem já visitou seu site</li>
+    </ul>
+
+    <div class="exemplo">
+        <h4>📊 Exemplo Prático - Decisão</h4>
+        <p><strong>Nicho:</strong> Academia de Ginástica</p>
+        <p><strong>Situação:</strong> Pessoa já decidiu se matricular, está comparando academias</p>
+        <p><strong>Conteúdo:</strong> Oferta "Matricule-se hoje e ganhe 1 mês grátis + Avaliação Física + Kit Boas-vindas"</p>
+        <p><strong>Resultado:</strong> A pessoa escolhe sua academia e se matricula.</p>
+    </div>
+
+    <div class="etapa">
+        <h3>ETAPA 4: RETENÇÃO (RETENTION)</h3>
+        <p><strong>O que acontece:</strong> O cliente já comprou. Agora é importante mantê-lo satisfeito e engajado.</p>
+        <p><strong>Estado mental:</strong> "Fiz uma boa escolha? Vale a pena continuar?"</p>
+        <p><strong>Objetivo do marketing:</strong> Garantir satisfação, evitar cancelamentos e aumentar o LTV (Lifetime Value).</p>
+    </div>
+
+    <p><strong>Características da Etapa de Retenção:</strong></p>
+    <ul>
+        <li>Cliente já pagou, mas pode desistir/cancelar</li>
+        <li>Precisa ver resultados e valor</li>
+        <li>Requer suporte, atenção e cuidado</li>
+        <li>É mais barato reter do que conquistar novos clientes</li>
+    </ul>
+
+    <p><strong>Estratégias para Retenção:</strong></p>
+    <ul>
+        <li><strong>Onboarding:</strong> Boas-vindas bem estruturadas, tutorial de uso</li>
+        <li><strong>Suporte de Qualidade:</strong> Responder rápido, resolver problemas</li>
+        <li><strong>Conteúdo Exclusivo:</strong> Materiais extras, atualizações, novidades</li>
+        <li><strong>Comunidade:</strong> Grupo VIP no WhatsApp/Telegram</li>
+        <li><strong>Pesquisas de Satisfação:</strong> "Como podemos melhorar?"</li>
+        <li><strong>Programa de Fidelidade:</strong> Recompensas, pontos, benefícios</li>
+    </ul>
+
+    <div class="exemplo">
+        <h4>📊 Exemplo Prático - Retenção</h4>
+        <p><strong>Nicho:</strong> Academia de Ginástica</p>
+        <p><strong>Situação:</strong> Aluno matriculado, mas pode cancelar se não ver resultados</p>
+        <p><strong>Estratégia:</strong> Acompanhamento mensal com personal, app para rastrear progresso, desafios entre alunos</p>
+        <p><strong>Resultado:</strong> Aluno mantém a matrícula e renova mensalmente.</p>
+    </div>
+
+    <div class="etapa">
+        <h3>ETAPA 5: ADVOCACIA (ADVOCACY)</h3>
+        <p><strong>O que acontece:</strong> O cliente está tão satisfeito que se torna um promotor da marca, indicando para amigos.</p>
+        <p><strong>Estado mental:</strong> "Isso é incrível! Preciso contar para todo mundo!"</p>
+        <p><strong>Objetivo do marketing:</strong> Transformar clientes em embaixadores e gerar marketing boca a boca.</p>
+    </div>
+
+    <p><strong>Características da Etapa de Advocacia:</strong></p>
+    <ul>
+        <li>Cliente extremamente satisfeito</li>
+        <li>Defende sua marca espontaneamente</li>
+        <li>Indica para amigos e familiares</li>
+        <li>É o melhor tipo de marketing: gratuito e autêntico</li>
+    </ul>
+
+    <p><strong>Estratégias para Advocacia:</strong></p>
+    <ul>
+        <li><strong>Programa de Indicação:</strong> "Indique um amigo e ganhe R$ 50"</li>
+        <li><strong>Depoimentos em Vídeo:</strong> Peça para clientes satisfeitos gravarem</li>
+        <li><strong>Cases de Sucesso:</strong> Mostre resultados incríveis</li>
+        <li><strong>Avaliações Online:</strong> Incentive reviews no Google, Facebook</li>
+        <li><strong>Recompensas:</strong> Brindes, descontos, acesso VIP para embaixadores</li>
+        <li><strong>UGC (User Generated Content):</strong> Compartilhe fotos/vídeos dos clientes</li>
+    </ul>
+
+    <div class="exemplo">
+        <h4>📊 Exemplo Prático - Advocacia</h4>
+        <p><strong>Nicho:</strong> Academia de Ginástica</p>
+        <p><strong>Situação:</strong> Aluno perdeu 15kg, está super feliz com os resultados</p>
+        <p><strong>Estratégia:</strong> Pedir depoimento em vídeo, oferecer 1 mês grátis para cada amigo que ele indicar</p>
+        <p><strong>Resultado:</strong> O aluno indica 5 amigos, você ganha 5 novos clientes sem custo de aquisição.</p>
+    </div>
+
+    <h2>📊 3. Mapeando a Jornada do SEU Cliente</h2>
+
+    <p>Agora que você conhece as 5 etapas, é hora de mapear a jornada específica do seu público. Siga este processo:</p>
+
+    <div class="importante">
+        <h3>🗺️ Passo a Passo para Mapear a Jornada</h3>
+
+        <p><strong>PASSO 1: Defina seu Cliente Ideal (Persona)</strong></p>
+        <ul>
+            <li>Quem é? (idade, profissão, renda)</li>
+            <li>Quais são suas dores e desejos?</li>
+            <li>Onde ele está online? (Instagram, YouTube, Google?)</li>
+        </ul>
+
+        <p><strong>PASSO 2: Identifique os Pontos de Contato</strong></p>
+        <ul>
+            <li>Como ele descobre você? (Google, indicação, anúncio?)</li>
+            <li>Onde ele interage com você? (DM, site, WhatsApp?)</li>
+            <li>Quais canais ele usa mais?</li>
+        </ul>
+
+        <p><strong>PASSO 3: Liste as Ações de Cada Etapa</strong></p>
+        <p>Para cada etapa da jornada, defina:</p>
+        <ul>
+            <li>Que conteúdo você vai criar?</li>
+            <li>Que canais vai usar?</li>
+            <li>Que métricas vai acompanhar?</li>
+        </ul>
+
+        <p><strong>PASSO 4: Identifique Gargalos e Oportunidades</strong></p>
+        <ul>
+            <li>Onde as pessoas estão "travando"?</li>
+            <li>Qual etapa precisa de mais atenção?</li>
+            <li>O que pode ser otimizado?</li>
+        </ul>
+    </div>
+
+    <h2>📋 4. Template: Jornada do Cliente</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Etapa</th>
+                <th>Conteúdo</th>
+                <th>Canal</th>
+                <th>Objetivo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Descoberta</strong></td>
+                <td>Post educativo, blog, vídeo informativo</td>
+                <td>Instagram, YouTube, Google</td>
+                <td>Gerar consciência do problema</td>
+            </tr>
+            <tr>
+                <td><strong>Consideração</strong></td>
+                <td>E-book, webinar, comparativo</td>
+                <td>Email, landing page, YouTube</td>
+                <td>Educar sobre soluções</td>
+            </tr>
+            <tr>
+                <td><strong>Decisão</strong></td>
+                <td>Oferta, página de vendas, urgência</td>
+                <td>Anúncios, WhatsApp, checkout</td>
+                <td>Converter em cliente</td>
+            </tr>
+            <tr>
+                <td><strong>Retenção</strong></td>
+                <td>Suporte, conteúdo exclusivo, atualizações</td>
+                <td>Email, comunidade, app</td>
+                <td>Manter satisfeito</td>
+            </tr>
+            <tr>
+                <td><strong>Advocacia</strong></td>
+                <td>Programa de indicação, depoimentos</td>
+                <td>Redes sociais, email</td>
+                <td>Transformar em promotor</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="exercicio">
+        <h3>📝 EXERCÍCIO PRÁTICO</h3>
+        <p><strong>Mapeie a Jornada do SEU Cliente:</strong></p>
+
+        <p><strong>1. Qual é o seu produto/serviço?</strong></p>
+        <p>_________________________________________________________________</p>
+
+        <p><strong>2. Para cada etapa, defina:</strong></p>
+
+        <p><strong>DESCOBERTA:</strong></p>
+        <ul>
+            <li>Que problema seu cliente tem? ______________________________________</li>
+            <li>Que conteúdo você vai criar? ______________________________________</li>
+            <li>Onde vai divulgar? ______________________________________</li>
+        </ul>
+
+        <p><strong>CONSIDERAÇÃO:</strong></p>
+        <ul>
+            <li>Como educar seu cliente? ______________________________________</li>
+            <li>Que material rico pode oferecer? ______________________________________</li>
+        </ul>
+
+        <p><strong>DECISÃO:</strong></p>
+        <ul>
+            <li>Que oferta irresistível pode fazer? ______________________________________</li>
+            <li>Que garantia pode dar? ______________________________________</li>
+        </ul>
+
+        <p><strong>RETENÇÃO:</strong></p>
+        <ul>
+            <li>Como vai garantir satisfação? ______________________________________</li>
+            <li>Que suporte vai oferecer? ______________________________________</li>
+        </ul>
+
+        <p><strong>ADVOCACIA:</strong></p>
+        <ul>
+            <li>Como incentivar indicações? ______________________________________</li>
+            <li>Que recompensa pode dar? ______________________________________</li>
+        </ul>
+    </div>
+
+    <div class="dica">
+        <h3>💡 Dicas de Ouro</h3>
+        <ul>
+            <li><strong>Não pule etapas:</strong> Tentar vender para quem está na Descoberta não funciona</li>
+            <li><strong>Conteúdo é rei:</strong> Cada etapa precisa de conteúdo específico</li>
+            <li><strong>Meça tudo:</strong> Use métricas para saber o que está funcionando</li>
+            <li><strong>Seja paciente:</strong> A jornada pode levar dias, semanas ou meses</li>
+            <li><strong>Automatize:</strong> Use automação de email para nutrir leads</li>
+        </ul>
+    </div>
+
+    <h2>📚 Resumo da Aula</h2>
+
+    <div class="importante">
+        <h3>🎯 Pontos-Chave</h3>
+        <ul>
+            <li>A jornada do cliente tem 5 etapas: Descoberta, Consideração, Decisão, Retenção e Advocacia</li>
+            <li>Cada etapa requer estratégias e conteúdos diferentes</li>
+            <li>Não tente vender antes do cliente estar pronto</li>
+            <li>Reter clientes é tão importante quanto conquistar novos</li>
+            <li>Clientes promotores são o melhor tipo de marketing</li>
+            <li>Mapear a jornada ajuda a criar estratégias mais eficazes</li>
+        </ul>
+    </div>
+
+    <h2>🔜 Próxima Aula</h2>
+
+    <div class="destaque">
+        <h3>📖 Aula 1.3 - Funil de Vendas</h3>
+        <p>Na próxima aula, você vai aprender sobre funil de vendas e como aplicá-lo na prática para guiar seu cliente da descoberta até a compra.</p>
+        <p><strong>Prepare-se para:</strong></p>
+        <ul>
+            <li>Entender ToFu, MoFu e BoFu</li>
+            <li>Criar seu próprio funil de vendas</li>
+            <li>Conhecer métricas essenciais de cada etapa</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p><strong>Cursos Certificados © 2026</strong></p>
+        <p>Curso: Marketing Digital do Zero ao Pro | Módulo 1 - Fundamentos do Marketing Digital</p>
+        <p>Aula 1.2 - Jornada do Cliente Digital | Página 1 de 1</p>
+        <p>📧 Dúvidas? contato@cursoscertificados.com.br | 💬 WhatsApp: (11) 98765-4321</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1.5 - Principais Canais Digitais</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1F2937;
+            background-color: #F9FAFB;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitulo {
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #F59E0B;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #1E40AF;
+            font-size: 2em;
+            margin: 40px 0 20px 0;
+            font-weight: 700;
+            border-left: 5px solid #F59E0B;
+            padding-left: 20px;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #1E3A8A;
+            font-size: 1.5em;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-family: 'Poppins', sans-serif;
+            color: #047857;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+
+        .destaque {
+            background: #FEF3C7;
+            border-left: 5px solid #F59E0B;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .destaque strong {
+            color: #92400E;
+            font-size: 1.1em;
+        }
+
+        .importante {
+            background: #DBEAFE;
+            border-left: 5px solid #1E40AF;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .importante strong {
+            color: #1E40AF;
+            font-size: 1.1em;
+        }
+
+        .sucesso {
+            background: #D1FAE5;
+            border-left: 5px solid #10B981;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .sucesso strong {
+            color: #047857;
+            font-size: 1.1em;
+        }
+
+        ul, ol {
+            margin: 20px 0 20px 40px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        li strong {
+            color: #1E40AF;
+        }
+
+        .canal-card {
+            background: linear-gradient(135deg, #F9FAFB 0%, #FFFFFF 100%);
+            border: 3px solid #E5E7EB;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .canal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+
+        .canal-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #E5E7EB;
+        }
+
+        .canal-icon {
+            font-size: 3em;
+            margin-right: 20px;
+        }
+
+        .canal-title h3 {
+            margin: 0 0 5px 0;
+            color: #1E40AF;
+        }
+
+        .canal-subtitle {
+            color: #6B7280;
+            font-size: 0.95em;
+            font-style: italic;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .pros, .cons {
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .pros {
+            background: #D1FAE5;
+            border-left: 4px solid #10B981;
+        }
+
+        .cons {
+            background: #FEE2E2;
+            border-left: 4px solid #EF4444;
+        }
+
+        .pros h4, .cons h4 {
+            margin-top: 0;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .pros h4 {
+            color: #047857;
+        }
+
+        .cons h4 {
+            color: #991B1B;
+        }
+
+        .pros ul, .cons ul {
+            margin: 10px 0 0 20px;
+        }
+
+        .pros li, .cons li {
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+
+        .tabela {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .tabela th {
+            background: #1E40AF;
+            color: white;
+            padding: 18px;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .tabela td {
+            padding: 18px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .tabela tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tabela tr:nth-child(even) {
+            background: #F9FAFB;
+        }
+
+        .exercicio {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 12px;
+            border: 3px solid #F59E0B;
+        }
+
+        .exercicio h3 {
+            color: #92400E;
+            margin-top: 0;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 3px solid #E5E7EB;
+            text-align: center;
+            color: #6B7280;
+        }
+
+        .footer strong {
+            color: #1E40AF;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-item {
+            background: #EFF6FF;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #BFDBFE;
+        }
+
+        .stat-number {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #1E40AF;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.85em;
+            color: #6B7280;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AULA 1.5</h1>
+            <p class="subtitulo">Principais Canais Digitais</p>
+            <span class="badge">MÓDULO 1 - FUNDAMENTOS</span>
+        </div>
+
+        <h2>📱 Visão Geral dos Canais Digitais</h2>
+
+        <p>Os <strong>canais digitais</strong> são os meios pelos quais você se comunica com seu público e promove seus produtos ou serviços na internet. Cada canal tem suas características, vantagens e desvantagens.</p>
+
+        <div class="destaque">
+            <strong>💡 Regra de Ouro:</strong> Não tente estar em TODOS os canais ao mesmo tempo! É melhor dominar 1-2 canais do que estar presente em 10 de forma medíocre. Escolha os canais onde sua persona está.
+        </div>
+
+        <p>Vamos explorar os principais canais digitais, suas características e quando usar cada um:</p>
+
+        <h2>🌟 Os 10 Principais Canais Digitais</h2>
+
+        <!-- INSTAGRAM -->
+        <div class="canal-card" style="border-color: #E1306C;">
+            <div class="canal-header">
+                <div class="canal-icon">📸</div>
+                <div class="canal-title">
+                    <h3>Instagram</h3>
+                    <p class="canal-subtitle">Rede social visual focada em fotos, vídeos e stories</p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">2B+</span>
+                    <span class="stat-label">Usuários ativos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">113M</span>
+                    <span class="stat-label">Brasileiros</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">18-34</span>
+                    <span class="stat-label">Faixa etária principal</span>
+                </div>
+            </div>
+
+            <p><strong>Melhor para:</strong> Marcas visuais, e-commerce, influenciadores, coaches, serviços B2C</p>
+
+            <p><strong>Formatos principais:</strong></p>
+            <ul>
+                <li><strong>Feed:</strong> Posts permanentes (fotos/carrosséis)</li>
+                <li><strong>Stories:</strong> Conteúdo efêmero (24h)</li>
+                <li><strong>Reels:</strong> Vídeos curtos (até 90s)</li>
+                <li><strong>IGTV:</strong> Vídeos longos</li>
+                <li><strong>Lives:</strong> Transmissões ao vivo</li>
+            </ul>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Vantagens</h4>
+                    <ul>
+                        <li>Alto engajamento</li>
+                        <li>Recursos de vendas (Instagram Shopping)</li>
+                        <li>Alcance orgânico ainda existe</li>
+                        <li>Excelente para construir marca</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ Desvantagens</h4>
+                    <ul>
+                        <li>Alcance orgânico em queda</li>
+                        <li>Exige conteúdo visual de qualidade</li>
+                        <li>Algoritmo difícil de decifrar</li>
+                        <li>Tempo intensivo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="importante">
+                <strong>💰 Monetização:</strong> Venda direta (DM), link na bio, anúncios pagos (Facebook Ads), parcerias com marcas, programa de afiliados.
+            </div>
+        </div>
+
+        <!-- FACEBOOK -->
+        <div class="canal-card" style="border-color: #1877F2;">
+            <div class="canal-header">
+                <div class="canal-icon">👥</div>
+                <div class="canal-title">
+                    <h3>Facebook</h3>
+                    <p class="canal-subtitle">Maior rede social do mundo, focada em comunidade e grupos</p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">3B+</span>
+                    <span class="stat-label">Usuários ativos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">130M</span>
+                    <span class="stat-label">Brasileiros</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">25-54</span>
+                    <span class="stat-label">Faixa etária principal</span>
+                </div>
+            </div>
+
+            <p><strong>Melhor para:</strong> Negócios locais, B2B, público 35+, grupos de interesse, eventos</p>
+
+            <p><strong>Formatos principais:</strong></p>
+            <ul>
+                <li><strong>Posts:</strong> Texto, fotos, vídeos, links</li>
+                <li><strong>Stories:</strong> Conteúdo efêmero</li>
+                <li><strong>Grupos:</strong> Comunidades segmentadas</li>
+                <li><strong>Marketplace:</strong> Vendas diretas</li>
+                <li><strong>Páginas:</strong> Perfis comerciais</li>
+            </ul>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Vantagens</h4>
+                    <ul>
+                        <li>Maior base de usuários</li>
+                        <li>Grupos muito engajados</li>
+                        <li>Plataforma de anúncios poderosa</li>
+                        <li>Marketplace gratuito</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ Desvantagens</h4>
+                    <ul>
+                        <li>Alcance orgânico praticamente zero</li>
+                        <li>Público mais velho (menos jovens)</li>
+                        <li>Muita concorrência</li>
+                        <li>Imagem "ultrapassada"</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="importante">
+                <strong>💰 Monetização:</strong> Facebook Ads (anúncios), grupos pagos, vendas no Marketplace, eventos pagos, parcerias.
+            </div>
+        </div>
+
+        <!-- YOUTUBE -->
+        <div class="canal-card" style="border-color: #FF0000;">
+            <div class="canal-header">
+                <div class="canal-icon">📺</div>
+                <div class="canal-title">
+                    <h3>YouTube</h3>
+                    <p class="canal-subtitle">Maior plataforma de vídeos do mundo (segundo maior buscador)</p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">2.5B+</span>
+                    <span class="stat-label">Usuários ativos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">142M</span>
+                    <span class="stat-label">Brasileiros</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">18-49</span>
+                    <span class="stat-label">Faixa etária principal</span>
+                </div>
+            </div>
+
+            <p><strong>Melhor para:</strong> Educadores, tutoriais, reviews, entretenimento, autoridade, SEO</p>
+
+            <p><strong>Formatos principais:</strong></p>
+            <ul>
+                <li><strong>Vídeos longos:</strong> Tutoriais, vlogs, reviews</li>
+                <li><strong>Shorts:</strong> Vídeos curtos (até 60s)</li>
+                <li><strong>Lives:</strong> Transmissões ao vivo</li>
+                <li><strong>Playlists:</strong> Organização de conteúdo</li>
+            </ul>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Vantagens</h4>
+                    <ul>
+                        <li>Conteúdo perene (vídeos duram anos)</li>
+                        <li>SEO poderoso (aparece no Google)</li>
+                        <li>Monetização por anúncios</li>
+                        <li>Constrói autoridade</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ Desvantagens</h4>
+                    <ul>
+                        <li>Exige equipamento e edição</li>
+                        <li>Leva tempo para crescer</li>
+                        <li>Monetização exige 1k inscritos</li>
+                        <li>Concorrência alta</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="importante">
+                <strong>💰 Monetização:</strong> Google AdSense, patrocínios, produtos próprios, afiliados, membros (assinaturas).
+            </div>
+        </div>
+
+        <!-- TIKTOK -->
+        <div class="canal-card" style="border-color: #000000;">
+            <div class="canal-header">
+                <div class="canal-icon">🎵</div>
+                <div class="canal-title">
+                    <h3>TikTok</h3>
+                    <p class="canal-subtitle">Plataforma de vídeos curtos com algoritmo viral</p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">1.5B+</span>
+                    <span class="stat-label">Usuários ativos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">82M</span>
+                    <span class="stat-label">Brasileiros</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">16-34</span>
+                    <span class="stat-label">Faixa etária principal</span>
+                </div>
+            </div>
+
+            <p><strong>Melhor para:</strong> Público jovem, entretenimento, tendências, virais, alcance rápido</p>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Vantagens</h4>
+                    <ul>
+                        <li>Potencial viral enorme</li>
+                        <li>Alcance orgânico alto</li>
+                        <li>Crescimento rápido possível</li>
+                        <li>Público engajado</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ Desvantagens</h4>
+                    <ul>
+                        <li>Público muito jovem (Gen Z)</li>
+                        <li>Conteúdo efêmero</li>
+                        <li>Difícil converter em vendas</li>
+                        <li>Exige constância extrema</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- LINKEDIN -->
+        <div class="canal-card" style="border-color: #0A66C2;">
+            <div class="canal-header">
+                <div class="canal-icon">💼</div>
+                <div class="canal-title">
+                    <h3>LinkedIn</h3>
+                    <p class="canal-subtitle">Rede social profissional focada em B2B e carreira</p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">900M+</span>
+                    <span class="stat-label">Usuários ativos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">63M</span>
+                    <span class="stat-label">Brasileiros</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">25-54</span>
+                    <span class="stat-label">Faixa etária principal</span>
+                </div>
+            </div>
+
+            <p><strong>Melhor para:</strong> B2B, serviços profissionais, recrutamento, networking, autoridade</p>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Vantagens</h4>
+                    <ul>
+                        <li>Networking profissional</li>
+                        <li>Autoridade e credibilidade</li>
+                        <li>B2B altamente eficaz</li>
+                        <li>Alcance orgânico ainda bom</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ Desvantagens</h4>
+                    <ul>
+                        <li>Não serve para B2C casual</li>
+                        <li>Público limitado</li>
+                        <li>Anúncios caros</li>
+                        <li>Menos engajamento que outras redes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- GOOGLE (SEO) -->
+        <div class="canal-card" style="border-color: #4285F4;">
+            <div class="canal-header">
+                <div class="canal-icon">🔍</div>
+                <div class="canal-title">
+                    <h3>Google (SEO)</h3>
+                    <p class="canal-subtitle">Otimização para mecanismos de busca (tráfego orgânico)</p>
+                </div>
+            </div>
+
+            <p><strong>Melhor para:</strong> Negócios locais, e-commerce, blogs, conteúdo educativo, vendas de longo prazo</p>
+
+            <p><strong>Estratégias principais:</strong></p>
+            <ul>
+                <li><strong>Blog/Site:</strong> Artigos otimizados para palavras-chave</li>
+                <li><strong>Google Meu Negócio:</strong> Aparecer em buscas locais</li>
+                <li><strong>Link building:</strong> Autoridade de domínio</li>
+                <li><strong>SEO técnico:</strong> Velocidade, mobile, estrutura</li>
+            </ul>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Vantagens</h4>
+                    <ul>
+                        <li>Tráfego qualificado (intenção de compra)</li>
+                        <li>Gratuito (sem anúncios)</li>
+                        <li>Resultados de longo prazo</li>
+                        <li>Autoridade e credibilidade</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ Desvantagens</h4>
+                    <ul>
+                        <li>Leva tempo (6-12 meses)</li>
+                        <li>Exige conhecimento técnico</li>
+                        <li>Concorrência alta</li>
+                        <li>Algoritmo sempre mudando</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- GOOGLE ADS -->
+        <div class="canal-card" style="border-color: #FBBC04;">
+            <div class="canal-header">
+                <div class="canal-icon">🎯</div>
+                <div class="canal-title">
+                    <h3>Google Ads</h3>
+                    <p class="canal-subtitle">Anúncios pagos na busca do Google e rede de display</p>
+                </div>
+            </div>
+
+            <p><strong>Melhor para:</strong> E-commerce, serviços locais, urgência, alta intenção de compra</p>
+
+            <p><strong>Tipos de anúncios:</strong></p>
+            <ul>
+                <li><strong>Rede de Pesquisa:</strong> Anúncios de texto no Google</li>
+                <li><strong>Rede de Display:</strong> Banners em sites parceiros</li>
+                <li><strong>Shopping:</strong> Produtos com foto e preço</li>
+                <li><strong>YouTube Ads:</strong> Anúncios em vídeos</li>
+            </ul>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Vantagens</h4>
+                    <ul>
+                        <li>Alta intenção de compra</li>
+                        <li>Resultados imediatos</li>
+                        <li>Segmentação precisa</li>
+                        <li>Controle total do orçamento</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ Desvantagens</h4>
+                    <ul>
+                        <li>Pode ser caro (CPC alto)</li>
+                        <li>Exige conhecimento técnico</li>
+                        <li>Concorrência feroz</li>
+                        <li>Para ao parar de pagar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- EMAIL MARKETING -->
+        <div class="canal-card" style="border-color: #10B981;">
+            <div class="canal-header">
+                <div class="canal-icon">📧</div>
+                <div class="canal-title">
+                    <h3>Email Marketing</h3>
+                    <p class="canal-subtitle">Comunicação direta com sua lista de contatos</p>
+                </div>
+            </div>
+
+            <p><strong>Melhor para:</strong> Nutrição de leads, vendas recorrentes, relacionamento, fidelização</p>
+
+            <p><strong>Tipos de emails:</strong></p>
+            <ul>
+                <li><strong>Newsletter:</strong> Conteúdo regular para sua lista</li>
+                <li><strong>Automações:</strong> Sequências automáticas (boas-vindas, carrinho abandonado)</li>
+                <li><strong>Campanhas:</strong> Promoções e lançamentos</li>
+                <li><strong>Transacionais:</strong> Confirmações, recibos</li>
+            </ul>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Vantagens</h4>
+                    <ul>
+                        <li>Você é dono da lista (não depende de algoritmo)</li>
+                        <li>ROI altíssimo (R$ 42 para cada R$ 1)</li>
+                        <li>Personalização total</li>
+                        <li>Automação poderosa</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ Desvantagens</h4>
+                    <ul>
+                        <li>Precisa construir lista do zero</li>
+                        <li>Taxas de abertura em queda</li>
+                        <li>Pode cair em spam</li>
+                        <li>Exige ferramentas pagas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="importante">
+                <strong>🔧 Ferramentas:</strong> MailChimp, RD Station, ActiveCampaign, ConvertKit, Brevo (Sendinblue).
+            </div>
+        </div>
+
+        <!-- WHATSAPP -->
+        <div class="canal-card" style="border-color: #25D366;">
+            <div class="canal-header">
+                <div class="canal-icon">💬</div>
+                <div class="canal-title">
+                    <h3>WhatsApp</h3>
+                    <p class="canal-subtitle">Mensageria direta e WhatsApp Business</p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">2B+</span>
+                    <span class="stat-label">Usuários ativos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">147M</span>
+                    <span class="stat-label">Brasileiros</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Taxa de abertura</span>
+                </div>
+            </div>
+
+            <p><strong>Melhor para:</strong> Atendimento, vendas consultivas, relacionamento próximo, negócios locais</p>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Vantagens</h4>
+                    <ul>
+                        <li>98% de taxa de abertura</li>
+                        <li>Brasileiro usa muito</li>
+                        <li>Comunicação instantânea</li>
+                        <li>Catálogo de produtos</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ Desvantagens</h4>
+                    <ul>
+                        <li>Atendimento 1 a 1 (pouco escalável)</li>
+                        <li>Pode ser invasivo</li>
+                        <li>Depende de número válido</li>
+                        <li>Spam pode bloquear conta</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="importante">
+                <strong>🔧 Ferramentas:</strong> WhatsApp Business, WhatsApp API, chatbots (ManyChat, Typebot, ChatGuru).
+            </div>
+        </div>
+
+        <!-- PODCAST -->
+        <div class="canal-card" style="border-color: #9333EA;">
+            <div class="canal-header">
+                <div class="canal-icon">🎙️</div>
+                <div class="canal-title">
+                    <h3>Podcast</h3>
+                    <p class="canal-subtitle">Conteúdo em áudio para consumo sob demanda</p>
+                </div>
+            </div>
+
+            <p><strong>Melhor para:</strong> Autoridade, storytelling, conteúdo profundo, relacionamento</p>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Vantagens</h4>
+                    <ul>
+                        <li>Público fiel e engajado</li>
+                        <li>Consome em qualquer lugar</li>
+                        <li>Baixa concorrência (comparado a vídeo)</li>
+                        <li>Constrói autoridade</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ Desvantagens</h4>
+                    <ul>
+                        <li>Crescimento lento</li>
+                        <li>Difícil monetizar no início</li>
+                        <li>Exige equipamento de áudio</li>
+                        <li>Menos viral que vídeo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="importante">
+                <strong>🔧 Plataformas:</strong> Spotify, Apple Podcasts, Google Podcasts, Deezer, Amazon Music.
+            </div>
+        </div>
+
+        <h2>📊 Tabela Comparativa: Qual Canal Escolher?</h2>
+
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Canal</th>
+                    <th>Custo Inicial</th>
+                    <th>Tempo p/ Resultado</th>
+                    <th>Dificuldade</th>
+                    <th>ROI Potencial</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Instagram</strong></td>
+                    <td>Baixo</td>
+                    <td>1-3 meses</td>
+                    <td>Médio</td>
+                    <td>Alto</td>
+                </tr>
+                <tr>
+                    <td><strong>Facebook</strong></td>
+                    <td>Baixo (orgânico) / Médio (pago)</td>
+                    <td>Imediato (pago)</td>
+                    <td>Médio</td>
+                    <td>Muito Alto</td>
+                </tr>
+                <tr>
+                    <td><strong>YouTube</strong></td>
+                    <td>Médio</td>
+                    <td>6-12 meses</td>
+                    <td>Alto</td>
+                    <td>Muito Alto</td>
+                </tr>
+                <tr>
+                    <td><strong>TikTok</strong></td>
+                    <td>Baixo</td>
+                    <td>1-3 meses</td>
+                    <td>Baixo-Médio</td>
+                    <td>Médio</td>
+                </tr>
+                <tr>
+                    <td><strong>LinkedIn</strong></td>
+                    <td>Baixo (orgânico) / Alto (pago)</td>
+                    <td>3-6 meses</td>
+                    <td>Médio</td>
+                    <td>Alto (B2B)</td>
+                </tr>
+                <tr>
+                    <td><strong>Google (SEO)</strong></td>
+                    <td>Baixo-Médio</td>
+                    <td>6-12 meses</td>
+                    <td>Alto</td>
+                    <td>Muito Alto</td>
+                </tr>
+                <tr>
+                    <td><strong>Google Ads</strong></td>
+                    <td>Alto</td>
+                    <td>Imediato</td>
+                    <td>Alto</td>
+                    <td>Muito Alto</td>
+                </tr>
+                <tr>
+                    <td><strong>Email Marketing</strong></td>
+                    <td>Baixo</td>
+                    <td>3-6 meses</td>
+                    <td>Médio</td>
+                    <td>Muito Alto</td>
+                </tr>
+                <tr>
+                    <td><strong>WhatsApp</strong></td>
+                    <td>Muito Baixo</td>
+                    <td>Imediato</td>
+                    <td>Baixo</td>
+                    <td>Alto</td>
+                </tr>
+                <tr>
+                    <td><strong>Podcast</strong></td>
+                    <td>Médio</td>
+                    <td>6-12 meses</td>
+                    <td>Médio-Alto</td>
+                    <td>Médio</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>🎯 Como Escolher Seus Canais?</h2>
+
+        <p>Siga este processo de 4 passos:</p>
+
+        <h3>Passo 1: Onde Está Sua Persona?</h3>
+        <div class="exemplo">
+            <ul>
+                <li><strong>Sua persona tem 18-25 anos?</strong> → TikTok, Instagram</li>
+                <li><strong>Sua persona tem 35-55 anos?</strong> → Facebook, Email, WhatsApp</li>
+                <li><strong>Sua persona é B2B (empresas)?</strong> → LinkedIn, Google Ads, Email</li>
+                <li><strong>Sua persona busca no Google?</strong> → SEO, Google Ads</li>
+            </ul>
+        </div>
+
+        <h3>Passo 2: Que Tipo de Conteúdo Você Consegue Criar?</h3>
+        <ul>
+            <li><strong>Gosta de aparecer em vídeo?</strong> → YouTube, TikTok, Reels</li>
+            <li><strong>Prefere escrever?</strong> → Blog (SEO), Email, LinkedIn</li>
+            <li><strong>Gosta de falar?</strong> → Podcast, Lives</li>
+            <li><strong>É visual/criativo?</strong> → Instagram, Pinterest</li>
+        </ul>
+
+        <h3>Passo 3: Qual Seu Orçamento?</h3>
+        <ul>
+            <li><strong>R$ 0-500/mês:</strong> Foque em orgânico (Instagram, TikTok, SEO, Email)</li>
+            <li><strong>R$ 500-2000/mês:</strong> Orgânico + testes de anúncios (Facebook/Instagram Ads)</li>
+            <li><strong>R$ 2000+/mês:</strong> Invista pesado em anúncios (Facebook Ads, Google Ads)</li>
+        </ul>
+
+        <h3>Passo 4: Qual Seu Objetivo?</h3>
+        <ul>
+            <li><strong>Vendas imediatas:</strong> Google Ads, Facebook Ads, WhatsApp</li>
+            <li><strong>Autoridade e branding:</strong> YouTube, Podcast, LinkedIn, Blog</li>
+            <li><strong>Engajamento e comunidade:</strong> Instagram, Facebook (grupos), TikTok</li>
+            <li><strong>Relacionamento de longo prazo:</strong> Email Marketing, WhatsApp</li>
+        </ul>
+
+        <div class="sucesso">
+            <strong>💡 Estratégia Recomendada para Iniciantes:</strong><br><br>
+            <strong>Ano 1:</strong> Domine 1 canal (Instagram OU YouTube OU Blog) + Email Marketing<br>
+            <strong>Ano 2:</strong> Adicione anúncios pagos (Facebook Ads OU Google Ads)<br>
+            <strong>Ano 3:</strong> Expanda para mais canais conforme seus resultados
+        </div>
+
+        <h2>🔄 Estratégia Omnichannel (Multi-canais)</h2>
+
+        <p>Quando você estiver mais maduro, pode integrar vários canais:</p>
+
+        <div class="exemplo">
+            <h4>📌 Exemplo de Funil Multi-canal:</h4>
+            <ol>
+                <li><strong>Topo (Descoberta):</strong> TikTok/Instagram Reels (vídeos virais) → Link na bio</li>
+                <li><strong>Meio (Nutrição):</strong> Captura email com material gratuito → Sequência de emails</li>
+                <li><strong>Fundo (Conversão):</strong> Email com oferta → Página de vendas → WhatsApp para dúvidas</li>
+                <li><strong>Pós-venda:</strong> Email de boas-vindas → Grupo VIP no WhatsApp → Comunidade no Facebook</li>
+            </ol>
+        </div>
+
+        <div class="exercicio">
+            <h3>📝 EXERCÍCIO: ESCOLHA SEUS CANAIS</h3>
+
+            <p><strong>1. Onde sua persona passa mais tempo online?</strong></p>
+            <p style="border: 1px solid #D1D5DB; padding: 15px; background: white; border-radius: 6px; min-height: 60px;">_________________________________________________________________</p>
+
+            <p><strong>2. Qual tipo de conteúdo você tem mais facilidade em criar?</strong></p>
+            <p style="border: 1px solid #D1D5DB; padding: 15px; background: white; border-radius: 6px; min-height: 60px;">_________________________________________________________________</p>
+
+            <p><strong>3. Qual seu orçamento mensal para marketing?</strong></p>
+            <p style="border: 1px solid #D1D5DB; padding: 15px; background: white; border-radius: 6px;">_________________________________________________________________</p>
+
+            <p><strong>4. Escolha 1-2 canais para focar nos próximos 3 meses:</strong></p>
+            <ol style="margin-left: 20px;">
+                <li style="border: 1px solid #D1D5DB; padding: 10px; background: white; border-radius: 6px; margin: 10px 0;">Canal Principal: _________________________________________________________________</li>
+                <li style="border: 1px solid #D1D5DB; padding: 10px; background: white; border-radius: 6px; margin: 10px 0;">Canal Secundário: _________________________________________________________________</li>
+            </ol>
+
+            <p><strong>5. Por que escolheu esses canais?</strong></p>
+            <p style="border: 1px solid #D1D5DB; padding: 15px; background: white; border-radius: 6px; min-height: 80px;">_________________________________________________________________</p>
+        </div>
+
+        <div class="sucesso">
+            <strong>🎊 Parabéns!</strong> Você concluiu o <strong>MÓDULO 1 - FUNDAMENTOS DO MARKETING DIGITAL</strong>! Agora você possui a base sólida necessária para implementar estratégias de marketing digital. No próximo módulo, vamos mergulhar em <strong>ESTRATÉGIA E PLANEJAMENTO</strong>!
+        </div>
+
+        <div class="footer">
+            <p><strong>Marketing Digital do Zero ao Pro</strong></p>
+            <p>Módulo 1 - Aula 1.5: Principais Canais Digitais</p>
+            <p>© 2026 Cursos Certificados - Todos os direitos reservados</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 4.1 - Google Ads - Fundamentos | Marketing Digital do Zero ao Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1f2937;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 4px solid #10b981;
+        }
+
+        .module-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #059669;
+            margin: 50px 0 25px 0;
+            padding-left: 20px;
+            border-left: 6px solid #10b981;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #374151;
+            margin: 35px 0 20px 0;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 6px solid #f59e0b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .highlight-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border-left: 6px solid #10b981;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .stat-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+
+        .campaign-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .campaign-card {
+            background: #f9fafb;
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .campaign-card:hover {
+            border-color: #10b981;
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .campaign-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            color: #10b981;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .campaign-card p {
+            font-size: 16px;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+
+        .formula-box {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        .formula {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .ads-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .ads-table th {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 18px;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .ads-table td {
+            padding: 16px 18px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 16px;
+        }
+
+        .ads-table tr:hover {
+            background: #f9fafb;
+        }
+
+        .emoji {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border-left: 6px solid #3b82f6;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .tip-box h3 {
+            color: #1e40af;
+            margin-top: 0;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border-left: 6px solid #ef4444;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .warning-box h3 {
+            color: #991b1b;
+            margin-top: 0;
+        }
+
+        ul, ol {
+            margin: 20px 0 20px 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .comparison-card {
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .comparison-bad {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 2px solid #ef4444;
+        }
+
+        .comparison-good {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border: 2px solid #10b981;
+        }
+
+        .comparison-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .comparison-bad h4 {
+            color: #991b1b;
+        }
+
+        .comparison-good h4 {
+            color: #065f46;
+        }
+
+        .exercise-box {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 3px solid #4f46e5;
+        }
+
+        .exercise-box h3 {
+            color: #3730a3;
+            margin-top: 0;
+            font-size: 26px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 3px solid #e5e7eb;
+            text-align: center;
+            color: #6b7280;
+        }
+
+        strong {
+            color: #059669;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            .campaign-grid,
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ads-table {
+                font-size: 14px;
+            }
+
+            .ads-table th,
+            .ads-table td {
+                padding: 12px 10px;
+            }
+        }
+
+        .ad-example {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #10b981;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .ad-title {
+            color: #1a0dab;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            text-decoration: none;
+        }
+
+        .ad-url {
+            color: #006621;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .ad-description {
+            color: #545454;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .ad-label {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .step-card {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #10b981;
+            margin: 15px 0;
+        }
+
+        .step-number {
+            background: #10b981;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-right: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="module-tag">Módulo 4 - Aula 1</span>
+            <h1>Google Ads - Fundamentos</h1>
+            <p class="subtitle">Como Criar Campanhas Lucrativas e Aparecer no Topo do Google</p>
+        </div>
+
+        <h2>🎯 O Que é Google Ads e Por Que Investir?</h2>
+
+        <p>Google Ads (antigamente Google AdWords) é a plataforma de anúncios do Google. Você paga para aparecer:</p>
+        <ul>
+            <li><strong>Nos resultados de busca</strong> (quando alguém pesquisa "comprar tênis de corrida")</li>
+            <li><strong>Em sites parceiros</strong> (banners em blogs, portais de notícias)</li>
+            <li><strong>No YouTube</strong> (vídeos antes/durante outros vídeos)</li>
+            <li><strong>No Gmail</strong> (anúncios na aba Promoções)</li>
+            <li><strong>No Google Maps</strong> (aparecer em buscas locais)</li>
+        </ul>
+
+        <div class="stat-box">
+            <h3>📊 Por Que Google Ads Funciona?</h3>
+            <ul>
+                <li><strong>Intenção de compra:</strong> Pessoas buscando ativamente por soluções (diferente de scroll passivo em redes sociais)</li>
+                <li><strong>Resultados imediatos:</strong> Apareça na primeira página em minutos (vs meses de SEO orgânico)</li>
+                <li><strong>Alcance massivo:</strong> Google processa 8,5 bilhões de buscas por dia</li>
+                <li><strong>ROI médio:</strong> R$ 2-8 de retorno para cada R$ 1 investido (quando bem otimizado)</li>
+                <li><strong>Pagamento por resultado:</strong> Só paga quando clicarem (modelo CPC - Custo por Clique)</li>
+            </ul>
+        </div>
+
+        <h2>🗺️ Tipos de Campanhas no Google Ads</h2>
+
+        <div class="campaign-grid">
+            <div class="campaign-card">
+                <h4><span class="emoji">🔍</span> 1. Rede de Pesquisa (Search)</h4>
+                <p><strong>Onde aparece:</strong> Resultados de busca do Google</p>
+                <p><strong>Formato:</strong> Anúncios de texto</p>
+                <p><strong>Quando usar:</strong> Capturar demanda existente (pessoas já procurando)</p>
+                <p><strong>CPC médio:</strong> R$ 0,50 - R$ 8 (depende do nicho)</p>
+                <p><strong>Melhor para:</strong> Vendas diretas, leads qualificados</p>
+            </div>
+
+            <div class="campaign-card">
+                <h4><span class="emoji">🖼️</span> 2. Rede de Display</h4>
+                <p><strong>Onde aparece:</strong> Sites, blogs, apps (3 milhões+ de sites parceiros)</p>
+                <p><strong>Formato:</strong> Banners visuais</p>
+                <p><strong>Quando usar:</strong> Reconhecimento de marca, remarketing</p>
+                <p><strong>CPM médio:</strong> R$ 5 - R$ 30 (por mil impressões)</p>
+                <p><strong>Melhor para:</strong> Topo do funil, awareness</p>
+            </div>
+
+            <div class="campaign-card">
+                <h4><span class="emoji">▶️</span> 3. YouTube (Vídeo)</h4>
+                <p><strong>Onde aparece:</strong> Antes/durante vídeos do YouTube</p>
+                <p><strong>Formato:</strong> Anúncios em vídeo (6s, 15s, puláveis, não-puláveis)</p>
+                <p><strong>Quando usar:</strong> Contar histórias, demonstrações, branding</p>
+                <p><strong>CPV médio:</strong> R$ 0,05 - R$ 0,50 (por visualização)</p>
+                <p><strong>Melhor para:</strong> Engajamento, remarketing criativo</p>
+            </div>
+
+            <div class="campaign-card">
+                <h4><span class="emoji">🛍️</span> 4. Shopping (E-commerce)</h4>
+                <p><strong>Onde aparece:</strong> Aba "Shopping" do Google + resultados de busca</p>
+                <p><strong>Formato:</strong> Imagem do produto + preço + loja</p>
+                <p><strong>Quando usar:</strong> Vender produtos físicos</p>
+                <p><strong>CPC médio:</strong> R$ 0,40 - R$ 3</p>
+                <p><strong>Melhor para:</strong> E-commerce com catálogo de produtos</p>
+            </div>
+
+            <div class="campaign-card">
+                <h4><span class="emoji">📍</span> 5. Local (Google Meu Negócio)</h4>
+                <p><strong>Onde aparece:</strong> Google Maps + resultados locais</p>
+                <p><strong>Formato:</strong> Ficha da empresa no topo</p>
+                <p><strong>Quando usar:</strong> Negócios físicos (restaurante, consultório, loja)</p>
+                <p><strong>CPC médio:</strong> R$ 0,80 - R$ 5</p>
+                <p><strong>Melhor para:</strong> Tráfego presencial, ligações</p>
+            </div>
+
+            <div class="campaign-card">
+                <h4><span class="emoji">🤖</span> 6. Performance Max</h4>
+                <p><strong>Onde aparece:</strong> Todas as redes do Google (IA decide)</p>
+                <p><strong>Formato:</strong> Automático (texto, imagem, vídeo)</p>
+                <p><strong>Quando usar:</strong> Maximizar conversões com IA</p>
+                <p><strong>CPA médio:</strong> Varia (foca em conversões)</p>
+                <p><strong>Melhor para:</strong> Campanhas avançadas, após ter dados</p>
+            </div>
+        </div>
+
+        <h2>💰 Como Funciona o Leilão do Google Ads</h2>
+
+        <div class="formula-box">
+            <div class="formula">
+                Índice de Qualidade (1-10) × Lance Máximo = Ranking do Anúncio
+            </div>
+        </div>
+
+        <p>Google Ads NÃO é simplesmente "quem paga mais aparece primeiro". É um leilão baseado em RELEVÂNCIA + LANCE.</p>
+
+        <h3>Índice de Qualidade (Quality Score)</h3>
+        <p>Nota de 1 a 10 que o Google dá para cada palavra-chave, baseado em:</p>
+
+        <table class="ads-table">
+            <thead>
+                <tr>
+                    <th>Fator</th>
+                    <th>Peso</th>
+                    <th>Como Melhorar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>CTR Esperado</strong><br>(taxa de cliques)</td>
+                    <td>40%</td>
+                    <td>Anúncios relevantes, títulos atraentes, palavras-chave específicas</td>
+                </tr>
+                <tr>
+                    <td><strong>Relevância do Anúncio</strong></td>
+                    <td>35%</td>
+                    <td>Anúncio deve mencionar a palavra-chave buscada</td>
+                </tr>
+                <tr>
+                    <td><strong>Experiência da Landing Page</strong></td>
+                    <td>25%</td>
+                    <td>Página rápida, mobile-friendly, conteúdo relevante</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="highlight-box">
+            <h3>💡 Exemplo Prático do Leilão</h3>
+            <p><strong>Busca:</strong> "curso de marketing digital"</p>
+            <p><strong>Anunciante A:</strong></p>
+            <ul>
+                <li>Lance máximo: R$ 5,00</li>
+                <li>Índice de qualidade: 8/10</li>
+                <li><strong>Ranking:</strong> 5 × 8 = 40</li>
+            </ul>
+            <p><strong>Anunciante B:</strong></p>
+            <ul>
+                <li>Lance máximo: R$ 8,00</li>
+                <li>Índice de qualidade: 4/10</li>
+                <li><strong>Ranking:</strong> 8 × 4 = 32</li>
+            </ul>
+            <p><strong>Resultado:</strong> Anunciante A aparece ACIMA do B, mesmo pagando MENOS, porque tem melhor qualidade!</p>
+        </div>
+
+        <h2>🎯 Estrutura de uma Conta Google Ads Otimizada</h2>
+
+        <div class="step-card">
+            <p><span class="step-number">1</span> <strong>Conta</strong> → Uma por empresa (vinculada ao seu e-mail do Google)</p>
+        </div>
+
+        <div class="step-card">
+            <p><span class="step-number">2</span> <strong>Campanhas</strong> → Agrupam anúncios por objetivo/orçamento (ex: "Campanha Search - Curso Marketing")</p>
+            <p style="margin-left: 44px; margin-top: 10px;"><em>Configurações de campanha: orçamento diário, segmentação geográfica, idiomas, datas</em></p>
+        </div>
+
+        <div class="step-card">
+            <p><span class="step-number">3</span> <strong>Grupos de Anúncios</strong> → Agrupam palavras-chave relacionadas (ex: "Marketing Digital Iniciantes", "Marketing Digital Avançado")</p>
+            <p style="margin-left: 44px; margin-top: 10px;"><em>Cada grupo tem palavras-chave específicas e anúncios específicos</em></p>
+        </div>
+
+        <div class="step-card">
+            <p><span class="step-number">4</span> <strong>Palavras-Chave</strong> → Termos que acionam seus anúncios (ex: "curso marketing digital online", "aprender marketing digital")</p>
+        </div>
+
+        <div class="step-card">
+            <p><span class="step-number">5</span> <strong>Anúncios</strong> → O que as pessoas veem (títulos, descrições, URL)</p>
+        </div>
+
+        <h3>Exemplo de Estrutura Ideal</h3>
+
+        <div class="ad-example">
+            <p><strong>📁 Campanha:</strong> "Search - Curso Marketing Digital 2025"</p>
+            <p style="margin-left: 20px;"><strong>📂 Grupo de Anúncios 1:</strong> "Marketing Digital - Iniciantes"</p>
+            <p style="margin-left: 40px;"><strong>🔑 Palavras-chave:</strong></p>
+            <ul style="margin-left: 60px; margin-top: 5px;">
+                <li>curso marketing digital para iniciantes</li>
+                <li>aprender marketing digital do zero</li>
+                <li>marketing digital iniciante online</li>
+            </ul>
+            <p style="margin-left: 40px; margin-top: 10px;"><strong>📝 Anúncios:</strong> 3-4 variações testando títulos diferentes</p>
+
+            <p style="margin-left: 20px; margin-top: 20px;"><strong>📂 Grupo de Anúncios 2:</strong> "Marketing Digital - Avançado"</p>
+            <p style="margin-left: 40px;"><strong>🔑 Palavras-chave:</strong></p>
+            <ul style="margin-left: 60px; margin-top: 5px;">
+                <li>curso marketing digital avançado</li>
+                <li>especialização marketing digital</li>
+                <li>marketing digital profissional</li>
+            </ul>
+        </div>
+
+        <h2>🔑 Tipos de Correspondência de Palavras-Chave</h2>
+
+        <table class="ads-table">
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Símbolo</th>
+                    <th>Como Funciona</th>
+                    <th>Exemplo</th>
+                    <th>Quando Usar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Exata</strong></td>
+                    <td>[palavra-chave]</td>
+                    <td>Apenas o termo exato ou variações muito próximas</td>
+                    <td>[curso marketing digital]<br>Aciona: "curso marketing digital", "curso de marketing digital"<br>NÃO aciona: "melhor curso marketing"</td>
+                    <td>Máximo controle, menor alcance, mais conversões</td>
+                </tr>
+                <tr>
+                    <td><strong>Frase</strong></td>
+                    <td>"palavra-chave"</td>
+                    <td>Frase na ordem, mas pode ter palavras antes/depois</td>
+                    <td>"curso marketing digital"<br>Aciona: "melhor curso marketing digital", "curso marketing digital grátis"<br>NÃO aciona: "curso digital de marketing"</td>
+                    <td>Equilíbrio entre controle e alcance</td>
+                </tr>
+                <tr>
+                    <td><strong>Ampla</strong></td>
+                    <td>palavra-chave</td>
+                    <td>Variações, sinônimos, buscas relacionadas</td>
+                    <td>curso marketing digital<br>Aciona: "aula marketing online", "treinamento publicidade digital", "como fazer marketing"</td>
+                    <td>Descobrir novas oportunidades (mas cuidado com desperdício)</td>
+                </tr>
+                <tr>
+                    <td><strong>Negativa</strong></td>
+                    <td>-palavra</td>
+                    <td>Impede que anúncio apareça</td>
+                    <td>-grátis -gratuito -free<br>Evita: "curso marketing digital grátis"</td>
+                    <td>Eliminar cliques sem intenção de compra</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box">
+            <h3>💡 Dica de Ouro: Estratégia Iniciante</h3>
+            <p><strong>Comece com correspondência de FRASE</strong> ("palavra-chave")</p>
+            <p><strong>Por quê?</strong></p>
+            <ul>
+                <li>✅ Mais controle que ampla (não desperdiça dinheiro)</li>
+                <li>✅ Mais alcance que exata (descobre variações)</li>
+                <li>✅ Ideal para testar e aprender</li>
+            </ul>
+            <p><strong>Depois de 30 dias:</strong> Veja o Relatório de Termos de Pesquisa. Adicione termos que convertem como [exata] e bloqueie os que não convertem como -negativa</p>
+        </div>
+
+        <h2>✍️ Anatomia de um Anúncio de Pesquisa Vencedor</h2>
+
+        <div class="ad-example">
+            <span class="ad-label">Anúncio</span>
+            <div class="ad-title">Curso Marketing Digital 2025 | Do Zero ao Pro em 60 Dias</div>
+            <div class="ad-url">www.seusite.com.br › Curso › Marketing-Digital</div>
+            <div class="ad-description">
+                Aprenda Estratégias Reais de Marketing Digital com Especialistas. Certificado Reconhecido + 7 Bônus Exclusivos. Garantia de 30 Dias. Vagas Limitadas!
+            </div>
+        </div>
+
+        <h3>Estrutura Detalhada</h3>
+
+        <table class="ads-table">
+            <thead>
+                <tr>
+                    <th>Elemento</th>
+                    <th>Limite</th>
+                    <th>Boas Práticas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Título 1</strong></td>
+                    <td>30 caracteres</td>
+                    <td>Incluir palavra-chave exata buscada</td>
+                </tr>
+                <tr>
+                    <td><strong>Título 2</strong></td>
+                    <td>30 caracteres</td>
+                    <td>Benefício principal ou diferencial</td>
+                </tr>
+                <tr>
+                    <td><strong>Título 3</strong></td>
+                    <td>30 caracteres (opcional)</td>
+                    <td>CTA ou urgência</td>
+                </tr>
+                <tr>
+                    <td><strong>Descrição 1</strong></td>
+                    <td>90 caracteres</td>
+                    <td>Expandir benefícios, resolver objeções</td>
+                </tr>
+                <tr>
+                    <td><strong>Descrição 2</strong></td>
+                    <td>90 caracteres (opcional)</td>
+                    <td>Prova social, garantias, bônus</td>
+                </tr>
+                <tr>
+                    <td><strong>URL de Exibição</strong></td>
+                    <td>2 caminhos de 15 caracteres</td>
+                    <td>Reforçar palavra-chave (ex: /Curso/Marketing-Digital)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Fórmulas de Títulos que Convertem</h3>
+
+        <div class="comparison-grid">
+            <div class="comparison-card comparison-bad">
+                <h4>❌ Títulos Fracos</h4>
+                <p>"Aprenda Marketing"</p>
+                <p>"Curso Online"</p>
+                <p>"Clique Aqui"</p>
+                <p><strong>Por que falham:</strong> Genéricos, sem diferencial, não incluem palavra-chave</p>
+            </div>
+
+            <div class="comparison-card comparison-good">
+                <h4>✅ Títulos Fortes</h4>
+                <p>"Curso Marketing Digital 2025"</p>
+                <p>"Do Zero ao Pro em 60 Dias"</p>
+                <p>"Certificado Reconhecido MEC"</p>
+                <p><strong>Por que funcionam:</strong> Específicos, com benefício claro, incluem palavra-chave</p>
+            </div>
+        </div>
+
+        <h3>9 Gatilhos para Anúncios de Alta Conversão</h3>
+
+        <ol>
+            <li><strong>Números:</strong> "47% mais resultados", "Mais de 10.000 alunos"</li>
+            <li><strong>Ano Atual:</strong> "2025" (mostra que é atualizado)</li>
+            <li><strong>Urgência:</strong> "Vagas limitadas", "Últimas 15 vagas"</li>
+            <li><strong>Garantia:</strong> "Garantia de 30 dias", "Risco zero"</li>
+            <li><strong>Autoridade:</strong> "Certificado MEC", "Reconhecido pela ABComm"</li>
+            <li><strong>Exclusividade:</strong> "Método exclusivo", "Só até amanhã"</li>
+            <li><strong>Facilidade:</strong> "Em 7 dias", "Passo a passo"</li>
+            <li><strong>Prova Social:</strong> "10.000+ alunos", "Nota 4.9/5"</li>
+            <li><strong>Benefício Tangível:</strong> "Aumente vendas em 30 dias", "Dobre seu tráfego"</li>
+        </ol>
+
+        <h2>💸 Orçamento: Quanto Investir para Começar?</h2>
+
+        <div class="stat-box">
+            <h3>💰 Orçamento Mínimo Recomendado</h3>
+            <p><strong>Para testar:</strong> R$ 300-500/mês (R$ 10-15/dia)</p>
+            <p><strong>Para escalar:</strong> R$ 1.000-3.000/mês (R$ 30-100/dia)</p>
+            <p><strong>Para dominar:</strong> R$ 5.000+/mês (R$ 150+/dia)</p>
+        </div>
+
+        <h3>Como Definir Orçamento Diário</h3>
+
+        <div class="formula-box">
+            <div class="formula">
+                Orçamento Diário = (Meta de Conversões × CPA Estimado) ÷ 30 dias
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h3>📊 Exemplo Prático</h3>
+            <p><strong>Meta:</strong> 30 vendas por mês</p>
+            <p><strong>CPA estimado:</strong> R$ 50 (custo para adquirir 1 cliente)</p>
+            <p><strong>Cálculo:</strong> (30 vendas × R$ 50) ÷ 30 dias = R$ 50/dia</p>
+            <p><strong>Orçamento mensal:</strong> R$ 1.500</p>
+            <p><strong>Receita esperada:</strong> 30 vendas × R$ 200 (ticket médio) = R$ 6.000</p>
+            <p><strong>ROI:</strong> R$ 6.000 ÷ R$ 1.500 = 4:1 (R$ 4 de retorno para cada R$ 1 investido)</p>
+        </div>
+
+        <h2>⚠️ 7 Erros Fatais de Iniciantes (e Como Evitar)</h2>
+
+        <div class="warning-box">
+            <h3>🚨 Erro 1: Enviar Tráfego para a Home do Site</h3>
+            <p><strong>Problema:</strong> Home tem muitas distrações. Taxa de conversão: 0,5-1%</p>
+            <p><strong>Solução:</strong> Crie landing page específica para cada campanha. Taxa de conversão: 5-15%</p>
+        </div>
+
+        <div class="warning-box">
+            <h3>🚨 Erro 2: Usar Correspondência Ampla sem Palavras Negativas</h3>
+            <p><strong>Problema:</strong> Desperdiça 40-60% do orçamento em cliques irrelevantes</p>
+            <p><strong>Solução:</strong> Adicione palavras negativas desde o dia 1: -grátis, -gratuito, -free, -curso gratuito, -vagas de emprego</p>
+        </div>
+
+        <div class="warning-box">
+            <h3>🚨 Erro 3: Não Instalar Rastreamento de Conversões</h3>
+            <p><strong>Problema:</strong> Não sabe quais anúncios/palavras-chave geram vendas</p>
+            <p><strong>Solução:</strong> Configure Google Tag Manager + GA4 + Conversões do Google Ads (próxima aula)</p>
+        </div>
+
+        <div class="warning-box">
+            <h3>🚨 Erro 4: Criar 1 Grupo de Anúncios com 50 Palavras-Chave</h3>
+            <p><strong>Problema:</strong> Anúncios genéricos, baixo índice de qualidade</p>
+            <p><strong>Solução:</strong> Máximo 10-15 palavras-chave por grupo. Crie grupos temáticos específicos</p>
+        </div>
+
+        <div class="warning-box">
+            <h3>🚨 Erro 5: Escrever Apenas 1 Anúncio por Grupo</h3>
+            <p><strong>Problema:</strong> Sem teste A/B, sem otimização</p>
+            <p><strong>Solução:</strong> Mínimo 3 anúncios por grupo. Google testa e mostra o melhor automaticamente</p>
+        </div>
+
+        <div class="warning-box">
+            <h3>🚨 Erro 6: Segmentar o Mundo Todo</h3>
+            <p><strong>Problema:</strong> Diluir orçamento, alcançar pessoas fora do seu mercado</p>
+            <p><strong>Solução:</strong> Comece local (sua cidade/estado). Expanda só depois de ter dados</p>
+        </div>
+
+        <div class="warning-box">
+            <h3>🚨 Erro 7: Desistir Antes de 30 Dias</h3>
+            <p><strong>Problema:</strong> Google precisa de dados para otimizar. Primeiros 7-14 dias = fase de aprendizado</p>
+            <p><strong>Solução:</strong> Dê pelo menos 30 dias e 50-100 conversões antes de julgar resultados</p>
+        </div>
+
+        <div class="exercise-box">
+            <h3>🎯 EXERCÍCIO PRÁTICO</h3>
+            <ol>
+                <li><strong>Crie sua conta Google Ads:</strong> Acesse ads.google.com e configure (pode pausar a primeira campanha que ele força você a criar)</li>
+                <li><strong>Pesquise 10 palavras-chave do seu nicho:</strong> Use o Planejador de Palavras-Chave do Google Ads (ferramenta gratuita). Anote volume de busca e CPC estimado</li>
+                <li><strong>Analise 5 anúncios de concorrentes:</strong> Busque suas palavras-chave no Google. Anote o que eles fazem de bom/ruim</li>
+                <li><strong>Escreva 3 títulos e 2 descrições:</strong> Para a palavra-chave principal do seu produto/serviço</li>
+                <li><strong>Liste 10 palavras-chave negativas:</strong> Termos que NÃO devem acionar seus anúncios (ex: grátis, emprego, curso gratuito)</li>
+            </ol>
+        </div>
+
+        <div class="tip-box">
+            <h3>🎓 Checklist: Primeira Campanha Google Ads</h3>
+            <ul>
+                <li>☐ Conta Google Ads criada e configurada</li>
+                <li>☐ Pixel de conversão instalado no site (Google Tag)</li>
+                <li>☐ Landing page específica criada (não home do site)</li>
+                <li>☐ 10-20 palavras-chave pesquisadas (volume + CPC)</li>
+                <li>☐ Palavras-chave negativas adicionadas</li>
+                <li>☐ 3+ grupos de anúncios temáticos criados</li>
+                <li>☐ 3 anúncios por grupo (teste A/B)</li>
+                <li>☐ Orçamento diário definido (mín. R$ 10/dia)</li>
+                <li>☐ Segmentação geográfica configurada</li>
+                <li>☐ Agenda de revisão semanal (toda segunda, 30min)</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p><strong>Próxima Aula:</strong> Meta Ads (Facebook e Instagram) - Fundamentos</p>
+            <p>Marketing Digital do Zero ao Pro • 2025</p>
+        </div>
+    </div>
+</body>
+</html>

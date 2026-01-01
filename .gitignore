@@ -1,0 +1,53 @@
+# Arquivos temporários do Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Arquivos do sistema
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Arquivos de log
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependências
+node_modules/
+bower_components/
+
+# Arquivos temporários
+*.tmp
+*.temp
+nul
+
+# PDFs (se não quiser versionar)
+# Descomente a linha abaixo se não quiser os PDFs no GitHub
+# PDFs_Curso_Kiwify/
+
+# Scripts de conversão (opcional - manter comentado para versionar)
+# converter-*.py
+# converter-*.bat
+# converter-*.ps1
+
+# Arquivos de IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Certificados e extensões
+*.vsix
+
+# Ambiente e configurações locais
+.env
+.env.local
+.env.*.local

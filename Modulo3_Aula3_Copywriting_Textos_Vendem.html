@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3.3 - Copywriting: Textos que Vendem</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1F2937;
+            background-color: #F9FAFB;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #E1306C 0%, #F77737 50%, #FCAF45 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitulo {
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #F59E0B;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #E1306C;
+            font-size: 2em;
+            margin: 40px 0 20px 0;
+            font-weight: 700;
+            border-left: 5px solid #F59E0B;
+            padding-left: 20px;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #C13584;
+            font-size: 1.5em;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-family: 'Poppins', sans-serif;
+            color: #047857;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+
+        .destaque {
+            background: #FEF3C7;
+            border-left: 5px solid #F59E0B;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .destaque strong {
+            color: #92400E;
+            font-size: 1.1em;
+        }
+
+        .importante {
+            background: #FCE7F3;
+            border-left: 5px solid #E1306C;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .importante strong {
+            color: #9F1239;
+            font-size: 1.1em;
+        }
+
+        .sucesso {
+            background: #D1FAE5;
+            border-left: 5px solid #10B981;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .sucesso strong {
+            color: #047857;
+            font-size: 1.1em;
+        }
+
+        .alerta {
+            background: #FEE2E2;
+            border-left: 5px solid #EF4444;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .alerta strong {
+            color: #991B1B;
+            font-size: 1.1em;
+        }
+
+        ul, ol {
+            margin: 20px 0 20px 40px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        li strong {
+            color: #E1306C;
+        }
+
+        .exemplo {
+            background: #F3F4F6;
+            border: 2px solid #E5E7EB;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+
+        .exemplo h4 {
+            color: #059669;
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2em;
+        }
+
+        .exercicio {
+            background: linear-gradient(135deg, #FCE7F3 0%, #FBCFE8 100%);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 12px;
+            border: 3px solid #E1306C;
+        }
+
+        .exercicio h3 {
+            color: #9F1239;
+            margin-top: 0;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 3px solid #E5E7EB;
+            text-align: center;
+            color: #6B7280;
+        }
+
+        .footer strong {
+            color: #E1306C;
+        }
+
+        .tabela {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .tabela th {
+            background: #E1306C;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .tabela td {
+            padding: 15px;
+            border-bottom: 1px solid #E5E7EB;
+            font-size: 0.95em;
+        }
+
+        .tabela tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tabela tr:nth-child(even) {
+            background: #F9FAFB;
+        }
+
+        .formula-box {
+            background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%);
+            border: 3px solid #3B82F6;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 12px;
+        }
+
+        .formula {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #1E40AF;
+            text-align: center;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .bad-copy {
+            background: #FEE2E2;
+            border: 3px solid #EF4444;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .good-copy {
+            background: #D1FAE5;
+            border: 3px solid #10B981;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .bad-copy h4 {
+            color: #991B1B;
+            margin-top: 0;
+        }
+
+        .good-copy h4 {
+            color: #047857;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AULA 3.3</h1>
+            <p class="subtitulo">Copywriting: Textos que Vendem</p>
+            <span class="badge">MÓDULO 3 - REDES SOCIAIS E CONTEÚDO</span>
+        </div>
+
+        <h2>✍️ O Que é Copywriting?</h2>
+
+        <p><strong>Copywriting</strong> é a arte e ciência de escrever textos persuasivos que levam o leitor a tomar uma ação específica (comprar, clicar, se cadastrar, compartilhar, etc.).</p>
+
+        <div class="destaque">
+            <strong>💡 Diferença Crucial:</strong><br>
+            <strong>Content Writing</strong> = Educar, informar, entreter<br>
+            <strong>Copywriting</strong> = Persuadir e VENDER<br><br>
+            Você precisa dos DOIS! Mas nesta aula vamos focar em copywriting.
+        </div>
+
+        <div class="comparison">
+            <div class="bad-copy">
+                <h4>❌ Content Writing:</h4>
+                <p style="margin: 0;">"Nosso produto tem 3 funcionalidades: A, B e C. Foi desenvolvido em 2020 com tecnologia avançada."</p>
+                <p style="font-size: 0.85em; color: #666; margin-top: 10px;"><em>Informativo, mas não vende</em></p>
+            </div>
+
+            <div class="good-copy">
+                <h4>✅ Copywriting:</h4>
+                <p style="margin: 0;">"Imagine economizar 5 horas por semana. Com nosso produto, você faz em 10 minutos o que levava horas. Ganhe seu tempo de volta!"</p>
+                <p style="font-size: 0.85em; color: #666; margin-top: 10px;"><em>Foca em benefício e emoção</em></p>
+            </div>
+        </div>
+
+        <h2>🎯 Os 4 Pilares do Copywriting</h2>
+
+        <h3>1. ATENÇÃO (Gancho)</h3>
+        <p>Você tem 3 segundos para capturar atenção. Se falhar, perdeu o leitor.</p>
+
+        <div class="exemplo">
+            <h4>📌 Ganchos que Funcionam:</h4>
+            <ul>
+                <li><strong>Pergunta provocativa:</strong> "Você está cometendo esses 5 erros?"</li>
+                <li><strong>Estatística chocante:</strong> "97% das pessoas fazem isso errado"</li>
+                <li><strong>Promessa ousada:</strong> "Dobrei meu faturamento em 30 dias"</li>
+                <li><strong>Curiosidade:</strong> "O segredo que ninguém te conta sobre..."</li>
+                <li><strong>Contradição:</strong> "Pare de [fazer algo óbvio]"</li>
+                <li><strong>Urgência:</strong> "Última chance de conseguir isso"</li>
+            </ul>
+        </div>
+
+        <h3>2. INTERESSE (Desenvolvimento)</h3>
+        <p>Mantenha o leitor interessado apresentando o problema/solução.</p>
+
+        <ul>
+            <li>Conte uma história (storytelling)</li>
+            <li>Apresente o problema que sua persona enfrenta</li>
+            <li>Agite a dor (mostre consequências de não resolver)</li>
+            <li>Introduza a solução (seu produto/serviço)</li>
+        </ul>
+
+        <h3>3. DESEJO (Benefícios)</h3>
+        <p>Faça o leitor DESEJAR sua solução.</p>
+
+        <div class="importante">
+            <strong>🎯 Regra de Ouro:</strong> Venda BENEFÍCIOS, não características!<br><br>
+            <strong>Característica:</strong> "Bateria de 5000mAh"<br>
+            <strong>Benefício:</strong> "Use o dia todo sem precisar carregar"<br><br>
+            Ninguém compra um "drill de 1/4 de polegada". Compram "buracos de 1/4 de polegada"!
+        </div>
+
+        <div class="comparison">
+            <div class="bad-copy">
+                <h4>❌ Foco em Características:</h4>
+                <p>"Nosso curso tem 40 horas de conteúdo, 26 aulas e 7 bônus."</p>
+            </div>
+
+            <div class="good-copy">
+                <h4>✅ Foco em Benefícios:</h4>
+                <p>"Aprenda a atrair clientes todo dia, mesmo começando do zero, em apenas 6 semanas."</p>
+            </div>
+        </div>
+
+        <h3>4. AÇÃO (Call-to-Action - CTA)</h3>
+        <p>Diga EXATAMENTE o que você quer que a pessoa faça.</p>
+
+        <ul>
+            <li><strong>Seja específico:</strong> "Clique no link da bio" > "Saiba mais"</li>
+            <li><strong>Crie urgência:</strong> "Apenas hoje" / "Últimas vagas"</li>
+            <li><strong>Reduza atrito:</strong> "Sem cartão de crédito" / "Grátis"</li>
+            <li><strong>Use verbos de ação:</strong> Garanta, Baixe, Inscreva-se, Comece</li>
+        </ul>
+
+        <h2>📐 Fórmulas de Copywriting Comprovadas</h2>
+
+        <h3>Fórmula 1: AIDA</h3>
+        <p>A fórmula mais clássica e testada do copywriting.</p>
+
+        <div class="formula-box">
+            <div class="formula">A - Atenção<br>I - Interesse<br>D - Desejo<br>A - Ação</div>
+        </div>
+
+        <div class="exemplo">
+            <h4>📌 Exemplo AIDA para Curso Online:</h4>
+
+            <p><strong>ATENÇÃO:</strong><br>
+            "Você sabia que 90% das pessoas desistem de vender online nos primeiros 3 meses?"</p>
+
+            <p><strong>INTERESSE:</strong><br>
+            "O problema não é a falta de clientes. É a falta de uma estratégia clara. A maioria fica postando sem rumo, esperando que 'alguém compre'."</p>
+
+            <p><strong>DESEJO:</strong><br>
+            "Imagine acordar com notificações de vendas. Ter um sistema que atrai clientes automaticamente, 24/7. É exatamente isso que nosso método ensina."</p>
+
+            <p><strong>AÇÃO:</strong><br>
+            "Clique no link e garanta sua vaga. Apenas 50 vagas disponíveis."</p>
+        </div>
+
+        <h3>Fórmula 2: PAS (Problem-Agitate-Solve)</h3>
+
+        <div class="formula-box">
+            <div class="formula">P - Problema<br>A - Agitar (Dor)<br>S - Solução</div>
+        </div>
+
+        <div class="exemplo">
+            <h4>📌 Exemplo PAS para Personal Trainer:</h4>
+
+            <p><strong>PROBLEMA:</strong><br>
+            "Você treina há meses mas não vê resultados?"</p>
+
+            <p><strong>AGITAR:</strong><br>
+            "Enquanto isso, seu corpo continua igual. Você se sente frustrado toda vez que olha no espelho. E o pior: está pensando em desistir de vez."</p>
+
+            <p><strong>SOLUÇÃO:</strong><br>
+            "O problema não é você. É o treino genérico. Com nossa consultoria personalizada, você terá resultados VISÍVEIS em 30 dias ou seu dinheiro de volta."</p>
+        </div>
+
+        <h3>Fórmula 3: BAB (Before-After-Bridge)</h3>
+
+        <div class="formula-box">
+            <div class="formula">B - Antes (situação atual ruim)<br>A - Depois (situação ideal)<br>B - Ponte (como chegar lá)</div>
+        </div>
+
+        <div class="exemplo">
+            <h4>📌 Exemplo BAB para Software:</h4>
+
+            <p><strong>ANTES:</strong><br>
+            "Você perde horas organizando planilhas, procurando informações, corrigindo erros manuais."</p>
+
+            <p><strong>DEPOIS:</strong><br>
+            "Imagine ter tudo automatizado. Um clique e pronto: relatórios gerados, dados organizados, tempo livre para focar no que importa."</p>
+
+            <p><strong>PONTE:</strong><br>
+            "Com [Produto], você transforma 8 horas de trabalho em 30 minutos. Teste grátis por 14 dias."</p>
+        </div>
+
+        <h3>Fórmula 4: FAB (Features-Advantages-Benefits)</h3>
+
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Etapa</th>
+                    <th>O Que É</th>
+                    <th>Exemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Feature (Característica)</strong></td>
+                    <td>O que o produto TEM</td>
+                    <td>"30 módulos em vídeo"</td>
+                </tr>
+                <tr>
+                    <td><strong>Advantage (Vantagem)</strong></td>
+                    <td>O que ele FAZ</td>
+                    <td>"Você aprende no seu ritmo"</td>
+                </tr>
+                <tr>
+                    <td><strong>Benefit (Benefício)</strong></td>
+                    <td>O que você GANHA</td>
+                    <td>"Estude mesmo com rotina corrida, concilie com trabalho e família"</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>🧠 Gatilhos Mentais (Triggers)</h2>
+
+        <p>Gatilhos mentais são "atalhos" que o cérebro usa para tomar decisões rápidas. Use-os eticamente!</p>
+
+        <h3>1. Escassez</h3>
+        <p>"Apenas 10 vagas restantes" / "Últimas unidades"</p>
+        <p><strong>Por que funciona:</strong> Valorizamos mais o que é raro.</p>
+
+        <h3>2. Urgência</h3>
+        <p>"Promoção válida até sexta-feira" / "Oferta expira em 24h"</p>
+        <p><strong>Por que funciona:</strong> Combate procrastinação.</p>
+
+        <h3>3. Prova Social</h3>
+        <p>"Mais de 10.000 alunos certificados" / "Nota 4.9 no Google"</p>
+        <p><strong>Por que funciona:</strong> Confiamos no que outros já validaram.</p>
+
+        <h3>4. Autoridade</h3>
+        <p>"Recomendado por especialistas" / "Formado em Harvard"</p>
+        <p><strong>Por que funciona:</strong> Confiamos em experts.</p>
+
+        <h3>5. Reciprocidade</h3>
+        <p>"Baixe grátis nosso e-book" (depois vende o curso)</p>
+        <p><strong>Por que funciona:</strong> Nos sentimos em dívida quando ganhamos algo.</p>
+
+        <h3>6. Antecipação</h3>
+        <p>"Em breve: lançamento revolucionário" / "Aguarde grandes novidades"</p>
+        <p><strong>Por que funciona:</strong> Cria expectativa e curiosidade.</p>
+
+        <h3>7. Garantia (Reversão de Risco)</h3>
+        <p>"7 dias de garantia ou seu dinheiro de volta"</p>
+        <p><strong>Por que funciona:</strong> Remove medo de perder dinheiro.</p>
+
+        <h3>8. Exclusividade</h3>
+        <p>"Acesso VIP apenas para membros" / "Oferta exclusiva"</p>
+        <p><strong>Por que funciona:</strong> Queremos nos sentir especiais.</p>
+
+        <h2>✅ Palavras Poderosas (Power Words)</h2>
+
+        <p>Algumas palavras têm impacto emocional maior. Use-as estrategicamente:</p>
+
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Emoção</th>
+                    <th>Palavras Poderosas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Curiosidade</strong></td>
+                    <td>Segredo, Revelado, Descoberta, Exclusivo, Privado, Oculto</td>
+                </tr>
+                <tr>
+                    <td><strong>Urgência</strong></td>
+                    <td>Agora, Hoje, Última chance, Urgente, Imediato, Rápido</td>
+                </tr>
+                <tr>
+                    <td><strong>Facilidade</strong></td>
+                    <td>Simples, Fácil, Sem esforço, Automático, Prático, Rápido</td>
+                </tr>
+                <tr>
+                    <td><strong>Segurança</strong></td>
+                    <td>Garantido, Comprovado, Seguro, Certificado, Confiável</td>
+                </tr>
+                <tr>
+                    <td><strong>Benefício</strong></td>
+                    <td>Grátis, Bônus, Economia, Lucro, Ganho, Resultado</td>
+                </tr>
+                <tr>
+                    <td><strong>Transformação</strong></td>
+                    <td>Novo, Transformar, Revolucionar, Melhorar, Dominar</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>❌ Erros Fatais de Copywriting</h2>
+
+        <div class="alerta">
+            <strong>Erro #1: Falar de VOCÊ, não do CLIENTE</strong><br>
+            ❌ "Somos a maior empresa do setor"<br>
+            ✅ "Você terá resultados 3x mais rápidos"
+        </div>
+
+        <div class="alerta">
+            <strong>Erro #2: Ser Vago</strong><br>
+            ❌ "Aumente suas vendas"<br>
+            ✅ "Aumente suas vendas em 40% nos próximos 90 dias"
+        </div>
+
+        <div class="alerta">
+            <strong>Erro #3: Sem CTA Claro</strong><br>
+            ❌ "Gostou? Comente!"<br>
+            ✅ "Clique no link da bio e garanta 50% OFF (só hoje)"
+        </div>
+
+        <div class="alerta">
+            <strong>Erro #4: Linguagem Técnica Demais</strong><br>
+            ❌ "Utilizamos algoritmo de machine learning..."<br>
+            ✅ "O sistema aprende sozinho e fica melhor a cada dia"
+        </div>
+
+        <div class="alerta">
+            <strong>Erro #5: Prometer Demais (Clickbait Enganoso)</strong><br>
+            ❌ "Fique milionário em 1 semana!"<br>
+            ✅ "Sistema validado que gerou R$ 50k em 6 meses"
+        </div>
+
+        <h2>📝 Templates de Copy Prontos para Usar</h2>
+
+        <h3>Template 1: Post Educativo</h3>
+        <div class="exemplo">
+            <p><strong>Gancho:</strong> [Número] [erros/dicas/segredos] que [resultado desejado]</p>
+            <p><strong>Desenvolvimento:</strong> Liste os pontos (1, 2, 3...)</p>
+            <p><strong>CTA:</strong> Salva esse post / Marca um amigo / Me segue para mais</p>
+
+            <p style="margin-top: 20px;"><em>Exemplo:</em><br>
+            "5 erros que te impedem de crescer no Instagram<br>
+            1. Postar sem estratégia<br>
+            2. Ignorar stories<br>
+            3. Não usar Reels<br>
+            4. Hashtags erradas<br>
+            5. Não analisar métricas<br><br>
+            Salva para não esquecer! 💾"</p>
+        </div>
+
+        <h3>Template 2: Storytelling de Venda</h3>
+        <div class="exemplo">
+            <p><strong>Parágrafo 1:</strong> Situação difícil (antes)<br>
+            <strong>Parágrafo 2:</strong> Ponto de virada (descoberta)<br>
+            <strong>Parágrafo 3:</strong> Transformação (depois)<br>
+            <strong>Parágrafo 4:</strong> Oferta + CTA</p>
+
+            <p style="margin-top: 20px;"><em>Exemplo:</em><br>
+            "Há 2 anos eu postava todo dia e não vendia nada...<br><br>
+            Até descobrir que o problema não era o produto. Era COMO eu falava dele.<br><br>
+            Quando aprendi copywriting, tudo mudou. Primeira venda em 48h. Depois virou avalanche.<br><br>
+            Se você quer o mesmo resultado, link na bio. Última turma do ano!"</p>
+        </div>
+
+        <h3>Template 3: Depoimento/Prova Social</h3>
+        <div class="exemplo">
+            <p>"[Resultado específico do cliente]<br>
+            [Nome + profissão] estava [problema].<br>
+            Depois de [usar produto], [resultado alcançado].<br>
+            [Depoimento entre aspas]<br>
+            Você também quer [resultado]? [CTA]"</p>
+        </div>
+
+        <h2>🎯 Copywriting para Cada Etapa do Funil</h2>
+
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Etapa</th>
+                    <th>Objetivo</th>
+                    <th>Tom de Copy</th>
+                    <th>Exemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Topo (ToFu)</strong></td>
+                    <td>Educar, atrair atenção</td>
+                    <td>Educativo, leve, valor</td>
+                    <td>"5 dicas grátis de [tema]"</td>
+                </tr>
+                <tr>
+                    <td><strong>Meio (MoFu)</strong></td>
+                    <td>Nutrir, criar desejo</td>
+                    <td>Storytelling, cases</td>
+                    <td>"Como [cliente] alcançou [resultado]"</td>
+                </tr>
+                <tr>
+                    <td><strong>Fundo (BoFu)</strong></td>
+                    <td>Converter em venda</td>
+                    <td>Direto, urgência, CTA forte</td>
+                    <td>"Últimas 10 vagas - 50% OFF só hoje"</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="exercicio">
+            <h3>📝 EXERCÍCIO: ESCREVA 3 COPIES</h3>
+
+            <p style="text-align: center; font-weight: bold; margin-bottom: 25px;">Pratique escrevendo copy para seu negócio:</p>
+
+            <div style="background: white; padding: 25px; border-radius: 8px; margin-bottom: 20px;">
+                <h4 style="color: #E1306C; margin-top: 0;">📌 COPY #1 - Post Educativo (AIDA)</h4>
+
+                <p><strong>ATENÇÃO (Gancho):</strong></p>
+                <p style="border: 1px solid #D1D5DB; padding: 12px; background: #F9FAFB; border-radius: 4px; min-height: 50px;">_________________________________________________________________</p>
+
+                <p><strong>INTERESSE (Problema):</strong></p>
+                <p style="border: 1px solid #D1D5DB; padding: 12px; background: #F9FAFB; border-radius: 4px; min-height: 80px;">_________________________________________________________________</p>
+
+                <p><strong>DESEJO (Solução/Benefício):</strong></p>
+                <p style="border: 1px solid #D1D5DB; padding: 12px; background: #F9FAFB; border-radius: 4px; min-height: 80px;">_________________________________________________________________</p>
+
+                <p><strong>AÇÃO (CTA):</strong></p>
+                <p style="border: 1px solid #D1D5DB; padding: 12px; background: #F9FAFB; border-radius: 4px; min-height: 50px;">_________________________________________________________________</p>
+            </div>
+
+            <div style="background: white; padding: 25px; border-radius: 8px; margin-bottom: 20px;">
+                <h4 style="color: #3B82F6; margin-top: 0;">📌 COPY #2 - PAS (Venda Direta)</h4>
+                <p style="border: 2px solid #3B82F6; padding: 15px; background: #EFF6FF; border-radius: 6px; min-height: 120px;">_________________________________________________________________</p>
+            </div>
+
+            <div style="background: white; padding: 25px; border-radius: 8px;">
+                <h4 style="color: #10B981; margin-top: 0;">📌 COPY #3 - Storytelling</h4>
+                <p style="border: 2px solid #10B981; padding: 15px; background: #D1FAE5; border-radius: 6px; min-height: 120px;">_________________________________________________________________</p>
+            </div>
+        </div>
+
+        <div class="sucesso">
+            <strong>🎊 Parabéns!</strong> Você concluiu a Aula 3.3 e agora sabe escrever textos que vendem! Na próxima aula, vamos aprender sobre <strong>Estratégias de Engajamento</strong> para fazer sua audiência interagir muito mais!
+        </div>
+
+        <div class="footer">
+            <p><strong>Marketing Digital do Zero ao Pro</strong></p>
+            <p>Módulo 3 - Aula 3.3: Copywriting - Textos que Vendem</p>
+            <p>© 2026 Cursos Certificados - Todos os direitos reservados</p>
+        </div>
+    </div>
+</body>
+</html>

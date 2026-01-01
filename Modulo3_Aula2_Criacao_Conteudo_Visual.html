@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3.2 - Criação de Conteúdo Visual Profissional</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1F2937;
+            background-color: #F9FAFB;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #E1306C 0%, #F77737 50%, #FCAF45 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitulo {
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #F59E0B;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #E1306C;
+            font-size: 2em;
+            margin: 40px 0 20px 0;
+            font-weight: 700;
+            border-left: 5px solid #F59E0B;
+            padding-left: 20px;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #C13584;
+            font-size: 1.5em;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-family: 'Poppins', sans-serif;
+            color: #047857;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+
+        .destaque {
+            background: #FEF3C7;
+            border-left: 5px solid #F59E0B;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .destaque strong {
+            color: #92400E;
+            font-size: 1.1em;
+        }
+
+        .importante {
+            background: #FCE7F3;
+            border-left: 5px solid #E1306C;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .importante strong {
+            color: #9F1239;
+            font-size: 1.1em;
+        }
+
+        .sucesso {
+            background: #D1FAE5;
+            border-left: 5px solid #10B981;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .sucesso strong {
+            color: #047857;
+            font-size: 1.1em;
+        }
+
+        ul, ol {
+            margin: 20px 0 20px 40px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        li strong {
+            color: #E1306C;
+        }
+
+        .exemplo {
+            background: #F3F4F6;
+            border: 2px solid #E5E7EB;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+
+        .exemplo h4 {
+            color: #059669;
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2em;
+        }
+
+        .exercicio {
+            background: linear-gradient(135deg, #FCE7F3 0%, #FBCFE8 100%);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 12px;
+            border: 3px solid #E1306C;
+        }
+
+        .exercicio h3 {
+            color: #9F1239;
+            margin-top: 0;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 3px solid #E5E7EB;
+            text-align: center;
+            color: #6B7280;
+        }
+
+        .footer strong {
+            color: #E1306C;
+        }
+
+        .tabela {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .tabela th {
+            background: #E1306C;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .tabela td {
+            padding: 15px;
+            border-bottom: 1px solid #E5E7EB;
+            font-size: 0.95em;
+        }
+
+        .tabela tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tabela tr:nth-child(even) {
+            background: #F9FAFB;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .tool-card {
+            background: white;
+            border: 2px solid #E5E7EB;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .tool-card h4 {
+            margin-top: 0;
+            color: #E1306C;
+        }
+
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .color-box {
+            height: 80px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AULA 3.2</h1>
+            <p class="subtitulo">Criação de Conteúdo Visual Profissional</p>
+            <span class="badge">MÓDULO 3 - REDES SOCIAIS E CONTEÚDO</span>
+        </div>
+
+        <h2>🎨 Por Que Design Importa no Marketing Digital?</h2>
+
+        <p>Vivemos em uma era visual. O cérebro processa imagens <strong>60.000x mais rápido</strong> que texto. Por isso:</p>
+
+        <ul>
+            <li>Posts com imagens têm <strong>650% mais engajamento</strong></li>
+            <li>90% das informações transmitidas ao cérebro são visuais</li>
+            <li>Pessoas lembram de <strong>80% do que veem</strong> vs 20% do que leem</li>
+            <li>Conteúdo visual é <strong>40x mais compartilhado</strong> nas redes sociais</li>
+        </ul>
+
+        <div class="destaque">
+            <strong>💡 A Boa Notícia:</strong> Você NÃO precisa ser designer profissional! Com as ferramentas certas e princípios básicos, qualquer um pode criar conteúdo visual atrativo.
+        </div>
+
+        <h2>🛠️ Ferramentas Essenciais (Gratuitas e Pagas)</h2>
+
+        <div class="tool-grid">
+            <div class="tool-card">
+                <h4>🎨 Canva</h4>
+                <p><strong>Tipo:</strong> Design gráfico</p>
+                <p><strong>Preço:</strong> Freemium (grátis + Pro R$ 36,90/mês)</p>
+                <p><strong>Melhor para:</strong> Posts, stories, carrosséis, infográficos</p>
+                <p><strong>Vantagem:</strong> Templates prontos, super fácil</p>
+            </div>
+
+            <div class="tool-card">
+                <h4>📸 Adobe Photoshop</h4>
+                <p><strong>Tipo:</strong> Edição de imagens</p>
+                <p><strong>Preço:</strong> R$ 43,43/mês</p>
+                <p><strong>Melhor para:</strong> Edições avançadas, manipulação</p>
+                <p><strong>Vantagem:</strong> Mais completo e profissional</p>
+            </div>
+
+            <div class="tool-card">
+                <h4>✨ Figma</h4>
+                <p><strong>Tipo:</strong> Design UI/UX</p>
+                <p><strong>Preço:</strong> Gratuito (pago: $12/mês)</p>
+                <p><strong>Melhor para:</strong> Layouts, protótipos, colaboração</p>
+                <p><strong>Vantagem:</strong> Online, trabalho em equipe</p>
+            </div>
+
+            <div class="tool-card">
+                <h4>📱 Adobe Express</h4>
+                <p><strong>Tipo:</strong> Design rápido</p>
+                <p><strong>Preço:</strong> Freemium</p>
+                <p><strong>Melhor para:</strong> Posts rápidos, stories, reels</p>
+                <p><strong>Vantagem:</strong> Rápido e intuitivo</p>
+            </div>
+
+            <div class="tool-card">
+                <h4>🖼️ Unsplash / Pexels</h4>
+                <p><strong>Tipo:</strong> Banco de imagens</p>
+                <p><strong>Preço:</strong> 100% Gratuito</p>
+                <p><strong>Melhor para:</strong> Fotos de alta qualidade</p>
+                <p><strong>Vantagem:</strong> Sem direitos autorais</p>
+            </div>
+
+            <div class="tool-card">
+                <h4>🎬 CapCut</h4>
+                <p><strong>Tipo:</strong> Edição de vídeo</p>
+                <p><strong>Preço:</strong> Gratuito</p>
+                <p><strong>Melhor para:</strong> Reels, TikTok, vídeos curtos</p>
+                <p><strong>Vantagem:</strong> Fácil, templates prontos</p>
+            </div>
+
+            <div class="tool-card">
+                <h4>🎭 Remove.bg</h4>
+                <p><strong>Tipo:</strong> Remover fundo</p>
+                <p><strong>Preço:</strong> Freemium</p>
+                <p><strong>Melhor para:</strong> Tirar fundo de fotos</p>
+                <p><strong>Vantagem:</strong> Automático, 5 segundos</p>
+            </div>
+
+            <div class="tool-card">
+                <h4>🎨 Coolors</h4>
+                <p><strong>Tipo:</strong> Paleta de cores</p>
+                <p><strong>Preço:</strong> Gratuito</p>
+                <p><strong>Melhor para:</strong> Gerar combinações de cores</p>
+                <p><strong>Vantagem:</strong> Infinitas possibilidades</p>
+            </div>
+        </div>
+
+        <h2>🎨 Princípios Básicos de Design</h2>
+
+        <h3>1. Hierarquia Visual</h3>
+
+        <p>Hierarquia guia o olho do espectador para onde você quer que ele olhe primeiro.</p>
+
+        <ul>
+            <li><strong>Tamanho:</strong> Maior = mais importante</li>
+            <li><strong>Cor:</strong> Contraste chama atenção</li>
+            <li><strong>Posição:</strong> Topo/centro = destaque</li>
+            <li><strong>Peso:</strong> Negrito > Regular</li>
+        </ul>
+
+        <div class="exemplo">
+            <h4>📌 Exemplo de Hierarquia:</h4>
+            <div style="background: white; padding: 30px; border-radius: 8px; text-align: center;">
+                <h1 style="font-size: 3em; color: #E1306C; margin: 10px 0;">GRANDE TÍTULO</h1>
+                <p style="font-size: 1.5em; color: #666; margin: 10px 0;">Subtítulo médio explicativo</p>
+                <p style="font-size: 1em; color: #999; margin: 10px 0;">Texto pequeno com detalhes adicionais</p>
+            </div>
+            <p style="margin-top: 15px;"><em>Viu como seu olho foi automaticamente do título para o subtítulo e depois para o texto?</em></p>
+        </div>
+
+        <h3>2. Espaçamento (White Space)</h3>
+
+        <p>Espaço vazio NÃO é espaço desperdiçado! Ele:</p>
+        <ul>
+            <li>Dá respiro ao design</li>
+            <li>Melhora legibilidade</li>
+            <li>Passa profissionalismo</li>
+            <li>Destaca elementos importantes</li>
+        </ul>
+
+        <div class="importante">
+            <strong>❌ Erro Comum:</strong> Tentar enfiar MUITA informação em um único post. Menos é mais! Prefira vários posts simples do que um poluído.
+        </div>
+
+        <h3>3. Contraste</h3>
+
+        <p>Contraste cria impacto visual e facilita leitura:</p>
+
+        <ul>
+            <li><strong>Cores:</strong> Escuro sobre claro, claro sobre escuro</li>
+            <li><strong>Tamanhos:</strong> Grande vs pequeno</li>
+            <li><strong>Estilos:</strong> Negrito vs regular, serif vs sans-serif</li>
+        </ul>
+
+        <div class="exemplo">
+            <h4>📌 Bom vs Mau Contraste:</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
+                <div style="background: #FFFFAA; padding: 20px; border-radius: 8px; border: 2px solid #EF4444;">
+                    <p style="color: #FFFF00; margin: 0; text-align: center;"><strong>❌ DIFÍCIL DE LER</strong></p>
+                    <p style="color: #999; font-size: 0.85em; margin-top: 10px; text-align: center;">Amarelo sobre amarelo claro</p>
+                </div>
+                <div style="background: #000000; padding: 20px; border-radius: 8px; border: 2px solid #10B981;">
+                    <p style="color: #FFFFFF; margin: 0; text-align: center;"><strong>✅ FÁCIL DE LER</strong></p>
+                    <p style="color: #CCC; font-size: 0.85em; margin-top: 10px; text-align: center;">Branco sobre preto</p>
+                </div>
+            </div>
+        </div>
+
+        <h3>4. Alinhamento</h3>
+
+        <p>Tudo deve estar alinhado a algo. Alinhamento cria organização e profissionalismo.</p>
+
+        <ul>
+            <li><strong>Esquerda:</strong> Mais comum, fácil de ler</li>
+            <li><strong>Centro:</strong> Títulos, posts curtos</li>
+            <li><strong>Direita:</strong> Raramente usado</li>
+            <li><strong>Justificado:</strong> Blocos de texto longos</li>
+        </ul>
+
+        <h3>5. Repetição (Consistência)</h3>
+
+        <p>Use os mesmos elementos visuais em todos os posts:</p>
+
+        <ul>
+            <li>Mesmas cores</li>
+            <li>Mesmas fontes</li>
+            <li>Mesmo estilo de foto/edição</li>
+            <li>Mesma disposição de elementos</li>
+        </ul>
+
+        <div class="importante">
+            <strong>🎨 Identidade Visual:</strong> Quando alguém vê seu post SEM ver o nome, precisa reconhecer que é seu. Isso é branding!
+        </div>
+
+        <h2>🎨 Psicologia das Cores</h2>
+
+        <p>Cada cor transmite uma emoção e influencia comportamento:</p>
+
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Cor</th>
+                    <th>Sentimento</th>
+                    <th>Quando Usar</th>
+                    <th>Exemplos de Marcas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><div style="width: 30px; height: 30px; background: #EF4444; border-radius: 4px; display: inline-block;"></div> <strong>Vermelho</strong></td>
+                    <td>Energia, urgência, paixão</td>
+                    <td>Promoções, comida, ação</td>
+                    <td>Coca-Cola, Netflix, YouTube</td>
+                </tr>
+                <tr>
+                    <td><div style="width: 30px; height: 30px; background: #3B82F6; border-radius: 4px; display: inline-block;"></div> <strong>Azul</strong></td>
+                    <td>Confiança, segurança, profissional</td>
+                    <td>Tecnologia, saúde, finanças</td>
+                    <td>Facebook, Twitter, LinkedIn</td>
+                </tr>
+                <tr>
+                    <td><div style="width: 30px; height: 30px; background: #10B981; border-radius: 4px; display: inline-block;"></div> <strong>Verde</strong></td>
+                    <td>Natureza, saúde, crescimento</td>
+                    <td>Orgânico, sustentável, dinheiro</td>
+                    <td>Starbucks, WhatsApp, Whole Foods</td>
+                </tr>
+                <tr>
+                    <td><div style="width: 30px; height: 30px; background: #F59E0B; border-radius: 4px; display: inline-block;"></div> <strong>Laranja</strong></td>
+                    <td>Entusiasmo, criatividade, diversão</td>
+                    <td>Call-to-action, juventude</td>
+                    <td>Nickelodeon, Amazon, Fanta</td>
+                </tr>
+                <tr>
+                    <td><div style="width: 30px; height: 30px; background: #FBBF24; border-radius: 4px; display: inline-block;"></div> <strong>Amarelo</strong></td>
+                    <td>Otimismo, felicidade, atenção</td>
+                    <td>Chamar atenção, alegria</td>
+                    <td>McDonald's, Snapchat, IKEA</td>
+                </tr>
+                <tr>
+                    <td><div style="width: 30px; height: 30px; background: #8B5CF6; border-radius: 4px; display: inline-block;"></div> <strong>Roxo</strong></td>
+                    <td>Luxo, realeza, criatividade</td>
+                    <td>Premium, beleza, espiritual</td>
+                    <td>Twitch, Cadbury, Hallmark</td>
+                </tr>
+                <tr>
+                    <td><div style="width: 30px; height: 30px; background: #EC4899; border-radius: 4px; display: inline-block;"></div> <strong>Rosa</strong></td>
+                    <td>Feminino, doce, romântico</td>
+                    <td>Público feminino, beleza</td>
+                    <td>Victoria's Secret, Barbie</td>
+                </tr>
+                <tr>
+                    <td><div style="width: 30px; height: 30px; background: #000000; border-radius: 4px; display: inline-block; border: 1px solid #ccc;"></div> <strong>Preto</strong></td>
+                    <td>Sofisticação, elegância, poder</td>
+                    <td>Luxo, premium, formal</td>
+                    <td>Chanel, Nike, Apple</td>
+                </tr>
+                <tr>
+                    <td><div style="width: 30px; height: 30px; background: #FFFFFF; border-radius: 4px; display: inline-block; border: 1px solid #ccc;"></div> <strong>Branco</strong></td>
+                    <td>Pureza, simplicidade, limpeza</td>
+                    <td>Minimalista, saúde, tech</td>
+                    <td>Apple, Tesla, Dove</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Como Criar Sua Paleta de Cores:</h3>
+
+        <div class="exemplo">
+            <h4>📌 Regra 60-30-10:</h4>
+            <ul>
+                <li><strong>60% - Cor Dominante:</strong> Cor principal da marca (backgrounds, maioria)</li>
+                <li><strong>30% - Cor Secundária:</strong> Complementa a principal</li>
+                <li><strong>10% - Cor de Destaque:</strong> Botões, CTAs, destaques</li>
+            </ul>
+
+            <div class="color-palette" style="margin-top: 20px;">
+                <div class="color-box" style="background: #1E40AF; grid-column: span 3;">60% Azul Principal</div>
+                <div class="color-box" style="background: #F59E0B; grid-column: span 2;">30% Laranja</div>
+                <div class="color-box" style="background: #10B981;">10% Verde</div>
+            </div>
+        </div>
+
+        <h2>✍️ Tipografia (Fontes)</h2>
+
+        <h3>Tipos de Fontes:</h3>
+
+        <ul>
+            <li><strong>Serif:</strong> Com "pezinhos" (Times New Roman, Georgia) - Formal, tradicional, confiança</li>
+            <li><strong>Sans-serif:</strong> Sem "pezinhos" (Arial, Helvetica) - Moderno, limpo, digital</li>
+            <li><strong>Script:</strong> Cursiva (Pacifico, Dancing Script) - Elegante, feminino, delicado</li>
+            <li><strong>Display:</strong> Decorativa (Impact, Bebas Neue) - Chamativa, títulos, impacto</li>
+        </ul>
+
+        <h3>Regras de Ouro para Fontes:</h3>
+
+        <ol>
+            <li><strong>Use no máximo 2-3 fontes diferentes</strong> (título + texto)</li>
+            <li><strong>Garanta legibilidade:</strong> Tamanho mínimo 16px para texto</li>
+            <li><strong>Contraste de peso:</strong> Negrito para títulos, regular para texto</li>
+            <li><strong>Evite fontes muito decorativas</strong> em textos longos</li>
+            <li><strong>Combine bem:</strong> Serif + Sans-serif funciona</li>
+        </ol>
+
+        <div class="exemplo">
+            <h4>📌 Combinações de Fontes que Funcionam:</h4>
+            <ul>
+                <li><strong>Poppins (título)</strong> + Inter (texto) ← Moderna e limpa</li>
+                <li><strong>Playfair Display (título)</strong> + Source Sans (texto) ← Elegante</li>
+                <li><strong>Montserrat (título)</strong> + Open Sans (texto) ← Versátil</li>
+                <li><strong>Bebas Neue (título)</strong> + Roboto (texto) ← Impactante</li>
+            </ul>
+        </div>
+
+        <h2>📐 Tamanhos Ideais para Cada Rede Social</h2>
+
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Plataforma</th>
+                    <th>Formato</th>
+                    <th>Tamanho (px)</th>
+                    <th>Proporção</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="4"><strong>Instagram</strong></td>
+                    <td>Feed (quadrado)</td>
+                    <td>1080 x 1080</td>
+                    <td>1:1</td>
+                </tr>
+                <tr>
+                    <td>Feed (retrato)</td>
+                    <td>1080 x 1350</td>
+                    <td>4:5</td>
+                </tr>
+                <tr>
+                    <td>Stories/Reels</td>
+                    <td>1080 x 1920</td>
+                    <td>9:16</td>
+                </tr>
+                <tr>
+                    <td>Carrossel</td>
+                    <td>1080 x 1080</td>
+                    <td>1:1</td>
+                </tr>
+                <tr>
+                    <td rowspan="3"><strong>Facebook</strong></td>
+                    <td>Post</td>
+                    <td>1200 x 630</td>
+                    <td>1.91:1</td>
+                </tr>
+                <tr>
+                    <td>Capa</td>
+                    <td>820 x 312</td>
+                    <td>2.7:1</td>
+                </tr>
+                <tr>
+                    <td>Stories</td>
+                    <td>1080 x 1920</td>
+                    <td>9:16</td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><strong>YouTube</strong></td>
+                    <td>Thumbnail</td>
+                    <td>1280 x 720</td>
+                    <td>16:9</td>
+                </tr>
+                <tr>
+                    <td>Capa do canal</td>
+                    <td>2560 x 1440</td>
+                    <td>16:9</td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><strong>LinkedIn</strong></td>
+                    <td>Post</td>
+                    <td>1200 x 627</td>
+                    <td>1.91:1</td>
+                </tr>
+                <tr>
+                    <td>Capa</td>
+                    <td>1584 x 396</td>
+                    <td>4:1</td>
+                </tr>
+                <tr>
+                    <td><strong>TikTok</strong></td>
+                    <td>Vídeo</td>
+                    <td>1080 x 1920</td>
+                    <td>9:16</td>
+                </tr>
+                <tr>
+                    <td><strong>Pinterest</strong></td>
+                    <td>Pin</td>
+                    <td>1000 x 1500</td>
+                    <td>2:3</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>📸 Dicas de Fotografia para Redes Sociais</h2>
+
+        <h3>Iluminação (O Mais Importante!):</h3>
+        <ul>
+            <li><strong>Luz natural é SEMPRE melhor</strong> que artificial</li>
+            <li><strong>Melhor horário:</strong> Golden hour (1h após nascer do sol ou 1h antes de pôr)</li>
+            <li><strong>Evite:</strong> Luz direta do sol (meio-dia) - cria sombras duras</li>
+            <li><strong>Dentro de casa:</strong> Próximo à janela, luz difusa</li>
+            <li><strong>Ring light:</strong> Ótimo investimento (R$ 50-200)</li>
+        </ul>
+
+        <h3>Composição (Regra dos Terços):</h3>
+        <p>Divida a imagem em 9 partes iguais (grade 3x3). Posicione elementos importantes nas interseções.</p>
+
+        <div class="exemplo">
+            <h4>📌 Ative a Grade no seu Celular:</h4>
+            <ul>
+                <li><strong>iPhone:</strong> Ajustes → Câmera → Grade</li>
+                <li><strong>Android:</strong> Câmera → Configurações → Linhas de grade</li>
+            </ul>
+        </div>
+
+        <h3>Ângulos que Funcionam:</h3>
+        <ul>
+            <li><strong>Eye level (altura dos olhos):</strong> Natural, conecta</li>
+            <li><strong>Bird's eye (de cima):</strong> Flatlay, comida, produtos</li>
+            <li><strong>Low angle (de baixo):</strong> Imponente, poderoso</li>
+            <li><strong>45 graus:</strong> Produtos, pessoas, versátil</li>
+        </ul>
+
+        <h2>🎬 Criação de Vídeos (Reels/TikTok)</h2>
+
+        <h3>Equipamento Básico:</h3>
+        <ul>
+            <li><strong>Celular:</strong> Qualquer smartphone moderno (iPhone 11+, Android 2020+)</li>
+            <li><strong>Tripé:</strong> R$ 30-100 (estabiliza, libera as mãos)</li>
+            <li><strong>Ring light:</strong> R$ 50-200</li>
+            <li><strong>Microfone lapela:</strong> R$ 50-150 (opcional, mas melhora MUITO o áudio)</li>
+        </ul>
+
+        <h3>Dicas para Vídeos Profissionais:</h3>
+        <ol>
+            <li><strong>Grave horizontal para paisagem, vertical para stories/reels</strong></li>
+            <li><strong>Limpe a lente do celular</strong> (parece óbvio, mas muitos esquecem!)</li>
+            <li><strong>Grave em local silencioso</strong> ou use música de fundo</li>
+            <li><strong>Use luz natural ou artificial de frente</strong> (nunca de trás)</li>
+            <li><strong>Grave vários takes</strong> - escolha o melhor na edição</li>
+            <li><strong>Primeiros 3 segundos:</strong> Gancho visual/texto chamativo</li>
+        </ol>
+
+        <h2>🔥 Templates Prontos no Canva</h2>
+
+        <p>O Canva tem milhares de templates prontos. Aqui estão os melhores:</p>
+
+        <ul>
+            <li><strong>Instagram Post:</strong> Busque "instagram post" → Filtre por gratuitos</li>
+            <li><strong>Stories:</strong> Busque "instagram stories" → Escolha seu estilo</li>
+            <li><strong>Carrossel:</strong> Busque "instagram carousel" → 10 slides conectados</li>
+            <li><strong>Reels Cover:</strong> Busque "reels cover" → Capa destacada</li>
+        </ul>
+
+        <div class="importante">
+            <strong>⚠️ Dica:</strong> NÃO use templates 100% igual saem. Personalize cores, fontes e imagens para combinar com sua marca!
+        </div>
+
+        <div class="exercicio">
+            <h3>📝 EXERCÍCIO: CRIE SUA IDENTIDADE VISUAL</h3>
+
+            <p style="text-align: center; font-weight: bold; margin-bottom: 25px;">Defina os elementos visuais da sua marca:</p>
+
+            <p><strong>1. Escolha 3 cores principais (use Coolors.co):</strong></p>
+            <ul style="margin-left: 20px;">
+                <li>Cor 1 (Dominante): _______________________________</li>
+                <li>Cor 2 (Secundária): _______________________________</li>
+                <li>Cor 3 (Destaque/CTA): _______________________________</li>
+            </ul>
+
+            <p><strong>2. Escolha 2 fontes:</strong></p>
+            <ul style="margin-left: 20px;">
+                <li>Títulos: _______________________________</li>
+                <li>Texto: _______________________________</li>
+            </ul>
+
+            <p><strong>3. Estilo de fotografia/imagem:</strong></p>
+            <p>☐ Minimalista (fundo branco, clean)<br>
+            ☐ Lifestyle (pessoas usando, contexto real)<br>
+            ☐ Flat lay (de cima, organizado)<br>
+            ☐ Escuro/Moody (tons escuros, dramático)<br>
+            ☐ Vibrante (cores saturadas, alegre)</p>
+
+            <p><strong>4. Agora crie 3 posts no Canva seguindo sua identidade:</strong></p>
+            <ol style="margin-left: 20px;">
+                <li>Post educativo (dica/tutorial)</li>
+                <li>Post inspiracional (frase motivacional)</li>
+                <li>Post de venda (produto/serviço)</li>
+            </ol>
+        </div>
+
+        <div class="sucesso">
+            <strong>🎊 Parabéns!</strong> Você concluiu a Aula 3.2 e agora sabe criar conteúdo visual profissional mesmo sem ser designer! Na próxima aula, vamos aprender sobre <strong>Copywriting</strong> - a arte de escrever textos que vendem!
+        </div>
+
+        <div class="footer">
+            <p><strong>Marketing Digital do Zero ao Pro</strong></p>
+            <p>Módulo 3 - Aula 3.2: Criação de Conteúdo Visual Profissional</p>
+            <p>© 2026 Cursos Certificados - Todos os direitos reservados</p>
+        </div>
+    </div>
+</body>
+</html>

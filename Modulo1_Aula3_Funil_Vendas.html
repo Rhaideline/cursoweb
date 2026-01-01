@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1.3 - Funil de Vendas no Marketing Digital</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1F2937;
+            background-color: #F9FAFB;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitulo {
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #F59E0B;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #1E40AF;
+            font-size: 2em;
+            margin: 40px 0 20px 0;
+            font-weight: 700;
+            border-left: 5px solid #F59E0B;
+            padding-left: 20px;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #1E3A8A;
+            font-size: 1.5em;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+
+        .destaque {
+            background: #FEF3C7;
+            border-left: 5px solid #F59E0B;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .destaque strong {
+            color: #92400E;
+            font-size: 1.1em;
+        }
+
+        .importante {
+            background: #DBEAFE;
+            border-left: 5px solid #1E40AF;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .importante strong {
+            color: #1E40AF;
+            font-size: 1.1em;
+        }
+
+        .sucesso {
+            background: #D1FAE5;
+            border-left: 5px solid #10B981;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .sucesso strong {
+            color: #047857;
+            font-size: 1.1em;
+        }
+
+        ul, ol {
+            margin: 20px 0 20px 40px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        li strong {
+            color: #1E40AF;
+        }
+
+        .exemplo {
+            background: #F3F4F6;
+            border: 2px solid #E5E7EB;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+
+        .exemplo h4 {
+            color: #059669;
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2em;
+        }
+
+        .tabela {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .tabela th {
+            background: #1E40AF;
+            color: white;
+            padding: 18px;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .tabela td {
+            padding: 18px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .tabela tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tabela tr:nth-child(even) {
+            background: #F9FAFB;
+        }
+
+        .exercicio {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 12px;
+            border: 3px solid #F59E0B;
+        }
+
+        .exercicio h3 {
+            color: #92400E;
+            margin-top: 0;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 3px solid #E5E7EB;
+            text-align: center;
+            color: #6B7280;
+        }
+
+        .footer strong {
+            color: #1E40AF;
+        }
+
+        .funil-visual {
+            background: linear-gradient(180deg, #DBEAFE 0%, #BFDBFE 50%, #93C5FD 100%);
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .funil-stage {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 90%;
+        }
+
+        .funil-stage.topo {
+            max-width: 95%;
+            background: #EFF6FF;
+            border: 2px solid #3B82F6;
+        }
+
+        .funil-stage.meio {
+            max-width: 70%;
+            background: #FEF3C7;
+            border: 2px solid #F59E0B;
+        }
+
+        .funil-stage.fundo {
+            max-width: 45%;
+            background: #D1FAE5;
+            border: 2px solid #10B981;
+        }
+
+        .percentual {
+            display: inline-block;
+            background: #1E40AF;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            margin-left: 10px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AULA 1.3</h1>
+            <p class="subtitulo">Funil de Vendas no Marketing Digital</p>
+            <span class="badge">MÓDULO 1 - FUNDAMENTOS</span>
+        </div>
+
+        <h2>📊 O Que é o Funil de Vendas?</h2>
+
+        <p>O <strong>Funil de Vendas</strong> (ou Sales Funnel) é uma representação visual das etapas pelas quais um potencial cliente passa desde o primeiro contato com sua marca até a efetivação da compra e além.</p>
+
+        <div class="destaque">
+            <strong>💡 Conceito Fundamental:</strong> O funil é chamado assim porque, em cada etapa, uma porcentagem de pessoas avança para a próxima fase, enquanto outras saem do processo. Isso cria um formato de funil: largo no topo (muitos visitantes) e estreito no fundo (poucos compradores).
+        </div>
+
+        <p>Imagina um funil de cozinha: você coloca muita água no topo, mas apenas uma quantidade controlada sai pelo fundo. No marketing, você atrai muitas pessoas no topo, mas apenas uma parte se torna cliente no final.</p>
+
+        <h2>🎯 As 3 Etapas Clássicas do Funil</h2>
+
+        <div class="funil-visual">
+            <h3 style="color: #1E40AF; margin-bottom: 30px; font-family: 'Poppins', sans-serif;">VISUALIZAÇÃO DO FUNIL DE VENDAS</h3>
+
+            <div class="funil-stage topo">
+                <h3 style="color: #1E40AF; margin: 0;">🔝 TOPO DO FUNIL (ToFu)</h3>
+                <p style="margin: 10px 0 0 0;"><strong>Consciência e Descoberta</strong> <span class="percentual">100%</span></p>
+            </div>
+
+            <div style="font-size: 3em; color: #6B7280; margin: 20px 0;">⬇️</div>
+
+            <div class="funil-stage meio">
+                <h3 style="color: #92400E; margin: 0;">🎯 MEIO DO FUNIL (MoFu)</h3>
+                <p style="margin: 10px 0 0 0;"><strong>Consideração e Interesse</strong> <span class="percentual">30-40%</span></p>
+            </div>
+
+            <div style="font-size: 3em; color: #6B7280; margin: 20px 0;">⬇️</div>
+
+            <div class="funil-stage fundo">
+                <h3 style="color: #047857; margin: 0;">💰 FUNDO DO FUNIL (BoFu)</h3>
+                <p style="margin: 10px 0 0 0;"><strong>Decisão e Ação</strong> <span class="percentual">2-5%</span></p>
+            </div>
+        </div>
+
+        <h3>1. Topo do Funil (ToFu - Top of Funnel)</h3>
+
+        <p><strong>Objetivo:</strong> Atrair visitantes e gerar consciência sobre sua marca.</p>
+
+        <p><strong>Características do público:</strong></p>
+        <ul>
+            <li>Ainda não conhece sua marca</li>
+            <li>Está buscando informações gerais</li>
+            <li>Tem um problema, mas não sabe como resolver</li>
+            <li>Não está pronto para comprar</li>
+        </ul>
+
+        <p><strong>Estratégias para o Topo:</strong></p>
+        <ul>
+            <li><strong>Conteúdo educativo:</strong> Blog posts, infográficos, vídeos informativos</li>
+            <li><strong>Redes sociais:</strong> Posts orgânicos, stories, reels</li>
+            <li><strong>SEO:</strong> Otimização para palavras-chave informacionais</li>
+            <li><strong>Anúncios de alcance:</strong> Facebook Ads, Google Display</li>
+            <li><strong>Materiais gratuitos:</strong> E-books, guias, checklists</li>
+        </ul>
+
+        <div class="exemplo">
+            <h4>📌 Exemplo Prático - Topo do Funil:</h4>
+            <p><strong>Negócio:</strong> Academia de fitness</p>
+            <p><strong>Conteúdo Topo:</strong></p>
+            <ul style="margin-top: 15px;">
+                <li>Blog: "10 Exercícios para Fazer em Casa Sem Equipamento"</li>
+                <li>Instagram: Post "5 Erros que Impedem Você de Emagrecer"</li>
+                <li>YouTube: Vídeo "Treino de 15 Minutos para Iniciantes"</li>
+                <li>E-book gratuito: "Guia Completo de Alimentação Saudável"</li>
+            </ul>
+            <p style="margin-top: 15px;"><strong>Objetivo:</strong> Pessoa descobre a academia através desse conteúdo gratuito.</p>
+        </div>
+
+        <h3>2. Meio do Funil (MoFu - Middle of Funnel)</h3>
+
+        <p><strong>Objetivo:</strong> Nutrir leads e criar relacionamento com potenciais clientes.</p>
+
+        <p><strong>Características do público:</strong></p>
+        <ul>
+            <li>Já conhece sua marca</li>
+            <li>Está comparando soluções</li>
+            <li>Quer saber mais sobre seu produto/serviço</li>
+            <li>Ainda tem dúvidas e objeções</li>
+        </ul>
+
+        <p><strong>Estratégias para o Meio:</strong></p>
+        <ul>
+            <li><strong>Email marketing:</strong> Sequência de emails educativos</li>
+            <li><strong>Webinars:</strong> Aulas ao vivo ou gravadas</li>
+            <li><strong>Cases de sucesso:</strong> Depoimentos e resultados de clientes</li>
+            <li><strong>Conteúdo de comparação:</strong> "X vs Y", "Qual escolher?"</li>
+            <li><strong>Demonstrações:</strong> Testes grátis, amostras, demos</li>
+        </ul>
+
+        <div class="exemplo">
+            <h4>📌 Exemplo Prático - Meio do Funil:</h4>
+            <p><strong>Negócio:</strong> Academia de fitness</p>
+            <p><strong>Conteúdo Meio:</strong></p>
+            <ul style="margin-top: 15px;">
+                <li>Email 1: "Conheça Nossa Metodologia de Treino Personalizado"</li>
+                <li>Email 2: "Veja os Resultados de Quem Treina Conosco" (depoimentos)</li>
+                <li>Email 3: "Tour Virtual: Conheça Nossa Estrutura"</li>
+                <li>Webinar: "Como Montar um Plano de Treino Eficiente"</li>
+                <li>WhatsApp: "Tire suas Dúvidas com Nossa Equipe"</li>
+            </ul>
+            <p style="margin-top: 15px;"><strong>Objetivo:</strong> Pessoa se interessa pela academia e considera se matricular.</p>
+        </div>
+
+        <h3>3. Fundo do Funil (BoFu - Bottom of Funnel)</h3>
+
+        <p><strong>Objetivo:</strong> Converter leads em clientes pagantes.</p>
+
+        <p><strong>Características do público:</strong></p>
+        <ul>
+            <li>Está pronto para comprar</li>
+            <li>Já considera sua solução</li>
+            <li>Precisa de um "empurrãozinho" final</li>
+            <li>Busca condições, preços, garantias</li>
+        </ul>
+
+        <p><strong>Estratégias para o Fundo:</strong></p>
+        <ul>
+            <li><strong>Páginas de vendas:</strong> Landing pages otimizadas (VSL)</li>
+            <li><strong>Ofertas limitadas:</strong> Descontos por tempo limitado</li>
+            <li><strong>Garantias:</strong> "Satisfação ou seu dinheiro de volta"</li>
+            <li><strong>Bônus exclusivos:</strong> Materiais adicionais</li>
+            <li><strong>Prova social:</strong> Avaliações, certificações, números</li>
+            <li><strong>Urgência e escassez:</strong> Contadores, vagas limitadas</li>
+        </ul>
+
+        <div class="exemplo">
+            <h4>📌 Exemplo Prático - Fundo do Funil:</h4>
+            <p><strong>Negócio:</strong> Academia de fitness</p>
+            <p><strong>Conteúdo Fundo:</strong></p>
+            <ul style="margin-top: 15px;">
+                <li>Oferta: "50% OFF na Matrícula - Válido Até Sexta-Feira!"</li>
+                <li>Garantia: "7 Dias de Teste Gratuito - Cancele Quando Quiser"</li>
+                <li>Bônus: "Ganhe Avaliação Física + Plano Alimentar Grátis"</li>
+                <li>Prova social: "Mais de 2.000 Alunos Transformados"</li>
+                <li>CTA direto: "Garanta Sua Vaga Agora - Apenas 10 Vagas Restantes"</li>
+            </ul>
+            <p style="margin-top: 15px;"><strong>Objetivo:</strong> Pessoa se matricula na academia.</p>
+        </div>
+
+        <h2>📈 Métricas Importantes do Funil</h2>
+
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Etapa do Funil</th>
+                    <th>Métrica Principal</th>
+                    <th>Taxa Média</th>
+                    <th>Como Calcular</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Topo</strong></td>
+                    <td>Taxa de Visitantes → Leads</td>
+                    <td>2-5%</td>
+                    <td>(Leads ÷ Visitantes) × 100</td>
+                </tr>
+                <tr>
+                    <td><strong>Meio</strong></td>
+                    <td>Taxa de Leads → Oportunidades</td>
+                    <td>10-20%</td>
+                    <td>(Oportunidades ÷ Leads) × 100</td>
+                </tr>
+                <tr>
+                    <td><strong>Fundo</strong></td>
+                    <td>Taxa de Conversão (Vendas)</td>
+                    <td>2-5%</td>
+                    <td>(Vendas ÷ Oportunidades) × 100</td>
+                </tr>
+                <tr>
+                    <td><strong>Geral</strong></td>
+                    <td>Taxa de Conversão Total</td>
+                    <td>0.5-2%</td>
+                    <td>(Vendas ÷ Visitantes) × 100</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="importante">
+            <strong>📊 Exemplo de Cálculo Real:</strong><br><br>
+            Imagine que você teve:<br>
+            • 10.000 visitantes no site (Topo)<br>
+            • 400 pessoas baixaram seu e-book (4% de conversão)<br>
+            • 80 pessoas agendaram consulta (20% dos leads)<br>
+            • 4 pessoas compraram (5% das oportunidades)<br><br>
+            <strong>Taxa de Conversão Total:</strong> (4 ÷ 10.000) × 100 = 0,04% ou 4 vendas a cada 10 mil visitantes
+        </div>
+
+        <h2>🔄 Pós-Venda: Além do Funil Tradicional</h2>
+
+        <p>Muitos profissionais esquecem que o funil não termina na venda! Existe uma etapa crucial após a compra:</p>
+
+        <h3>4. Pós-Venda e Fidelização</h3>
+
+        <p><strong>Objetivo:</strong> Transformar clientes em fãs e promotores da marca.</p>
+
+        <ul>
+            <li><strong>Onboarding:</strong> Receber bem o novo cliente</li>
+            <li><strong>Suporte excelente:</strong> Atendimento de qualidade</li>
+            <li><strong>Upsell/Cross-sell:</strong> Vender produtos complementares</li>
+            <li><strong>Programa de indicação:</strong> "Indique um amigo e ganhe desconto"</li>
+            <li><strong>Conteúdo exclusivo:</strong> Materiais VIP para clientes</li>
+        </ul>
+
+        <div class="sucesso">
+            <strong>✨ Estatística Importante:</strong> Conquistar um novo cliente custa de 5 a 25 vezes mais do que manter um cliente existente. Por isso, invista em fidelização!
+        </div>
+
+        <h2>🎨 Exemplo Completo: Funil de uma Loja de Roupas Online</h2>
+
+        <div class="exemplo">
+            <h4>TOPO (Atração)</h4>
+            <ul>
+                <li>Instagram: Post "5 Tendências de Moda para 2026"</li>
+                <li>Pinterest: Looks inspiradores</li>
+                <li>Google: Blog "Como Combinar Cores na Roupa"</li>
+                <li><strong>Resultado:</strong> 20.000 pessoas veem o conteúdo</li>
+            </ul>
+
+            <h4>MEIO (Nutrição)</h4>
+            <ul>
+                <li>E-book grátis: "Guia de Estilo Pessoal" (em troca do email)</li>
+                <li>Email 1: "Descubra Qual Seu Tipo de Corpo"</li>
+                <li>Email 2: "Peças Essenciais para Seu Guarda-Roupa"</li>
+                <li>Email 3: "Veja Nossas Coleções Exclusivas"</li>
+                <li><strong>Resultado:</strong> 1.000 pessoas se cadastram (5%)</li>
+            </ul>
+
+            <h4>FUNDO (Conversão)</h4>
+            <ul>
+                <li>Oferta: "30% OFF na Primeira Compra + Frete Grátis"</li>
+                <li>Escassez: "Últimas Unidades do Tamanho M"</li>
+                <li>Garantia: "30 Dias para Trocar ou Devolver"</li>
+                <li>Prova social: "Nota 4.8/5 - Mais de 10 mil clientes satisfeitos"</li>
+                <li><strong>Resultado:</strong> 50 pessoas compram (5% dos 1.000 leads)</li>
+            </ul>
+
+            <h4>PÓS-VENDA (Fidelização)</h4>
+            <ul>
+                <li>Email de boas-vindas: "Obrigada por comprar conosco!"</li>
+                <li>Dica de uso: "Como Cuidar da Sua Peça"</li>
+                <li>Cupom exclusivo: "10% OFF na Próxima Compra"</li>
+                <li>Programa VIP: "Acumule pontos e ganhe descontos"</li>
+                <li><strong>Resultado:</strong> 20 clientes compram novamente (40% de recompra)</li>
+            </ul>
+        </div>
+
+        <h2>🚀 Como Criar Seu Próprio Funil</h2>
+
+        <p><strong>Passo a passo prático:</strong></p>
+
+        <ol>
+            <li><strong>Defina seu público-alvo:</strong> Quem você quer atrair?</li>
+            <li><strong>Mapeie a jornada:</strong> Como essa pessoa descobre, considera e decide comprar?</li>
+            <li><strong>Crie conteúdo para cada etapa:</strong> Topo, meio e fundo</li>
+            <li><strong>Escolha as ferramentas:</strong> Site, email marketing, CRM</li>
+            <li><strong>Configure as automações:</strong> Sequências de email, chatbots</li>
+            <li><strong>Teste e otimize:</strong> Analise as métricas e melhore continuamente</li>
+        </ol>
+
+        <div class="importante">
+            <strong>🎯 Dica de Ouro:</strong> Comece simples! Você não precisa de um funil complexo no início. Um funil básico funcional é melhor que um funil perfeito que nunca sai do papel.
+        </div>
+
+        <h2>❌ Erros Comuns em Funis de Vendas</h2>
+
+        <ul>
+            <li><strong>Vender logo no topo:</strong> Você não pede em casamento no primeiro encontro, certo? Não tente vender para quem acabou de conhecer sua marca.</li>
+            <li><strong>Não nutrir os leads:</strong> Capturou o email e não mandou nenhuma mensagem? Lead perdido!</li>
+            <li><strong>Ignorar pós-venda:</strong> Cliente comprou e sumiu? Você perdeu oportunidade de fidelizar.</li>
+            <li><strong>Não medir resultados:</strong> Se você não mede, não consegue melhorar.</li>
+            <li><strong>Funil muito longo:</strong> Muitas etapas = mais chances de perder o cliente no caminho.</li>
+        </ul>
+
+        <div class="exercicio">
+            <h3>📝 EXERCÍCIO PRÁTICO</h3>
+
+            <p><strong>Crie um funil de vendas para o SEU negócio (ou um negócio que você gostaria de ter):</strong></p>
+
+            <ol>
+                <li>Escreva qual é o seu produto/serviço:</li>
+                <p style="border: 1px solid #D1D5DB; padding: 15px; background: white; border-radius: 6px; min-height: 50px;">_________________________________________________________________</p>
+
+                <li>TOPO - Liste 3 ideias de conteúdo para atrair pessoas:</li>
+                <ul>
+                    <li style="border: 1px solid #D1D5DB; padding: 10px; background: white; border-radius: 6px; margin: 10px 0;">_______________________________________________</li>
+                    <li style="border: 1px solid #D1D5DB; padding: 10px; background: white; border-radius: 6px; margin: 10px 0;">_______________________________________________</li>
+                    <li style="border: 1px solid #D1D5DB; padding: 10px; background: white; border-radius: 6px; margin: 10px 0;">_______________________________________________</li>
+                </ul>
+
+                <li>MEIO - Como você vai nutrir essas pessoas? (email, WhatsApp, etc.)</li>
+                <p style="border: 1px solid #D1D5DB; padding: 15px; background: white; border-radius: 6px; min-height: 80px;">_________________________________________________________________</p>
+
+                <li>FUNDO - Qual oferta você fará para converter em venda?</li>
+                <p style="border: 1px solid #D1D5DB; padding: 15px; background: white; border-radius: 6px; min-height: 80px;">_________________________________________________________________</p>
+
+                <li>PÓS-VENDA - Como vai fidelizar o cliente?</li>
+                <p style="border: 1px solid #D1D5DB; padding: 15px; background: white; border-radius: 6px; min-height: 80px;">_________________________________________________________________</p>
+            </ol>
+        </div>
+
+        <div class="sucesso">
+            <strong>🎊 Parabéns!</strong> Você concluiu a Aula 1.3 e agora entende como funciona o Funil de Vendas no Marketing Digital. Na próxima aula, vamos aprofundar em <strong>Personas e Público-Alvo</strong>, para você aprender a identificar exatamente quem é seu cliente ideal!
+        </div>
+
+        <div class="footer">
+            <p><strong>Marketing Digital do Zero ao Pro</strong></p>
+            <p>Módulo 1 - Aula 1.3: Funil de Vendas no Marketing Digital</p>
+            <p>© 2026 Cursos Certificados - Todos os direitos reservados</p>
+        </div>
+    </div>
+</body>
+</html>
