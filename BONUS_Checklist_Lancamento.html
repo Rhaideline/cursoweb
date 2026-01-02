@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist de Lancamento - Passo a Passo Completo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            padding: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 { font-family: 'Poppins', sans-serif; color: #1E40AF; }
+
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #1E40AF, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle { text-align: center; color: #6B7280; margin-bottom: 40px; font-size: 18px; }
+
+        .phase {
+            background: #F3F4F6;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 5px solid #1E40AF;
+        }
+
+        .phase-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .phase-number {
+            background: linear-gradient(135deg, #1E40AF, #3B82F6);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .phase-title { font-size: 24px; color: #1E40AF; }
+        .phase-time { color: #F59E0B; font-weight: 500; font-size: 14px; }
+
+        .checklist { list-style: none; }
+
+        .checklist li {
+            background: white;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #1E40AF;
+            border-radius: 4px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .task-content { flex: 1; }
+        .task-title { font-weight: 600; color: #1F2937; margin-bottom: 5px; }
+        .task-desc { font-size: 14px; color: #6B7280; }
+
+        .priority-high { border-left: 4px solid #EF4444; }
+        .priority-medium { border-left: 4px solid #F59E0B; }
+        .priority-low { border-left: 4px solid #10B981; }
+
+        .tip-box {
+            background: linear-gradient(135deg, #DBEAFE, #E0E7FF);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .warning-box {
+            background: #FEF3C7;
+            border-left: 4px solid #F59E0B;
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        .success-box {
+            background: #D1FAE5;
+            border-left: 4px solid #10B981;
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, #1E40AF, #1E3A8A);
+            color: white;
+            border-radius: 12px;
+        }
+
+        @media print {
+            body { padding: 20px; }
+            .phase { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Checklist de Lancamento</h1>
+    <p class="subtitle">Passo a Passo Completo para Lancar Seu Produto Digital</p>
+
+    <div class="phase">
+        <div class="phase-header">
+            <span class="phase-number">1</span>
+            <div>
+                <h2 class="phase-title">Pre-Lancamento</h2>
+                <span class="phase-time">30 a 15 dias antes</span>
+            </div>
+        </div>
+
+        <ul class="checklist">
+            <li class="priority-high">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Definir produto e oferta</p>
+                    <p class="task-desc">Nome, preco, bonus, garantia e diferenciais</p>
+                </div>
+            </li>
+            <li class="priority-high">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Criar pagina de vendas</p>
+                    <p class="task-desc">Headline, beneficios, prova social, FAQ, botao de compra</p>
+                </div>
+            </li>
+            <li class="priority-high">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Configurar plataforma de pagamento</p>
+                    <p class="task-desc">Kiwify, Hotmart, Eduzz ou similar</p>
+                </div>
+            </li>
+            <li class="priority-medium">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Criar pagina de captura (opcional)</p>
+                    <p class="task-desc">Para construir lista de espera</p>
+                </div>
+            </li>
+            <li class="priority-medium">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Preparar sequencia de emails</p>
+                    <p class="task-desc">Pre-lancamento, abertura, lembretes, fechamento</p>
+                </div>
+            </li>
+            <li class="priority-low">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Criar criativos para anuncios</p>
+                    <p class="task-desc">Imagens, videos, copies para trafego pago</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="phase">
+        <div class="phase-header">
+            <span class="phase-number">2</span>
+            <div>
+                <h2 class="phase-title">Aquecimento</h2>
+                <span class="phase-time">15 a 7 dias antes</span>
+            </div>
+        </div>
+
+        <ul class="checklist">
+            <li class="priority-high">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Criar conteudo de aquecimento</p>
+                    <p class="task-desc">Posts sobre o problema que seu produto resolve</p>
+                </div>
+            </li>
+            <li class="priority-high">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Compartilhar bastidores</p>
+                    <p class="task-desc">Mostrar a criacao do produto gera antecipacao</p>
+                </div>
+            </li>
+            <li class="priority-medium">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Coletar depoimentos antecipados</p>
+                    <p class="task-desc">Beta testers ou clientes anteriores</p>
+                </div>
+            </li>
+            <li class="priority-medium">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Anunciar data de lancamento</p>
+                    <p class="task-desc">"Dia X vai acontecer algo especial..."</p>
+                </div>
+            </li>
+            <li class="priority-low">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Fazer lives de conteudo</p>
+                    <p class="task-desc">Entregar valor e mencionar o lancamento</p>
+                </div>
+            </li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>Dica:</strong> Use a tecnica "Revelar aos poucos". Mostre um pedaco do produto cada dia para criar curiosidade!
+        </div>
+    </div>
+
+    <div class="phase">
+        <div class="phase-header">
+            <span class="phase-number">3</span>
+            <div>
+                <h2 class="phase-title">Dia do Lancamento</h2>
+                <span class="phase-time">Dia D</span>
+            </div>
+        </div>
+
+        <ul class="checklist">
+            <li class="priority-high">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Testar pagina de vendas e checkout</p>
+                    <p class="task-desc">Fazer uma compra teste para garantir que tudo funciona</p>
+                </div>
+            </li>
+            <li class="priority-high">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Enviar email de abertura</p>
+                    <p class="task-desc">"As inscricoes estao abertas!"</p>
+                </div>
+            </li>
+            <li class="priority-high">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Postar anuncio em todas as redes</p>
+                    <p class="task-desc">Feed, Stories, Reels - anunciar a abertura</p>
+                </div>
+            </li>
+            <li class="priority-high">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Ativar anuncios pagos (se houver)</p>
+                    <p class="task-desc">Comecar campanhas de trafego pago</p>
+                </div>
+            </li>
+            <li class="priority-medium">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Fazer live de lancamento</p>
+                    <p class="task-desc">Apresentar o produto ao vivo e tirar duvidas</p>
+                </div>
+            </li>
+            <li class="priority-medium">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Responder mensagens rapidamente</p>
+                    <p class="task-desc">Estar disponivel no WhatsApp/DM</p>
+                </div>
+            </li>
+        </ul>
+
+        <div class="warning-box">
+            <strong>Atencao:</strong> Tenha alguem para te ajudar no dia do lancamento. O volume de mensagens pode ser alto!
+        </div>
+    </div>
+
+    <div class="phase">
+        <div class="phase-header">
+            <span class="phase-number">4</span>
+            <div>
+                <h2 class="phase-title">Durante o Lancamento</h2>
+                <span class="phase-time">Dias 2 a 6</span>
+            </div>
+        </div>
+
+        <ul class="checklist">
+            <li class="priority-high">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Enviar emails diarios</p>
+                    <p class="task-desc">Lembrete, quebra de objecoes, depoimentos</p>
+                </div>
+            </li>
+            <li class="priority-high">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Postar conteudo de prova social</p>
+                    <p class="task-desc">Prints de vendas, depoimentos, resultados</p>
+                </div>
+            </li>
+            <li class="priority-medium">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Fazer follow-up com leads</p>
+                    <p class="task-desc">Mensagens para quem demonstrou interesse</p>
+                </div>
+            </li>
+            <li class="priority-medium">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Criar urgencia gradual</p>
+                    <p class="task-desc">"Restam X vagas", "Bonus disponivel ate..."</p>
+                </div>
+            </li>
+            <li class="priority-low">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Analisar metricas diariamente</p>
+                    <p class="task-desc">Conversao, cliques, vendas - ajustar se necessario</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="phase">
+        <div class="phase-header">
+            <span class="phase-number">5</span>
+            <div>
+                <h2 class="phase-title">Fechamento</h2>
+                <span class="phase-time">Ultimo dia</span>
+            </div>
+        </div>
+
+        <ul class="checklist">
+            <li class="priority-high">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Email de ultima chance (manha)</p>
+                    <p class="task-desc">"Ultimas horas para garantir..."</p>
+                </div>
+            </li>
+            <li class="priority-high">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Stories de contagem regressiva</p>
+                    <p class="task-desc">Sticker de countdown ate o fechamento</p>
+                </div>
+            </li>
+            <li class="priority-high">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Email de encerramento (noite)</p>
+                    <p class="task-desc">"Encerra em X horas" - maximo de urgencia</p>
+                </div>
+            </li>
+            <li class="priority-medium">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Mensagem final no WhatsApp</p>
+                    <p class="task-desc">Para leads que nao compraram</p>
+                </div>
+            </li>
+            <li class="priority-high">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Fechar carrinho no horario prometido</p>
+                    <p class="task-desc">Cumprir o que foi dito - credibilidade</p>
+                </div>
+            </li>
+        </ul>
+
+        <div class="success-box">
+            <strong>Parabens!</strong> Voce completou seu lancamento! Agora analise os resultados e planeje o proximo.
+        </div>
+    </div>
+
+    <div class="phase">
+        <div class="phase-header">
+            <span class="phase-number">6</span>
+            <div>
+                <h2 class="phase-title">Pos-Lancamento</h2>
+                <span class="phase-time">Dia seguinte</span>
+            </div>
+        </div>
+
+        <ul class="checklist">
+            <li class="priority-high">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Enviar boas-vindas aos compradores</p>
+                    <p class="task-desc">Email e WhatsApp com acessos</p>
+                </div>
+            </li>
+            <li class="priority-medium">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Analisar metricas do lancamento</p>
+                    <p class="task-desc">Total de vendas, conversao, ROI</p>
+                </div>
+            </li>
+            <li class="priority-medium">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Documentar aprendizados</p>
+                    <p class="task-desc">O que funcionou? O que melhorar?</p>
+                </div>
+            </li>
+            <li class="priority-low">
+                <span class="checkbox"></span>
+                <div class="task-content">
+                    <p class="task-title">Agradecer publicamente</p>
+                    <p class="task-desc">Post de agradecimento e resultados</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <h3>Cursos Certificados</h3>
+        <p style="margin-top: 10px;">Este material faz parte do Curso de Marketing Digital</p>
+        <p style="margin-top: 5px;">WhatsApp: (31) 98658-9584</p>
+    </div>
+</body>
+</html>

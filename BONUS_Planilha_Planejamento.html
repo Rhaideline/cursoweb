@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilha de Planejamento - Calendario Editorial</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 { font-family: 'Poppins', sans-serif; color: #1E40AF; }
+
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #1E40AF, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle { text-align: center; color: #6B7280; margin-bottom: 40px; font-size: 18px; }
+
+        .intro {
+            background: linear-gradient(135deg, #DBEAFE, #FEF3C7);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        h2 { font-size: 24px; margin-top: 40px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #F59E0B; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #1E40AF;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        tr:nth-child(even) { background: #F9FAFB; }
+        tr:hover { background: #DBEAFE; }
+
+        .status-planejado { color: #F59E0B; font-weight: bold; }
+        .status-criado { color: #3B82F6; font-weight: bold; }
+        .status-publicado { color: #10B981; font-weight: bold; }
+
+        .section {
+            background: #F3F4F6;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid #1E40AF;
+        }
+
+        .checklist { list-style: none; }
+        .checklist li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #E5E7EB;
+        }
+        .checklist li:before {
+            content: "[ ] ";
+            color: #1E40AF;
+            font-weight: bold;
+        }
+
+        .tip-box {
+            background: #10B981;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, #1E40AF, #1E3A8A);
+            color: white;
+            border-radius: 12px;
+        }
+
+        @media print {
+            body { padding: 15px; }
+            table { font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Planilha de Planejamento</h1>
+    <p class="subtitle">Calendario Editorial Completo para Suas Redes Sociais</p>
+
+    <div class="intro">
+        <h2 style="border: none; margin: 0 0 15px 0;">Como Usar Esta Planilha</h2>
+        <p>1. Imprima ou copie para o Google Sheets/Excel</p>
+        <p>2. Preencha com seu conteudo semanal</p>
+        <p>3. Atualize os status conforme produz</p>
+        <p>4. Revise toda segunda-feira para a semana</p>
+    </div>
+
+    <h2>Calendario Semanal - Modelo</h2>
+    <table>
+        <tr>
+            <th>Dia</th>
+            <th>Plataforma</th>
+            <th>Tipo de Conteudo</th>
+            <th>Tema/Assunto</th>
+            <th>Horario</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td><strong>Segunda</strong></td>
+            <td>Instagram Feed</td>
+            <td>Carrossel Educativo</td>
+            <td>5 Dicas de [seu nicho]</td>
+            <td>10:00</td>
+            <td class="status-planejado">Planejado</td>
+        </tr>
+        <tr>
+            <td><strong>Segunda</strong></td>
+            <td>Stories</td>
+            <td>Bastidores</td>
+            <td>Rotina da semana</td>
+            <td>14:00</td>
+            <td class="status-planejado">Planejado</td>
+        </tr>
+        <tr>
+            <td><strong>Terca</strong></td>
+            <td>Instagram Reels</td>
+            <td>Tutorial Rapido</td>
+            <td>Como fazer [X]</td>
+            <td>12:00</td>
+            <td class="status-planejado">Planejado</td>
+        </tr>
+        <tr>
+            <td><strong>Terca</strong></td>
+            <td>Stories</td>
+            <td>Enquete</td>
+            <td>Interacao com audiencia</td>
+            <td>18:00</td>
+            <td class="status-planejado">Planejado</td>
+        </tr>
+        <tr>
+            <td><strong>Quarta</strong></td>
+            <td>Instagram Feed</td>
+            <td>Post de Valor</td>
+            <td>Dica transformadora</td>
+            <td>10:00</td>
+            <td class="status-planejado">Planejado</td>
+        </tr>
+        <tr>
+            <td><strong>Quarta</strong></td>
+            <td>Stories</td>
+            <td>Caixa de Perguntas</td>
+            <td>Tire suas duvidas</td>
+            <td>20:00</td>
+            <td class="status-planejado">Planejado</td>
+        </tr>
+        <tr>
+            <td><strong>Quinta</strong></td>
+            <td>Instagram Reels</td>
+            <td>Trend/Viral</td>
+            <td>Adaptar trend atual</td>
+            <td>12:00</td>
+            <td class="status-planejado">Planejado</td>
+        </tr>
+        <tr>
+            <td><strong>Quinta</strong></td>
+            <td>Stories</td>
+            <td>Depoimento</td>
+            <td>Resultado de cliente</td>
+            <td>16:00</td>
+            <td class="status-planejado">Planejado</td>
+        </tr>
+        <tr>
+            <td><strong>Sexta</strong></td>
+            <td>Instagram Feed</td>
+            <td>Post Pessoal</td>
+            <td>Historia/Bastidores</td>
+            <td>10:00</td>
+            <td class="status-planejado">Planejado</td>
+        </tr>
+        <tr>
+            <td><strong>Sexta</strong></td>
+            <td>Stories</td>
+            <td>CTA para o final de semana</td>
+            <td>Oferta/Promocao</td>
+            <td>18:00</td>
+            <td class="status-planejado">Planejado</td>
+        </tr>
+        <tr>
+            <td><strong>Sabado</strong></td>
+            <td>Stories</td>
+            <td>Conteudo Leve</td>
+            <td>Lifestyle/Descontracao</td>
+            <td>11:00</td>
+            <td class="status-planejado">Planejado</td>
+        </tr>
+        <tr>
+            <td><strong>Domingo</strong></td>
+            <td>Instagram Feed</td>
+            <td>Reflexao/Motivacao</td>
+            <td>Mensagem inspiradora</td>
+            <td>19:00</td>
+            <td class="status-planejado">Planejado</td>
+        </tr>
+    </table>
+
+    <h2>Melhores Horarios para Postar</h2>
+    <div class="section">
+        <table>
+            <tr>
+                <th>Plataforma</th>
+                <th>Melhores Horarios</th>
+                <th>Melhores Dias</th>
+            </tr>
+            <tr>
+                <td>Instagram Feed</td>
+                <td>10h, 12h, 18h, 21h</td>
+                <td>Terca a Quinta</td>
+            </tr>
+            <tr>
+                <td>Instagram Stories</td>
+                <td>9h, 12h, 17h, 20h</td>
+                <td>Todos os dias</td>
+            </tr>
+            <tr>
+                <td>Instagram Reels</td>
+                <td>11h, 13h, 19h</td>
+                <td>Quarta a Sabado</td>
+            </tr>
+            <tr>
+                <td>TikTok</td>
+                <td>12h, 15h, 21h</td>
+                <td>Terca a Quinta</td>
+            </tr>
+            <tr>
+                <td>YouTube</td>
+                <td>14h, 17h</td>
+                <td>Quinta a Domingo</td>
+            </tr>
+            <tr>
+                <td>LinkedIn</td>
+                <td>8h, 10h, 12h</td>
+                <td>Terca a Quinta</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Checklist de Producao de Conteudo</h2>
+    <div class="section">
+        <ul class="checklist">
+            <li>Definir tema e objetivo do post</li>
+            <li>Pesquisar palavras-chave e hashtags</li>
+            <li>Criar roteiro/texto da legenda</li>
+            <li>Produzir imagem/video</li>
+            <li>Editar e ajustar</li>
+            <li>Escrever CTA (chamada para acao)</li>
+            <li>Selecionar hashtags (5-15)</li>
+            <li>Agendar publicacao</li>
+            <li>Responder comentarios apos publicar</li>
+            <li>Analisar metricas em 24h</li>
+        </ul>
+    </div>
+
+    <h2>Categorias de Conteudo (Regra 70-20-10)</h2>
+    <div class="section">
+        <table>
+            <tr>
+                <th>Categoria</th>
+                <th>Porcentagem</th>
+                <th>Exemplos</th>
+            </tr>
+            <tr>
+                <td><strong>Valor/Educacao</strong></td>
+                <td>70%</td>
+                <td>Dicas, tutoriais, informacoes uteis</td>
+            </tr>
+            <tr>
+                <td><strong>Conexao/Pessoal</strong></td>
+                <td>20%</td>
+                <td>Bastidores, historias, humanizacao</td>
+            </tr>
+            <tr>
+                <td><strong>Venda/Promocao</strong></td>
+                <td>10%</td>
+                <td>Ofertas, produtos, servicos</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tip-box">
+        <h3 style="margin-bottom: 10px;">Dica Pro: Batch Content</h3>
+        <p>Separe 1 dia por semana para criar todo o conteudo da semana seguinte. Isso aumenta sua produtividade em ate 300%!</p>
+    </div>
+
+    <div class="footer">
+        <h3>Cursos Certificados</h3>
+        <p style="margin-top: 10px;">Este material faz parte do Curso de Marketing Digital</p>
+        <p style="margin-top: 5px;">WhatsApp: (31) 98658-9584</p>
+    </div>
+</body>
+</html>
