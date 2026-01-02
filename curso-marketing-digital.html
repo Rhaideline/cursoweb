@@ -823,43 +823,62 @@
     </section>
 
     <!-- SEÇÃO "POR QUE ESCOLHER NOSSOS CURSOS?" -->
-    <section id="sobre" class="bg-white py-16 lg:py-24">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16 text-primary-blue font-poppins">
-                Por Que Mais de 10.000 Alunos Já Se Certificaram Conosco?
-            </h2>
+    <section id="sobre" class="relative py-20 lg:py-28 overflow-hidden">
+        <!-- Background -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black"></div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <div class="inline-block mb-4 px-6 py-2 glass-card rounded-full border border-blue-500/30">
+                    <span class="text-blue-400 text-sm font-semibold tracking-widest uppercase">Por Que Nos Escolher</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-poppins">
+                    <span class="text-white">Mais de </span>
+                    <span class="gradient-text">10.000 Alunos</span>
+                    <span class="text-white"> Certificados</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Card 1 -->
-                <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover-lift hover:border-accent-orange">
-                    <div class="text-5xl mb-4 text-success-green">🏆</div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900 font-poppins">Certificação Reconhecida</h3>
-                    <p class="text-sm font-semibold text-primary-blue mb-2">Certificados Válidos em Todo o Brasil</p>
-                    <p class="text-gray-600 font-inter">Nossos certificados são reconhecidos por empresas e instituições, comprovando sua qualificação profissional.</p>
+                <div class="glass-card-premium p-8 rounded-2xl border border-yellow-500/20 hover:border-yellow-400/50 transition-all duration-300 hover:scale-105 group">
+                    <div class="w-16 h-16 mb-6 bg-gradient-to-br from-yellow-500 to-yellow-400 rounded-2xl flex items-center justify-center shadow-lg shadow-yellow-500/30 group-hover:scale-110 transition-transform">
+                        <span class="text-3xl">🏆</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white font-poppins">Certificação Reconhecida</h3>
+                    <p class="text-yellow-400 text-sm font-semibold mb-3">Válido em Todo o Brasil</p>
+                    <p class="text-gray-400 text-sm">Certificados reconhecidos por empresas e instituições.</p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover-lift hover:border-accent-orange">
-                    <div class="text-5xl mb-4 text-success-green">📚</div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900 font-poppins">Metodologia Comprovada</h3>
-                    <p class="text-sm font-semibold text-primary-blue mb-2">Aprenda de Forma Prática e Objetiva</p>
-                    <p class="text-gray-600 font-inter">Conteúdo direto ao ponto, com exemplos reais e exercícios práticos para fixação imediata.</p>
+                <div class="glass-card-premium p-8 rounded-2xl border border-blue-500/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 group">
+                    <div class="w-16 h-16 mb-6 bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
+                        <span class="text-3xl">📚</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white font-poppins">Metodologia Comprovada</h3>
+                    <p class="text-blue-400 text-sm font-semibold mb-3">Aprenda de Forma Prática</p>
+                    <p class="text-gray-400 text-sm">Conteúdo direto ao ponto com exemplos reais.</p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover-lift hover:border-accent-orange">
-                    <div class="text-5xl mb-4 text-success-green">⏰</div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900 font-poppins">Flexibilidade Total</h3>
-                    <p class="text-sm font-semibold text-primary-blue mb-2">Estude No Seu Ritmo, Onde Quiser</p>
-                    <p class="text-gray-600 font-inter">Acesso vitalício às aulas online. Assista quantas vezes quiser, quando quiser.</p>
+                <div class="glass-card-premium p-8 rounded-2xl border border-green-500/20 hover:border-green-400/50 transition-all duration-300 hover:scale-105 group">
+                    <div class="w-16 h-16 mb-6 bg-gradient-to-br from-green-600 to-green-400 rounded-2xl flex items-center justify-center shadow-lg shadow-green-500/30 group-hover:scale-110 transition-transform">
+                        <span class="text-3xl">⏰</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white font-poppins">Flexibilidade Total</h3>
+                    <p class="text-green-400 text-sm font-semibold mb-3">Estude No Seu Ritmo</p>
+                    <p class="text-gray-400 text-sm">Acesso vitalício. Assista quando e onde quiser.</p>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover-lift hover:border-accent-orange">
-                    <div class="text-5xl mb-4 text-success-green">💬</div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900 font-poppins">Suporte Especializado</h3>
-                    <p class="text-sm font-semibold text-primary-blue mb-2">Tire Suas Dúvidas Com Especialistas</p>
-                    <p class="text-gray-600 font-inter">Suporte dedicado via WhatsApp para garantir seu sucesso completo.</p>
+                <div class="glass-card-premium p-8 rounded-2xl border border-purple-500/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 group">
+                    <div class="w-16 h-16 mb-6 bg-gradient-to-br from-purple-600 to-purple-400 rounded-2xl flex items-center justify-center shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform">
+                        <span class="text-3xl">💬</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white font-poppins">Suporte Especializado</h3>
+                    <p class="text-purple-400 text-sm font-semibold mb-3">Tire Suas Dúvidas</p>
+                    <p class="text-gray-400 text-sm">Suporte via WhatsApp para seu sucesso.</p>
                 </div>
             </div>
         </div>
